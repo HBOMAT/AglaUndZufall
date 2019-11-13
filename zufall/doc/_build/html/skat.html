@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Skat - SkatBlatt &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen" href="klassen.html" />
+    <link rel="next" title="Funktionen" href="funktionen.html" />
+    <link rel="prev" title="Lotto" href="lotto.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="funktionen.html" title="Funktionen"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="lotto.html" title="Lotto"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" accesskey="U">Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="skat-skatblatt">
+<h1>Skat - SkatBlatt<a class="headerlink" href="#skat-skatblatt" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="zufall.lib.objekte.skat_blatt.SkatBlatt">
+<em class="property">class </em><code class="descclassname">zufall.lib.objekte.skat_blatt.</code><code class="descname">SkatBlatt</code><a class="headerlink" href="#zufall.lib.objekte.skat_blatt.SkatBlatt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Skatblatt</p>
+<p><strong>Kurzname</strong> <strong>Skat</strong></p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div><p>Skat( )</p>
+<p>Es wird ein Skatblatt erzeugt, womit Wahrscheinlichkeiten für Ereignisse 
+berechnet werden können, die beim Ziehen einer einzelnen Karte eintreten</p>
+<p>Das Objekt ist nicht zum Skatspiel bestimmt; Skat ist kein rein 
+zufälliges Spiel</p>
+</div></blockquote>
+<p>Zuweisung    s = Skat()  <span class="math">\(\qquad\)</span> (s - freier Bezeichner)</p>
+<p>Elemente der Ergebnismenge (das komplette Blatt)</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">s.KreuzAs</span></code> <span class="math">\(\quad\)</span>    <code class="docutils literal"><span class="pre">s.PikAs</span></code> <span class="math">\(\quad\)</span>   <code class="docutils literal"><span class="pre">s.HerzAs</span></code> <span class="math">\(\quad\)</span>   <code class="docutils literal"><span class="pre">s.KaroAs</span></code></p>
+<p><code class="docutils literal"><span class="pre">s.KreuzKönig</span></code>  <span class="math">\(\quad\)</span>     <code class="docutils literal"><span class="pre">s.PikKönig</span></code>  <span class="math">\(\quad\)</span>    <code class="docutils literal"><span class="pre">s.HerzKönig</span></code>  <span class="math">\(\quad\)</span>   <code class="docutils literal"><span class="pre">s.KaroKönig</span></code></p>
+<p><code class="docutils literal"><span class="pre">s.KreuzDame</span></code>  <span class="math">\(\quad\)</span>    <code class="docutils literal"><span class="pre">s.PikDame</span></code>  <span class="math">\(\quad\)</span>  <code class="docutils literal"><span class="pre">s.HerzDame</span></code>  <span class="math">\(\quad\)</span>      <code class="docutils literal"><span class="pre">s.KaroDame</span></code></p>
+<p><code class="docutils literal"><span class="pre">s.KreuzBube</span></code>  <span class="math">\(\quad\)</span>  <code class="docutils literal"><span class="pre">s.PikBube</span></code>  <span class="math">\(\quad\)</span>   <code class="docutils literal"><span class="pre">s.HerzBube</span></code>  <span class="math">\(\quad\)</span>  <code class="docutils literal"><span class="pre">s.KaroBube</span></code></p>
+<p><code class="docutils literal"><span class="pre">s.Kreuz10</span></code>  <span class="math">\(\quad\)</span>   <code class="docutils literal"><span class="pre">s.Pik10</span></code>  <span class="math">\(\quad\)</span>     <code class="docutils literal"><span class="pre">s.Herz10</span></code>  <span class="math">\(\quad\)</span>    <code class="docutils literal"><span class="pre">s.Karo10</span></code></p>
+<p><code class="docutils literal"><span class="pre">s.Kreuz9</span></code>   <span class="math">\(\quad\)</span>    <code class="docutils literal"><span class="pre">s.Pik9</span></code>  <span class="math">\(\quad\)</span>      <code class="docutils literal"><span class="pre">s.Herz9</span></code>  <span class="math">\(\quad\)</span>   <code class="docutils literal"><span class="pre">s.Karo9</span></code></p>
+<p><code class="docutils literal"><span class="pre">s.Kreuz8</span></code>  <span class="math">\(\quad\)</span>    <code class="docutils literal"><span class="pre">s.Pik8</span></code>  <span class="math">\(\quad\)</span>     <code class="docutils literal"><span class="pre">s.Herz8</span></code>  <span class="math">\(\quad\)</span>  <code class="docutils literal"><span class="pre">s.Karo8</span></code></p>
+<p><code class="docutils literal"><span class="pre">s.Kreuz7</span></code>  <span class="math">\(\quad\)</span>   <code class="docutils literal"><span class="pre">s.Pik7</span></code>  <span class="math">\(\quad\)</span>  <code class="docutils literal"><span class="pre">s.Herz7</span></code>  <span class="math">\(\quad\)</span>   <code class="docutils literal"><span class="pre">s.Karo7</span></code></p>
+</div></blockquote>
+<p>Ereignisse beim Ziehen einer Karte sind alle Elementarereignisse sowie</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">s.Kreuz</span></code>  <span class="math">\(\qquad\qquad\:\:\)</span>        &#8220;Kreuz&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s.Pik</span></code>    <span class="math">\(\qquad\qquad\quad\:\)</span>        &#8220;Pik&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s.Herz</span></code>   <span class="math">\(\qquad\qquad\:\:\:\;\)</span>        &#8220;Herz&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s.Karo</span></code>   <span class="math">\(\qquad\qquad\:\:\:\,\)</span>        &#8220;Karo&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s.Bube</span></code>   <span class="math">\(\qquad\qquad\:\:\;\,\)</span>        &#8220;Bube&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s.Dame</span></code>   <span class="math">\(\qquad\qquad\:\;\:\,\)</span>        &#8220;Dame&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s.König</span></code>  <span class="math">\(\qquad\qquad\:\,\,\)</span>        &#8220;König&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s.As</span></code>     <span class="math">\(\qquad\qquad\quad\:\:\;\)</span>        &#8220;As&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s._7</span></code> = <code class="docutils literal"><span class="pre">s.Sieben</span></code>  <span class="math">\(\quad\:\:\;\)</span> &#8220;7&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s._8</span></code> = <code class="docutils literal"><span class="pre">s.Acht</span></code>  <span class="math">\(\qquad\,\,\,\)</span> &#8220;8&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s._9</span></code> = <code class="docutils literal"><span class="pre">s.Neun</span></code>  <span class="math">\(\qquad\,\,\,\)</span> &#8220;9&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s._10</span></code> = <code class="docutils literal"><span class="pre">s.Zehn</span></code> <span class="math">\(\qquad\)</span> &#8220;10&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s.schwarz</span></code>   <span class="math">\(\qquad\quad\:\:\:\:\)</span> &#8220;Kreuz oder Pik&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s.rot</span></code>      <span class="math">\(\qquad\quad\quad\:\:\:\:\,\,\,\)</span> &#8220;Herz oder Karo&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s.Bild</span></code>    <span class="math">\(\qquad\qquad\quad\,\)</span> &#8220;Bube, Dame, König oder As&#8221;</p>
+<p><code class="docutils literal"><span class="pre">s.Zahl</span></code>     <span class="math">\(\qquad\qquad\:\:\:\:\;\)</span> &#8220;7, 8, 9 oder 10&#8221;</p>
+<p>(Es gibt jeweils 8 Karten in den Farben Kreuz und Pik (beide schwarz)
+und Herz und Karo (beide rot)</p>
+<p>In jeder Farbe gibt es die Bilder As, König, Dame und Bube  sowie die
+Zahlen 10, 9, 8 und 7)</p>
+</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="zufall.lib.objekte.skat_blatt.SkatBlatt.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#zufall.lib.objekte.skat_blatt.SkatBlatt.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.skat_blatt.SkatBlatt.omega">
+<code class="descname">omega</code><a class="headerlink" href="#zufall.lib.objekte.skat_blatt.SkatBlatt.omega" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kartenmenge</p>
+<p>Synonym: <strong>blatt</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.skat_blatt.SkatBlatt.P">
+<code class="descname">P</code><span class="sig-paren">(</span><em>e /</em><span class="optional">[</span>, <em>e1</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.skat_blatt.SkatBlatt.P" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wahrscheinlichkeit eines Ereignisses beim einmaligen Ziehen
+einer Karte</p>
+<p><em>e</em> : Ereignis</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><em>einzelne Karte</em> | <em>Menge/Liste/Tupel</em> von Karten |</div>
+</div>
+<div class="line-block">
+<div class="line"><em>Ereignis</em> beim Ziehen einer Karte (siehe unten)</div>
+</div>
+</div></blockquote>
+<p>Bei der Angabe von zwei Ereignissen wird die bedingte
+Wahrscheinlichkeit <span class="math">\(P( e | e_1 )\)</span> berechnet</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="lotto.html"
+                        title="vorheriges Kapitel">Lotto</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="funktionen.html"
+                        title="nächstes Kapitel">Funktionen</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/skat.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="funktionen.html" title="Funktionen"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="lotto.html" title="Lotto"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" >Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

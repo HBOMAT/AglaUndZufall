@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Animationen &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="next" title="System - Variablen" href="system_variablen.html" />
+    <link rel="prev" title="Grafik-Spezifikationen" href="grafik_spezifikationen.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="system_variablen.html" title="System - Variablen"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="grafik_spezifikationen.html" title="Grafik-Spezifikationen"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="animationen">
+<h1>Animationen<a class="headerlink" href="#animationen" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Animationen sind gegenwärtig nur in 3D möglich (mit Mayavi), sie befinden
+sich in einem experimentellen Stadium</p>
+<p>Animierte Grafiken sind für folgende Klassen im Raum implementiert:</p>
+<ul class="simple">
+<li>Vektor (nur Punktdarstellung)</li>
+<li>Gerade</li>
+<li>Ebene</li>
+<li>Kugel</li>
+<li>Strecke</li>
+<li>Dreieck</li>
+<li>Viereck</li>
+<li>Kreis</li>
+<li>Kegel</li>
+<li>Zylinder</li>
+<li>Körper</li>
+<li>Pyramide</li>
+<li>Prisma</li>
+<li>Kurve</li>
+<li>Fläche</li>
+</ul>
+<p>Es kann nur ein Parameter (je Objekt) animiert werden. Generell nicht
+animierbar sind Pfeile und gefüllte Objekte sowie die Grenzen eines
+Parameterbereiches. Weitere Einschränkungen sind, dass Kurven nicht
+verfeinert bzw. als Röhre animiert dargestellt und Flächen nicht mit
+Gitternetz oder als Drahtdarstellung animiert werden  können. Des weiteren
+ist die Bedienung zum Ablaufen einer Animation provisorisch</p>
+<p>Eine Animation wird erzeugt, indem innerhalb einer <code class="docutils literal"><span class="pre">zeichne/Grafik</span></code>
+-Anweisung in der Spezifikation des zu animierenden Objektes eine Angabe
+zum Parameter in der Form:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span> <span class="o">/</span><span class="p">[</span><span class="n">name</span><span class="p">,</span> <span class="p">]</span> <span class="n">unten</span><span class="p">,</span> <span class="n">oben</span> <span class="o">/</span><span class="p">[,</span> <span class="n">anzahl</span><span class="p">]</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>gemacht wird. Hier sind <code class="docutils literal"><span class="pre">name</span></code> der Parametername (er kann auch weggelassen
+werden), <code class="docutils literal"><span class="pre">unten</span></code> und <code class="docutils literal"><span class="pre">oben</span></code> die untere und obere Grenze des
+Parameterbereiches und <code class="docutils literal"><span class="pre">anzahl</span></code> die Anzahl der Unterteilungen desselben
+(bei Weglassen wird der Standardwert 20 angenommen). Ein Beispiel ist:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">f</span> <span class="o">=</span> <span class="n">Fläche</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># mit einem Parameter</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">zeichne</span><span class="p">(</span> <span class="p">[</span> <span class="n">f</span><span class="p">,</span> <span class="n">gelb</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> <span class="p">]</span>
+</pre></div>
+</div>
+<p>Das synchrone Ablaufen bei der gleichzeitigen Animation mehrerer Objekte
+erfordert die Übereinstimmung der Angaben zu <code class="docutils literal"><span class="pre">unten</span></code>, <code class="docutils literal"><span class="pre">oben</span></code> und
+<code class="docutils literal"><span class="pre">anzahl</span></code></p>
+<p>Bei der Ausführung öffnen sich zwei Fenster - für die eigentliche Grafik und
+ein kleines Bedienfenster, in dem zunächst der <code class="docutils literal"><span class="pre">Delay</span></code>-Eintrag von
+Interesse ist. Der dort enthaltene große Wert garantiert genügend Zeit, um
+die beiden Fenster in eine günstige Position zu rücken. Die eigentliche
+Animation wird gestartet, indem dieser Wert verringert wird. Dazu wird der
+Cursor mit der Maus am Ende des <code class="docutils literal"><span class="pre">Delay</span></code>-Feldes platziert. Dann können
+mit der Rücktaste genügend Ziffern gelöscht werden. Eine laufende Animation
+kann mit den entsprechenden Schaltern gestoppt und wieder gestartet werden.
+Die Grafik kann jederzeit verschoben, gedreht und gezoomt werden</p>
+<p>Bemerkung zur Arbeit mit Windows: Die Ausführung von weiter unten liegenden
+Zellen des Notebooks ist erst möglich, wenn beide Fenster wieder geschlossen
+wurden</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="grafik_spezifikationen.html"
+                        title="vorheriges Kapitel">Grafik-Spezifikationen</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="system_variablen.html"
+                        title="nächstes Kapitel">System - Variablen</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/animationen.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="system_variablen.html" title="System - Variablen"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="grafik_spezifikationen.html" title="Grafik-Spezifikationen"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

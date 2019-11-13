@@ -1,0 +1,651 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Fläche &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen im Raum" href="klassenr3.html" />
+    <link rel="next" title="Matrix" href="matrix.html" />
+    <link rel="prev" title="Fläche2terOrdnung" href="f2o.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="matrix.html" title="Matrix"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="f2o.html" title="Fläche2terOrdnung"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr3.html" accesskey="U">Klassen im Raum</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="flache">
+<h1>Fläche<a class="headerlink" href="#flache" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.flaeche.Flaeche">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.flaeche.</code><code class="descname">Flaeche</code><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Fläche im Raum</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div><p>Fläche ( <em>par_form, (u_par_name, u_unt, u_ob), (w_par_name, w_unt, w_ob)</em> )</p>
+<p><em>oder</em></p>
+<p>Fläche ( <em>allg_punkt, (u_par_name, u_unt, u_ob), (w_par_name, w_unt, w_ob)</em> )</p>
+<p><em>oder</em></p>
+<p>Fläche ( <em>fkt_gleich /[, (u_par_name, u_unt, u_ob), (w_par_name, w_unt, w_ob) ]</em> )</p>
+<p><em>oder</em></p>
+<p>Fläche ( <em>imp_gleich</em> )</p>
+</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>par_form</em> :     Parameterform</p>
+<p><em>allg_punkt</em> :   Vektor (allgemeiner Flächenpunkt)</p>
+<p><em>fkt_gleich</em> :   &#8216;<em>z = f(x, y )</em> &#8216;  Funktionsgleichung</p>
+<dl class="docutils">
+<dt><em>imp_gleich</em>:   </dt>
+<dd>&#8216;<em>F(x, y, z ) = 0</em> &#8216; <em>oder</em> <em>F(x, y, z)</em>, 
+rechte Seite = 0 angenommen; Implizite Gleichung</dd>
+<dt><em>u_par_name</em>: </dt>
+<dd>Name des <em>u</em>-Flächenparameters; freier Bezeichner; 
+Standard <em>u</em></dd>
+<dt><em>w_par_name</em>: </dt>
+<dd>ebenso, <em>w</em>-Flächenparameter; Standard <em>w</em></dd>
+<dt><em>u_unt, u_ob</em>: </dt>
+<dd>untere, obere Grenzen des Parameterbereiches für 
+den <em>u</em>-Parameter</dd>
+</dl>
+<p><em>w_unt, w_ob</em>: ebenso, <em>w</em>-Parameter</p>
+<p>Die Verwendung der Bezeichner <em>x</em>, <em>y</em> und <em>z</em> ist zwingend</p>
+<p>Bei einer Funktionsgleichung wird parametrisiert, wobei
+eventuell mitgeteilte Parameterangaben benutzt werden; dabei werden
+<em>x</em> und <em>y</em> durch die angegebenen Parameter ersetzt; wurden keine
+Parameterangaben gemacht, wird <em>(u, -10, 10),  (w, -10, 10)</em> verwendet</p>
+<p>Für die Parameterangaben kann statt eines Tupels eine Liste benutzt
+werden</p>
+</div></blockquote>
+<p>Sollen weitere Gleichungen einer Fläche mit gespeichert werden, sind sie 
+über Schlüsselwortparameter mitzuteilen, wobei nur die rechte bzw. linke 
+Seite der jeweiligen Gleichung geschrieben wird</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>prg = (...)</em> oder <em>v(...)</em>   Parameterform bzw. allgemeiner Flächenpunkt</li>
+<li><em>fkt = f(x, y )</em>      - Funktionsgleichung (rechte Seite)</li>
+<li><em>imp = F(x, y, z )</em>   - Implizite Gleichung (linke Seite; rechte Seite = 0 angenommen)</li>
+</ul>
+</div></blockquote>
+<p>Es wird nicht geprüft, ob diese Gleichungen zu der erzeugten Fläche gehören</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Vordefinierte Flächen</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">EinhSphäre</span></code> : Einheitssphäre</p>
+<p><code class="docutils literal"><span class="pre">HypSchale</span></code>  : Obere Hälfte des Zweischaligen Hyperboloids</p>
+<p><code class="docutils literal"><span class="pre">Sphäre</span></code> (<em>mitte, radius</em> ) : Sphäre</p>
+<blockquote>
+<div><p><em>mitte</em> : Mittelpunkt</p>
+<p><em>radius</em> : Radius</p>
+</div></blockquote>
+<p><code class="docutils literal"><span class="pre">KugelOberFläche</span> <span class="pre">=</span> <span class="pre">Sphäre</span></code></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Eigenschaften und Methoden</strong> für <strong>parametrisierte</strong> Flächen</p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code>, <code class="docutils literal"><span class="pre">ss</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code>, <code class="docutils literal"><span class="pre">ß</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.flaeche.Flaeche.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.flaeche.Flaeche.ber">
+<code class="descname">ber</code><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.ber" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameterbereiche</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.flaeche.Flaeche.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.flaeche.Flaeche.fkt">
+<code class="descname">fkt</code><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.fkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Funktionsgleichung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.flaeche.Flaeche.imp">
+<code class="descname">imp</code><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.imp" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Implizite Gleichung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.flaeche.Flaeche.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.flaeche.Flaeche.par">
+<code class="descname">par</code><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Flächenparameter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.flaeche.Flaeche.pf">
+<code class="descname">pf</code><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.pf" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameterform; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.flaeche.Flaeche.prg">
+<code class="descname">prg</code><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.prg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parametergleichung; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.flaeche.Flaeche.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameter einer Schar</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildfläche bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.drei_bein">
+<code class="descname">drei_bein</code><span class="sig-paren">(</span><em>/[u_wert, w_wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.drei_bein" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Begleitendes Dreibein</p>
+<p><em>wert</em> : Wert eines Flächenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>( zwei Tangenteneinheitsvektoren,</dt>
+<dd>Normaleneinheitsvektor )</dd>
+<dt>bei Angabe von zwei Parameterwerten:</dt>
+<dd>Dreibein in einem bestimmten Punkt der Fläche</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>Dreibein im allgemeinen Punkt der Fläche</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.fund_form1">
+<code class="descname">fund_form1</code><span class="sig-paren">(</span><em>/[u_wert, w_wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.fund_form1" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Synonyme: <strong>ff1</strong>, <strong>I</strong></p>
+<p>Erste Fundamentalform</p>
+<p><em>wert</em> : Wert eines Flächenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe von zwei Parameterwerten:</dt>
+<dd>Koeffizienten der 1. Fundamentalform in einem bestimmten Punkt der Fläche</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>Koeffizienten der 1. Fundamentalform im allgemeinen Punkt der Fläche</dd>
+</dl>
+</dd>
+<dt>Zusatz :</dt>
+<dd><p class="first"><cite>d=1</cite> - Dezimaldarstellung</p>
+<p><cite>df=1</cite> - Darstellung in Differentialen</p>
+<p class="last"><cite>m=1</cite> - Matrix-Darstellung</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.fund_form2">
+<code class="descname">fund_form2</code><span class="sig-paren">(</span><em>/[u_wert, w_wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.fund_form2" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Synonyme: <strong>ff2</strong>, <strong>II</strong></p>
+<p>Zweite Fundamentalform</p>
+<p><em>wert</em> : Wert eines Flächenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe von zwei Parameterwerten:</dt>
+<dd>Koeffizienten der 2. Fundamentalform in einem bestimmten Punkt der Fläche</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>Koeffizienten der 2. Fundamentalform im allgemeinen Punkt der Fläche</dd>
+</dl>
+</dd>
+<dt>Zusatz :</dt>
+<dd><p class="first"><cite>d=1</cite> -  Dezimaldarstellung</p>
+<p><cite>df=1</cite> - Darstellung in Differentialen</p>
+<p class="last"><cite>m=1</cite> -  Matrix-Darstellung</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.gauss_kruemm">
+<code class="descname">gauss_kruemm</code><span class="sig-paren">(</span><em>/[u_wert, w_wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.gauss_kruemm" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Synonyme: <strong>K</strong>, <strong>k</strong></p>
+<p>Gauß&#8217;sche Krümmung</p>
+<p><em>wert</em> : Wert eines Flächenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe von zwei Parameterwerten:</dt>
+<dd>Gauß&#8217;sche Krümmung in einem bestimmten Punkt der Fläche</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>Gauß&#8217;sche Krümmung im allgemeinen Punkt der Fläche</dd>
+</dl>
+</dd>
+<dt>Zusatz :</dt>
+<dd><cite>d=1</cite> -  Dezimaldarstellung</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.haupt_kr_radius">
+<code class="descname">haupt_kr_radius</code><span class="sig-paren">(</span><em>/[u_wert, w_wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.haupt_kr_radius" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Synonyme: <strong>HKR</strong>, <strong>hkr</strong></p>
+<p>Hauptkrümmungsradien</p>
+<p><em>wert</em> : Wert eines Flächenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe von zwei Parameterwerten:</dt>
+<dd>Hauptkrümmungsradien in einem bestimmten Punkt der Fläche</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>Hauptkrümmungsradien im allgemeinen Punkt der Fläche</dd>
+</dl>
+</dd>
+</dl>
+<p>Zusatz : <cite>d=1</cite> - Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.haupt_kr_richt">
+<code class="descname">haupt_kr_richt</code><span class="sig-paren">(</span><em>/[u_wert, w_wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.haupt_kr_richt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Synonyme: <strong>HKRicht</strong>, <strong>hkRicht</strong></p>
+<p>Hauptkrümmungsrichtungen</p>
+<p><em>wert</em> : Wert eines Flächenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe von zwei Parameterwerten:</dt>
+<dd>Hauptkrümmungsrichtungen in einem bestimmten Punkt der Fläche</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>Hauptkrümmungsrichtungen im allgemeinen Punkt der Fläche</dd>
+</dl>
+</dd>
+</dl>
+<p>Zusatz : <cite>d=1</cite> - Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.haupt_kruemm">
+<code class="descname">haupt_kruemm</code><span class="sig-paren">(</span><em>/[u_wert, w_wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.haupt_kruemm" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Synonyme: <strong>HK</strong>, <strong>hk</strong></p>
+<p>Hauptkrümmungen</p>
+<p><em>wert</em> : Wert eines Flächenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe von zwei Parameterwerten:</dt>
+<dd>Hauptkrümmungen in einem bestimmten Punkt der Fläche</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>Hauptkrümmungen im allgemeinen Punkt der Fläche</dd>
+</dl>
+</dd>
+</dl>
+<p>Zusatz : <cite>d=1</cite> - Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.kurve">
+<code class="descname">kurve</code><span class="sig-paren">(</span><em>u_fkt</em>, <em>w_fkt</em>, <em>(par_name</em>, <em>par_unt</em>, <em>par_ob)</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.kurve" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kurve auf der Fläche</p>
+<p><em>fkt</em>    :    Funktion in einem Argument (Parameter)</p>
+<p><em>par_name</em> :  Name des Parameters</p>
+<p><em>par_unt, par_ob</em> : untere und obere Bereichsgrenzen des Parameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.mitt_kruemm">
+<code class="descname">mitt_kruemm</code><span class="sig-paren">(</span><em>/[u_wert, w_wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.mitt_kruemm" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Synonyme: <strong>H</strong>, <strong>hh</strong></p>
+<p>Mittlere Krümmung</p>
+<p><em>wert</em> : Wert eines Flächenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe von zwei Parameterwerten:</dt>
+<dd>Mittlere Krümmung in einem bestimmten Punkt der Fläche</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>Mittlere Krümmung im allgemeinen Punkt der Fläche</dd>
+</dl>
+</dd>
+</dl>
+<p>Zusatz : <cite>d=1</cite>   Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.norm">
+<code class="descname">norm</code><span class="sig-paren">(</span><em>/[u_wert, w_wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.norm" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Normalenvektor</p>
+<p><em>wert</em> : Wert eines Flächenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe von zwei Parameterwerten:</dt>
+<dd>Normalenvektor in einem bestimmten Punkt der Fläche</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>Normalenvektor im allgemeinen Punkt der Fläche</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.par_wert">
+<code class="descname">par_wert</code><span class="sig-paren">(</span><em>punkt</em>, <em>start1</em>, <em>start2</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.par_wert" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameterwerte eines Flächenpunktes</p>
+<p><em>start</em> : Startwert des nummerischen Verfahrens zur Berechnung
+der Flächenparameter</p>
+<p>Die Startwerte für die beiden Flächenparameter sind so genau wie
+möglich anzugeben; die Parameterwerte werden über die Minimierung
+des Abstandes, des gegebenen Punktes zu den Flächenpunkten gesucht;
+es wird <code class="xref py py-func docutils literal"><span class="pre">nsolve</span></code> verwendet (siehe SymPy-Dokumentation)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.pkt">
+<code class="descname">pkt</code><span class="sig-paren">(</span><em>/[u_wert, w_wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.pkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Punkt der Fläche</p>
+<p><em>wert</em> : Wert eines Flächenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe von zwei Parameterwerten:</dt>
+<dd>zugehöriger Punkt der Fläche</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>allgemeiner Punkt der Fläche</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Flächenschar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.tang_ebene">
+<code class="descname">tang_ebene</code><span class="sig-paren">(</span><em>/[u_wert, w_wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.tang_ebene" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Tangentialebene</p>
+<p><em>wert</em> : Wert eines Flächenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe von zwei Parameterwerten:</dt>
+<dd>Tangentialebene in einem bestimmten Punkt der Fläche</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>Tangentialebene im allgemeinen Punkt der Fläche</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.tang_vekt">
+<code class="descname">tang_vekt</code><span class="sig-paren">(</span><em>/[u_wert, w_wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.tang_vekt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Tangentenvektoren</p>
+<p><em>wert</em> : Wert eines Flächenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe von zwei Parameterwerten:</dt>
+<dd>Tangentenvektoren in einem bestimmten Punkt der Fläche</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>Tangentenvektoren im allgemeinen Punkt der Fläche</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.flaeche.Flaeche.weing_matrix">
+<code class="descname">weing_matrix</code><span class="sig-paren">(</span><em>/[u_wert, w_wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.flaeche.Flaeche.weing_matrix" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Weingarten-Matrix</p>
+<p><em>wert</em> : Wert eines Flächenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe von zwei Parameterwerten:</dt>
+<dd>Weingarten-Matrix in einem bestimmten Punkt der Fläche</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>Weingarten-Matrix im allgemeinen Punkt der Fläche</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner*</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">hilfe</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">h</span></code></p>
+<p><code class="docutils literal"><span class="pre">drei_bein</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">dreiBein</span></code></p>
+<p><code class="docutils literal"><span class="pre">fund_form1</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">fundForm1</span></code></p>
+<p><code class="docutils literal"><span class="pre">fund_form2</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">fundForm2</span></code></p>
+<p><code class="docutils literal"><span class="pre">gauß_krümm</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">gaußKrümm</span></code></p>
+<p><code class="docutils literal"><span class="pre">haupt_kr_radius</span> <span class="pre">:</span>&#160; <span class="pre">hauptKrRadius</span></code></p>
+<p><code class="docutils literal"><span class="pre">haupt_kr_richt</span>&#160; <span class="pre">:</span>&#160; <span class="pre">hauptKrRicht</span></code></p>
+<p><code class="docutils literal"><span class="pre">haupt_krümm</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">hauptKrümm</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">mitt_krümm</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">mittKrümm</span></code></p>
+<p><code class="docutils literal"><span class="pre">par_wert</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">parWert</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+<p><code class="docutils literal"><span class="pre">tang_ebene</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">tangEbene</span></code></p>
+<p><code class="docutils literal"><span class="pre">tang_vekt</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">tangVekt</span></code></p>
+<p><code class="docutils literal"><span class="pre">weing_matrix</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">weingMatrix</span></code></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Eigenschaften und Methoden</strong> für Flächen, die mittels
+<strong>impliziter Gleichung</strong> erzeugt wurden</p>
+<dl class="attribute">
+<dt>
+<code class="descname">hilfe</code></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">dim</code></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">fkt</code></dt>
+<dd><p>Funktionsgleichung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">imp</code></dt>
+<dd><p>Implizite Gleichung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">is_schar</code></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">pf</code></dt>
+<dd><p>Parameterform; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">prg</code></dt>
+<dd><p>Parametergleichung; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">sch_par</code></dt>
+<dd><p>Parameter einer Schar</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span></dt>
+<dd><p>Bildfläche bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">norm</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span></dt>
+<dd><p>Normalenvektor</p>
+<p><em>punkt</em> : Punkt der Fläche</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span></dt>
+<dd><p>Element einer Flächenschar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">tang_ebene</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span></dt>
+<dd><p>Tangentialebene</p>
+<p><em>punkt</em> : Punkt der Fläche</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">tang_vekt</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span></dt>
+<dd><p>Tangentenvektoren</p>
+<p><em>punkt</em> : Punkt der Fläche</p>
+<p>Rückgabe : Spannvektoren der Tangentialebene</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">hilfe</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">h</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+<p><code class="docutils literal"><span class="pre">tang_ebene</span> <span class="pre">:</span>&#160; <span class="pre">tangEbene</span></code></p>
+<p><code class="docutils literal"><span class="pre">tang_vekt</span>&#160; <span class="pre">:</span>&#160; <span class="pre">tangVekt</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="f2o.html"
+                        title="vorheriges Kapitel">Fläche2terOrdnung</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="matrix.html"
+                        title="nächstes Kapitel">Matrix</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/flaeche.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="matrix.html" title="Matrix"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="f2o.html" title="Fläche2terOrdnung"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr3.html" >Klassen im Raum</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

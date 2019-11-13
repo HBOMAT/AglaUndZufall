@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Hyperbolische Geometrie in agla &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="prev" title="Sphärische Geometrie in agla" href="sphaerische_geometrie.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="sphaerische_geometrie.html" title="Sphärische Geometrie in agla"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="hyperbolische-geometrie-in-agla">
+<span id="hyperbolische-geometrie"></span><h1>Hyperbolische Geometrie in agla<a class="headerlink" href="#hyperbolische-geometrie-in-agla" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Die <em>agla</em> -
+<a class="reference internal" href="klassen_hyp_geometrie.html#klassen-hyp-geometrie"><span class="std std-ref">Klassen der hyperbolischen Geometrie</span></a>
+tragen experimentellen Charakter</p>
+<p>Sie dienen dazu, hyperbolische Objekte rechnerisch zu erzeugen und
+grafisch darzustellen; die Rechenzeiten können relativ lang sein</p>
+<p>Es werden folgende Modelle unterstützt (die Bezeichnungen unterscheiden
+sich eventuell von den Bezeichnungen in anderen Quellen)</p>
+<ul>
+<li><p class="first"><strong>D</strong> : EinheitsKreisScheiben-Modell in der Ebene</p>
+</li>
+<li><p class="first"><strong>H</strong> : HyperboloidHalbSchalen-Modell im Raum</p>
+</li>
+<li><dl class="first docutils">
+<dt><strong>D3</strong>: <em>D</em>-Modell in der <em>xy</em> - Ebene des Raumes</dt>
+<dd><p class="first last">(zur gemeinsamen Betrachtung von <em>D</em>- und <em>H</em>-Modell vorgesehen)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>E</strong>:  Modell in der oberen Halbebene der Ebene</dt>
+<dd><p class="first last">(hier als Hilfsmodell benutzt)</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Die Berechnungen der Objekte erfolgen standardmäßig nummerisch (nicht
+exakt), die symbolische Berechnung kann mit einem Schlüsselwortparameter
+erreicht werden. Für ihre Methoden ist diese Möglichkeit nicht vorgesehen</p>
+<p>Außer Punkten sind aktuell keine hyperbolischen Objekte mit Parametern
+möglich</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Literatur</p>
+<blockquote>
+<div><p>Agricola, I. und Th. Friedrich. <em>Elementargeometrie</em>. Vieweg+Teubner, 2009.</p>
+<p>Rosebrock, S. <em>Geometrische Gruppentheorie</em>. Vieweg+Teubner, 2010.</p>
+<p>Bär, Ch. <em>Elementare Differentialgeometrie</em>. De Gruyter, 2010.</p>
+<p>Augat, C. <em>Über die Modelle der hyperbolischen Geometrie</em>, 1996.</p>
+<blockquote>
+<div><a class="reference external" href="http://augat.zsg-rottenburg.de/zula.pdf">http://augat.zsg-rottenburg.de/zula.pdf</a>
+(Zugriff 6.3.2019)</div></blockquote>
+<dl class="docutils">
+<dt>Zürn, U. <em>Vergleich der Dreiecksgeometrie in der Euklidischen und</em></dt>
+<dd><p class="first"><em>Hyperbolischen Ebene</em>.</p>
+<p class="last"><a class="reference external" href="http://math.uni-tuebingen.de/user/loose/studium/Diplomarbeiten/SA.Zuern.pdf">http://math.uni-tuebingen.de/user/loose/studium/Diplomarbeiten/SA.Zuern.pdf</a>
+(Zugriff 6.3.2019)</p>
+</dd>
+</dl>
+<p>Lind, D. <em>Nichteuklidische Geometrie</em>. Bergische Universität.</p>
+<blockquote>
+<div>ww2.math.uni-wuppertal.de/~lind/NE_Skript.pdf
+(Zugriff 6.3.2019)</div></blockquote>
+<p>Gekrümmte Welten</p>
+<blockquote>
+<div><p>Gruppenleiter:</p>
+<blockquote>
+<div>Jörg Kramer, Anna v. Pippich Humboldt-Universität zu Berlin</div></blockquote>
+<p>Teilnehmer:</p>
+<blockquote>
+<div>6 Schülerinnen und Schüler aus Berliner Schulen</div></blockquote>
+<p><a class="reference external" href="http://didaktik.mathematik.hu-berlin.de/files/2012_pippich.pdf">http://didaktik.mathematik.hu-berlin.de/files/2012_pippich.pdf</a>
+(Zugriff 26.1.2019)</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="sphaerische_geometrie.html"
+                        title="vorheriges Kapitel">Sphärische Geometrie in agla</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/hyperbolische_geometrie.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="sphaerische_geometrie.html" title="Sphärische Geometrie in agla"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

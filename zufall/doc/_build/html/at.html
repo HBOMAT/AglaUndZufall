@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AT - AlternativTest &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen" href="klassen.html" />
+    <link rel="next" title="KI - KonfidenzIntervall" href="ki.html" />
+    <link rel="prev" title="HB - HäufigkeitsBaum" href="hb.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="ki.html" title="KI - KonfidenzIntervall"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="hb.html" title="HB - HäufigkeitsBaum"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" accesskey="U">Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="at-alternativtest">
+<h1>AT - AlternativTest<a class="headerlink" href="#at-alternativtest" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest">
+<em class="property">class </em><code class="descclassname">zufall.lib.objekte.alternativ_test.</code><code class="descname">AlternativTest</code><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Alternativtest</p>
+<p><strong>Kurzname</strong> <strong>AT</strong></p>
+<p><strong>Erzeugung</strong> AT( <em>p0, p1, zahl1, zahl2</em> )</p>
+<blockquote>
+<div><em>p0</em>, <em>p1</em> : Wahrscheinlichkeiten bei <span class="math">\(H_0\)</span>, <span class="math">\(H_1\)</span></div></blockquote>
+<p><strong>Berechnung</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="37%" />
+<col width="26%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">gegeben:  zahl1</th>
+<th class="head">zahl2</th>
+<th class="head">berechnet</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>n</em></td>
+<td><em>k</em></td>
+<td><em>alpha</em>, <em>beta</em></td>
+</tr>
+<tr class="row-odd"><td><em>n</em></td>
+<td>ob. Grenze f. <em>alpha</em></td>
+<td><em>k</em>, <em>beta</em></td>
+</tr>
+<tr class="row-even"><td>ob. Grenze f. <em>alpha</em></td>
+<td>ob. Grenze f. <em>beta</em></td>
+<td><em>n</em>, <em>k</em></td>
+</tr>
+</tbody>
+</table>
+<p><em>n</em> :       Stichprobenumfang</p>
+<p><em>k</em> :      kritische Zahl</p>
+<p><em>alpha</em> :   Wahrscheinlichkeit für Fehler 1. Art</p>
+<p><em>beta</em> : ebenso, 2. Art</p>
+</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.ab_ber">
+<code class="descname">ab_ber</code><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.ab_ber" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ablehnungsbereich von <span class="math">\(H_0\)</span></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.ab_ber_">
+<code class="descname">ab_ber_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.ab_ber_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ablehnungsbereich von <span class="math">\(H_0\)</span>; zugehörige Methode</p>
+<p>Zusatz: <cite>g=ja</cite> Grafische Darstellung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.an_ber">
+<code class="descname">an_ber</code><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.an_ber" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Annahmebereich von <span class="math">\(H_0\)</span></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.an_ber_">
+<code class="descname">an_ber_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.an_ber_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Annahmebereich von <span class="math">\(H_0\)</span>; zugehörige Methode</p>
+<p>Zusatz: <cite>g=ja</cite> Grafische Darstellung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.alpha">
+<code class="descname">alpha</code><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.alpha" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wahrscheinlichkeit für Fehler 1. Art</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.begriffe">
+<code class="descname">begriffe</code><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.begriffe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Begriffe beim Testen von Hypothesen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.beta">
+<code class="descname">beta</code><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.beta" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wahrscheinlichkeit für Fehler 2. Art</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.bv0">
+<code class="descname">bv0</code><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.bv0" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>BinomialVerteilung bei <span class="math">\(H_0\)</span></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.bv1">
+<code class="descname">bv1</code><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.bv1" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>BinomialVerteilung bei <span class="math">\(H_1\)</span></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.h0">
+<code class="descname">h0</code><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.h0" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Nullhypothese</p>
+<p>Synonym: <strong>H0</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.h1">
+<code class="descname">h1</code><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.h1" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Alternativhypothese</p>
+<p>Synonym: <strong>H1</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.k">
+<code class="descname">k</code><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.k" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kritische Zahl</p>
+<p>Synonym: <strong>K</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.n">
+<code class="descname">n</code><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.n" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Stichprobenumfang</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.regel">
+<code class="descname">regel</code><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.regel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Entscheidungsregel</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.alternativ_test.AlternativTest.regel_">
+<code class="descname">regel_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.alternativ_test.AlternativTest.regel_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Entscheidungsregel; zugehörige Methode</p>
+<p>Zusatz:   <cite>g=ja</cite>   Grafische Darstellung</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">ab_ber</span>&#160; <span class="pre">:</span>&#160; <span class="pre">abBer</span></code></p>
+<p><code class="docutils literal"><span class="pre">an_ber</span>&#160; <span class="pre">:</span>&#160; <span class="pre">anBer</span></code></p>
+<p><code class="docutils literal"><span class="pre">regel_</span>&#160; <span class="pre">:</span>&#160; <span class="pre">Regel</span></code></p>
+</div></blockquote>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="hb.html"
+                        title="vorheriges Kapitel">HB - HäufigkeitsBaum</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="ki.html"
+                        title="nächstes Kapitel">KI - KonfidenzIntervall</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/at.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="ki.html" title="KI - KonfidenzIntervall"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="hb.html" title="HB - HäufigkeitsBaum"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" >Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

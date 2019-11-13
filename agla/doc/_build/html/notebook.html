@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Jupyter-Notebook &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="next" title="Nutzung von SymPy-Anweisungen" href="sympy_anweisungen.html" />
+    <link rel="prev" title="Zugriff auf Eigenschaften und Methoden" href="zugriff.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="sympy_anweisungen.html" title="Nutzung von SymPy-Anweisungen"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="zugriff.html" title="Zugriff auf Eigenschaften und Methoden"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="jupyter-notebook">
+<h1>Jupyter-Notebook<a class="headerlink" href="#jupyter-notebook" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p>Um in einem Notebook mit <em>agla</em> arbeiten zu können, muss zu Beginn
+der Sitzung die (Jupyter-) Anweisung</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="o">%</span><span class="n">run</span> <span class="n">agla</span><span class="o">/</span><span class="n">start</span>
+</pre></div>
+</div>
+<p class="last">in einer Codezelle ausgeführt werden</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><em>agla</em> benutzt als Bedienoberfläche <strong>Jupyter</strong>. Dieses wurde unter dem Namen
+<strong>IPython</strong> ursprünglich als Entwicklungsumgebung für Python-Anwendungen
+bereitgestellt, unterstützt aber inzwischen eine Vielzahl weiterer
+Programmiersprachen. Der Name setzt sich aus den Namen von drei Sprachen
+zusammen - <strong>Julia</strong> (eine Sprache, die sehr schnellen Code erzeugt),
+<strong>Python</strong> und <strong>R</strong> (inzwischen ein leistungsfähiges Statistikpaket)</p>
+<p>Ausschlaggebend für die Wahl dieser Plattform war das hier realisierte
+Notebook-Konzept, wie es auch in kommerziellen CAS (z.B. Mathematica)
+Verwendung findet</p>
+<p>Die Oberfläche ist in englischer Sprache verfasst, erfordert also das
+Verständnis beim Lesen</p>
+<p>Jupyter läuft als lokale Anwendung auf dem Standardbrowser des Computers, Kern
+(<em>kernel</em> ) ist der Python-Interpreter</p>
+<p>Ein Jupyer-Notebook ist in Zellen (<em>cells</em>) unterteilt, wobei drei Zelltypen
+auftreten, die hier interessieren:</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>Code</strong>-Zellen</dt>
+<dd><div class="first line-block">
+<div class="line">Kennzeichnung: <code class="docutils literal"><span class="pre">In</span> <span class="pre">[..]</span></code></div>
+</div>
+<div class="line-block">
+<div class="line">In diese Zellen werden Anweisungen in der benutzten Programmiersprache
+(hier Python) geschrieben, also auch Anweisungen zur Benutzung von
+<em>agla</em>; die Zellen sind analog zu einem Texteditor editierbar; beim
+Ausführen (<em>run</em>) einer solchen Zelle wird ihr Inhalt an den
+Python-Interpreter übergeben, der für seine Verarbeitung sorgt</div>
+</div>
+<div class="last line-block">
+<div class="line">Eine neue Zelle wird standardmäßig als Code-Zelle erzeugt; die
+Umwandlung einer Markdown-Zelle in eine Code-Zelle ist über das
+<code class="docutils literal"><span class="pre">Code</span></code>-Menü oder die Platzierung des Cursors im vorderen Zellbereich
+und Drücken der <code class="docutils literal"><span class="pre">Y</span></code>-Taste erreichbar</div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Ausgabe</strong>-Zellen</dt>
+<dd><div class="first line-block">
+<div class="line">Kennzeichnung: <code class="docutils literal"><span class="pre">Out</span> <span class="pre">[..]</span></code></div>
+</div>
+<div class="last line-block">
+<div class="line">Die Zellen entstehen, wenn nach der Auswertung einer Codezelle durch
+den Python-Interpreter eine Ausgabe erforderlich ist; in diese Zellen
+kann vom Benutzer nicht direkt geschrieben werden</div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Markdown</strong>-Zellen</dt>
+<dd><div class="first line-block">
+<div class="line">Ohne Kennzeichnung</div>
+</div>
+<div class="line-block">
+<div class="line">Die Zellen dienen vor allem zur Aufnahme von Texten, wobei diese mit
+Markdown- (eine einfache Auszeichnungssprache) oder HTML-Anweisungen
+formatiert werden können; sie können auch mathematische Formeln
+enthalten (Nutzung von <span class="math">\(\LaTeX\)</span>), außerdem können in solchen
+Zellen Grafiken und Bilder dargestellt sowie Audio- und
+Video-Dateien aktiv sein; beim Ausführen einer solchen Zelle werden
+eventuell vorhandene Formatierungs-Anweisungen ausgeführt und der
+    Inhalt auf dem Ausgabemedium präsentiert</div>
+</div>
+<div class="last line-block">
+<div class="line">Die Umwandlung einer Code-Zelle in eine Markdown-Zelle ist über das
+entsprechende Menü oder die Platzierung des Cursors im vorderen
+Zellbereich und Drücken der <code class="docutils literal"><span class="pre">M</span></code>-Taste erreichbar</div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Code- und Markdown-Zellen können beliebig erzeugt, gelöscht, kopiert,
+eingefügt und verschoben werden</p>
+<p>Es kann zu jeder dieser Zellen gesprungen werden, um sie zu verändern
+und/oder (erneut) auszuführen</p>
+<p>In einem Notebook kann in zwei Modi gearbeitet werden</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>Editier</strong>-Modus</dt>
+<dd><div class="first line-block">
+<div class="line">Einschalten mit <code class="docutils literal"><span class="pre">Enter</span></code>; oben rechts ist ein Stift dargestellt</div>
+</div>
+<div class="line-block">
+<div class="line">in diesem Modus kann der Inhalt der aktuellen Zelle editiert werden</div>
+</div>
+<div class="last line-block">
+<div class="line">das Editieren einer vorhandenen Markdown-Zelle kann auch mit einem
+Doppel-Klick eingeleitet werden</div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Kommando</strong>-Modus</dt>
+<dd><div class="first line-block">
+<div class="line">Einschalten mit <code class="docutils literal"><span class="pre">ESC</span></code>; der Stift rechts oben fehlt</div>
+</div>
+<div class="last line-block">
+<div class="line">in diesem Modus können Aktionen durchgeführt werden, die das Notebook
+als Ganzes betreffen (Zellen erzeugen, kopieren, löschen, verschieben,
+zwischen ihnen navigieren, Dateien öffnen und speichern usw.)</div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Wenn der Kern beschäftigt ist, ist der schwarze Kreis rechts oben gefüllt;
+auch in dieser Zeit kann editiert werden, die Ausführung weiterer Zellen
+kann aber erst erfolgen, wenn der Kern wieder frei ist</p>
+<p>Eine Datei, in die der Inhalt eines Notebooks gespeichert wird, erhält die
+Endung <code class="docutils literal"><span class="pre">.ipynb</span></code></p>
+<p>Für den Export eines Notebooks, z.B. in das <code class="docutils literal"><span class="pre">.html</span></code>- oder <code class="docutils literal"><span class="pre">.pdf</span></code>-Format,
+ist das separat zu nutzende Werkzeug <strong>nbconvert</strong> vorgesehen</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Die Bedienung eines Notebooks kann über das Menü und/oder über die Tastatur
+erfolgen</p>
+<p>Einige Tastatur-Kürzel zur Arbeit mit einem Jupyter-Notebook:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="65%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Kürzel</th>
+<th class="head">Bedeutung</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Umsch+Enter</span></code></td>
+<td>Zelle ausführen, zur nächsten gehen
+(diese wird eventuell neu angefügt)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Strg+Enter</span></code></td>
+<td>Zelle ausführen, in der Zelle verbleiben</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Strg+M</span> <span class="pre">B</span></code></td>
+<td>Zelle unterhalb einfügen</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Strg+M</span> <span class="pre">A</span></code></td>
+<td>Zelle oberhalb einfügen</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Strg+M</span> <span class="pre">DD</span></code></td>
+<td>Zelle löschen (<code class="docutils literal"><span class="pre">D</span></code> 2-mal drücken)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Esc</span> <span class="pre">X</span></code></td>
+<td>Zelle löschen</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Strg+Z</span></code></td>
+<td>Zurücksetzen beim Editieren</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Esc</span></code></td>
+<td>Einschalten des Kommando-Modus</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Enter</span></code></td>
+<td>Einschalten des Editier-Modus</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Strg+M</span> <span class="pre">H</span></code></td>
+<td>Anzeigen aller Tastatur-Kürzel</td>
+</tr>
+</tbody>
+</table>
+<p>Ausführen:  (z.B. <code class="docutils literal"><span class="pre">Strg-M</span> <span class="pre">B</span></code>)</p>
+<p><code class="docutils literal"><span class="pre">Strg</span></code>-Taste drücken, dann <code class="docutils literal"><span class="pre">M</span></code>-Taste, <code class="docutils literal"><span class="pre">Strg</span></code> loslassen, dann <code class="docutils literal"><span class="pre">B</span></code>-
+Taste</p>
+<p>Durch mehrmaliges Drücken der <code class="docutils literal"><span class="pre">B</span></code>-Taste können mehrere Zellen eingefügt
+werden</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="zugriff.html"
+                        title="vorheriges Kapitel">Zugriff auf Eigenschaften und Methoden</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="sympy_anweisungen.html"
+                        title="nächstes Kapitel">Nutzung von SymPy-Anweisungen</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/notebook.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="sympy_anweisungen.html" title="Nutzung von SymPy-Anweisungen"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="zugriff.html" title="Zugriff auf Eigenschaften und Methoden"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

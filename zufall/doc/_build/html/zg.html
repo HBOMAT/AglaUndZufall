@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ZG - ZufallsGröße &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen" href="klassen.html" />
+    <link rel="next" title="BK - BernoulliKette" href="bk.html" />
+    <link rel="prev" title="ZE - ZufallsExperiment" href="ze.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="bk.html" title="BK - BernoulliKette"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="ze.html" title="ZE - ZufallsExperiment"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" accesskey="U">Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="zg-zufallsgrosze">
+<h1>ZG - ZufallsGröße<a class="headerlink" href="#zg-zufallsgrosze" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse">
+<em class="property">class </em><code class="descclassname">zufall.lib.objekte.zufalls_groesse.</code><code class="descname">ZufallsGroesse</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Zufallsgröße</p>
+<p><strong>Kurzname</strong> <strong>ZG</strong></p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>ZG( <em>verteilung</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>verteilung</em> : <em>Liste/Tupel</em> | <em>dictionary</em></p>
+<blockquote>
+<div><p>Elemente der Liste sind 2-elementige Listen/Tupel, 
+die die Zuordnung Wert - Wahrscheinlichkeit bzw.  
+Häufigkeit/Zahl &gt; 0  beinhalten;
+In einem dictionary erfolgt die Zuordnung als
+zahl : zugeordnete_zahl</p>
+<p>Ist die Summe der zugeordneten Zahlen ungleich 1, wird  
+eine Wahrscheinlichkeitsverteilung durch Normieren 
+erzeugt</p>
+</div></blockquote>
+</div></blockquote>
+<p id="spiele"><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.erw">
+<code class="descname">erw</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.erw" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erwartungswert</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.erw_">
+<code class="descname">erw_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.erw_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erwartungswert; zugehörige Methode</p>
+<p>Zusatz: <cite>d=n</cite>   Darstellung dezimal mit <em>n</em> Kommastellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.graf_F">
+<code class="descname">graf_F</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.graf_F" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Graf der Verteilungsfunktion</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.hist">
+<code class="descname">hist</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.hist" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Histogramm</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.hist_">
+<code class="descname">hist_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.hist_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Histogramm; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>p=ja`</cite>  Polygonzug-Diagramm</p>
+<dl class="last docutils">
+<dt>Angabe einer Zufallsgröße / Datenreihe - Vergleich mit anderer</dt>
+<dd>Verteilung</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.hist_kum">
+<code class="descname">hist_kum</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.hist_kum" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Histogramm der kumulierten Wahrscheinlichkeiten</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.n_omega">
+<code class="descname">n_omega</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.n_omega" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Größe der Ergebnismenge</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.omega">
+<code class="descname">omega</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.omega" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ergebismenge</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.poly_zug">
+<code class="descname">poly_zug</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.poly_zug" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Polygonzug</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.poly_zug_">
+<code class="descname">poly_zug_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.poly_zug_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Polygonzug; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>hi=ja`</cite>  Histogramm</p>
+<p class="last">Angabe einer Zufallsgröße / Datenreihe - Vergleich mit anderer
+Verteilung</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.sigma">
+<code class="descname">sigma</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.sigma" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Standardabweichung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.sigma_">
+<code class="descname">sigma_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.sigma_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Standardabweichung; zugehörige Methode</p>
+<p>Zusatz: <cite>d=n</cite>  Darstellung dezimal mit <em>n</em> Kommastellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.var">
+<code class="descname">var</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.var" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Varianz</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.var_">
+<code class="descname">var_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.var_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Varianz; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>d=n</cite>  Darstellung dezimal mit <em>n</em> Kommastellen</p>
+<p class="last"><cite>b=ja</cite> Begriffe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.versuch">
+<code class="descname">versuch</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.versuch" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Versuch</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.vert">
+<code class="descname">vert</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.vert" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wahrscheinlichkeitsverteilung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.vert_">
+<code class="descname">vert_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.vert_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wahrscheinlichkeitsverteilung; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>p=ja</cite> Wahrscheinlichkeiten werden als Prozentwerte ausgegeben</p>
+<p><cite>d=n</cite> ebenso, dezimal mit <em>n</em> Kommastellen</p>
+<p><cite>s=ja</cite> Spaltenausgabe</p>
+<p><cite>sp=ja</cite> ebenso, Prozentwerte</p>
+<p class="last"><cite>sd=n</cite> ebenso, dezimal mit <em>n</em> Kommastellen</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.vert_kum">
+<code class="descname">vert_kum</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.vert_kum" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kumulierte Wahrscheinlichkeitsverteilung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.vert_kum_">
+<code class="descname">vert_kum_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.vert_kum_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kumulierte Wahrscheinlichkeitsverteilung; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>p=ja</cite> Wahrscheinlichkeiten werden als Prozentwerte ausgegeben</p>
+<p><cite>d=n</cite> ebenso, dezimal mit <em>n</em> Kommastellen</p>
+<p><cite>s=ja</cite> Spaltenausgabe</p>
+<p><cite>sp=ja</cite> ebenso, Prozentwerte</p>
+<p class="last"><cite>sd=ja</cite> ebenso, dezimal mit <em>n</em> Kommastellen</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.F">
+<code class="descname">F</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.F" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Verteilungsfunktion</p>
+<p><em>wert</em> : Zahl</p>
+<p>Zusatz: <cite>d=n</cite> - Darstellung dezimal mit <em>n</em> Kommastellen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.P">
+<code class="descname">P</code><span class="sig-paren">(</span><em>e, /[e1] </em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.P" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wahrscheinlichkeit eines Ereignisses</p>
+<p><em>e</em>: Ereignis</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><em>elem</em> |</div>
+<div class="line"><em>Liste/Tupel/Menge</em> von Elementen der Ergebnismenge |</div>
+<div class="line"><em>X = elem</em> |</div>
+<div class="line"><em>elem rel X</em> |</div>
+<div class="line"><em>X rel elem</em> |</div>
+<div class="line"><em>abs( X - elem ) rel zahl</em> |</div>
+<div class="line"><em>&#8216;elem rel X rel elem&#8217;</em>  (Zeichenkette)</div>
+<div class="line">der Bezeichner <em>X</em> ist zwingend</div>
+</div>
+</div></blockquote>
+<p><em>e1</em> :  <em>elem</em> | <em>Liste/Tupel/Menge</em> von Elementen der Ergebnismenge</p>
+<p><em>elem</em> :   Element der Ergebnismenge</p>
+<p><em>rel</em> : Relation  &lt; | &lt;= | &gt; | &gt;=</p>
+<p><em>zahl</em> : reelle Zahl</p>
+<p>Bei der Angabe von zwei Ereignissen wird die bedingte Wahrscheinlichkeit
+<span class="math">\(P( e | e_1 )\)</span> berechnet</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>p=ja</cite> - Darstellung als Prozentwert</p>
+<p><cite>d=n</cite> - Darstellung dezimal mit <em>n</em> Kommastellen</p>
+<p class="last"><cite>g=ja</cite> - grafische Darstellung</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.quantil">
+<code class="descname">quantil</code><span class="sig-paren">(</span><em>q</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.quantil" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Quantile</p>
+<p><em>q</em> : Zahl aus [0,1]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.relh2p">
+<code class="descname">relh2p</code><span class="sig-paren">(</span><em>e</em>, <em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.relh2p" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Stabilisierung der relativen Häufigkeiten</p>
+<p><em>e</em>: Ereignis</p>
+<blockquote>
+<div>Element | Liste | Tupel | Menge von Elementen der
+Ergebnismenge</div></blockquote>
+<p><em>m</em>: Anzahl Versuche</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.stich_probe">
+<code class="descname">stich_probe</code><span class="sig-paren">(</span><em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_groesse.ZufallsGroesse.stich_probe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Stichprobe</p>
+<p><em>m</em> : Umfang (Anzahl Versuche)</p>
+<p>Zusatz: <cite>d=ja</cite> - Rückgabe als DatenReihe</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">erw_</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Erw</span></code></p>
+<p><code class="docutils literal"><span class="pre">graf_F</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">grafF</span></code></p>
+<p><code class="docutils literal"><span class="pre">hist_</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Hist</span></code></p>
+<p><code class="docutils literal"><span class="pre">hist_kum</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">histKum</span></code></p>
+<p><code class="docutils literal"><span class="pre">n_omega</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">nOmega</span></code></p>
+<p><code class="docutils literal"><span class="pre">poly_zug</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">polyZug</span></code></p>
+<p><code class="docutils literal"><span class="pre">poly_zug_</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">PolyZug</span></code></p>
+<p><code class="docutils literal"><span class="pre">sigma_</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Sigma</span></code></p>
+<p><code class="docutils literal"><span class="pre">stich_probe</span> <span class="pre">:</span>&#160; <span class="pre">stichProbe</span></code></p>
+<p><code class="docutils literal"><span class="pre">var_</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Var</span></code></p>
+<p><code class="docutils literal"><span class="pre">vert_</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Vert</span></code></p>
+<p><code class="docutils literal"><span class="pre">vert_kum</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">vertKum</span></code></p>
+<p><code class="docutils literal"><span class="pre">vert_kum_</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">VertKum</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="ze.html"
+                        title="vorheriges Kapitel">ZE - ZufallsExperiment</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="bk.html"
+                        title="nächstes Kapitel">BK - BernoulliKette</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/zg.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="bk.html" title="BK - BernoulliKette"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="ze.html" title="ZE - ZufallsExperiment"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" >Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

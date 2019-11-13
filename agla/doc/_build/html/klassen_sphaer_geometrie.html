@@ -1,0 +1,753 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Klassen der sphärischen Geometrie &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Andere Klassen" href="andere_klassen.html" />
+    <link rel="next" title="Klassen der hyperbolischen Geometrie" href="klassen_hyp_geometrie.html" />
+    <link rel="prev" title="Gleichung" href="gleichung.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="klassen_hyp_geometrie.html" title="Klassen der hyperbolischen Geometrie"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="gleichung.html" title="Gleichung"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="andere_klassen.html" accesskey="U">Andere Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="klassen-der-spharischen-geometrie">
+<span id="klassen-sphaer-geometrie"></span><h1>Klassen der sphärischen Geometrie<a class="headerlink" href="#klassen-der-spharischen-geometrie" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Zu allgemeinen Angaben siehe <a class="reference internal" href="sphaerische_geometrie.html#sphaerische-geometrie"><span class="std std-ref">hier</span></a></p>
+<p>Es stehen folgende Klassen zur Verfügung:</p>
+<p><code class="docutils literal"><span class="pre">sPunkt</span></code> - <a class="reference internal" href="#spunkt"><span class="std std-ref">sphärischer Punkt</span></a></p>
+<p><code class="docutils literal"><span class="pre">sGerade</span></code> - <a class="reference internal" href="#sgerade"><span class="std std-ref">sphärische Gerade</span></a></p>
+<p><code class="docutils literal"><span class="pre">sStrecke</span></code> - <a class="reference internal" href="#sstrecke"><span class="std std-ref">sphärische Strecke</span></a></p>
+<p><code class="docutils literal"><span class="pre">sDreieck</span></code> - <a class="reference internal" href="#sdreieck"><span class="std std-ref">sphärisches Dreieck</span></a></p>
+<p><code class="docutils literal"><span class="pre">sKreis</span></code> - <a class="reference internal" href="#skreis"><span class="std std-ref">sphärischer Kreis</span></a></p>
+<p><code class="docutils literal"><span class="pre">sZweieck</span></code> - <a class="reference internal" href="#szweieck"><span class="std std-ref">sphärisches Zweieck</span></a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="spharischer-punkt">
+<span id="spunkt"></span><h2>sphärischer Punkt<a class="headerlink" href="#spharischer-punkt" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="class">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.sphaer_geometrie.</code><code class="descname">sPunkt</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>sPunkt  - sphärischer Punkt</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div><p>sPunkt ( <em>länge, breite</em> ) <em>oder</em></p>
+<p>sPunkt ( <em>punkt</em> ) <em>oder</em></p>
+<p>sPunkt ( <em>x, y, &#8216;+&#8217; | &#8216;-&#8216;</em> )</p>
+</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>länge</em> : sphärische Koordinate eines Punktes der Einheitssphäre; 
+<em>länge</em> <span class="math">\(\in [0, 2 \pi]\)</span></p>
+<p><em>breite</em> : ebenso; <em>breite</em> <span class="math">\(\in [-\pi/2, \pi/2]\)</span></p>
+<p><em>punkt</em> : Punkt der Einheitssphäre</p>
+<p><em>x, y</em> : Koordinaten eines Punktes der Einheitskreisscheibe; &#8216;+&#8217;, &#8216;-&#8216; - 
+zugehöriger Punkt der Einheitssphäre ober- oder unterhalb der <em>xy</em> - Ebene</p>
+</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt.abstand">
+<code class="descname">abstand</code><span class="sig-paren">(</span><em>spunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt.abstand" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Sphärischer Abstand zu einem anderen Punkt</p>
+<p><em>spunkt</em> : sphärischer Punkt</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildpunkt bei einer Abbildung</p>
+<p><em>abbildung</em> : Isometrie der Einheitssphäre</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt.breite">
+<code class="descname">breite</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt.breite" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Breite; sphärische Koordinate</p>
+<p>Synonyme: <strong>b</strong>, <strong>phi</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt.e">
+<code class="descname">e</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt.e" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidischer Punkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt.diam">
+<code class="descname">diam</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt.diam" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>diametral gegenüber liegender Punkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidische Dimension</p>
+<p>Synonym: <strong>gegen</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt.geo_koord">
+<code class="descname">geo_koord</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt.geo_koord" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Geografische Koordinaten Breite, Länge</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt.laenge">
+<code class="descname">laenge</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt.laenge" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Länge; sphärische Koordinate</p>
+<p>Synonyme: <strong>l</strong>, <strong>lamda</strong> <em>Schreibweise beachten</em></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt.polare">
+<code class="descname">polare</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt.polare" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Polare</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt.schnitt">
+<code class="descname">schnitt</code><span class="sig-paren">(</span><em>sgerade</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt.schnitt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Schnitt mit einer sphärischen Geraden</p>
+<p><em>sgerade</em> : sphärische Gerade</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Schar von spärischen Punkten</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sPunkt.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sPunkt.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameter einer Schar</p>
+</dd></dl>
+
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">geo_koord</span> <span class="pre">:</span>&#160; <span class="pre">geoKoord</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="spharische-gerade">
+<span id="sgerade"></span><h2>sphärische Gerade<a class="headerlink" href="#spharische-gerade" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="class">
+<dt id="agla.lib.objekte.sphaer_geometrie.sGerade">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.sphaer_geometrie.</code><code class="descname">sGerade</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sGerade" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>sGerade  - sphärische Gerade</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>sGerade ( <em>spunkt1, spunkt2</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><em>spunkt</em> : sphärischer Punkt</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sGerade.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sGerade.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sGerade.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sGerade.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildgerade bei einer Abbildung</p>
+<p><em>abbildung</em> : Isometrie der Einheitssphäre</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sGerade.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sGerade.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sGerade.normale">
+<code class="descname">normale</code><span class="sig-paren">(</span><em>spunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sGerade.normale" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Normale in einem Geradenpunkt</p>
+<p><em>spunkt</em> : Punkt der sphärischen Geraden</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sGerade.pkt">
+<code class="descname">pkt</code><span class="sig-paren">(</span><em>/[wert]</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sGerade.pkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Punkt der sphärischen Geraden</p>
+<p><em>wert</em> : Wert des Geradenparameters  aus <span class="math">\([0, 2 \pi]\)</span></p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Geradenpunkt, der zu diesem Wert gehört</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>allgemeiner Punkt der Geraden</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sGerade.pol">
+<code class="descname">pol</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sGerade.pol" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Zwei Pole</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sGerade.punkte">
+<code class="descname">punkte</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sGerade.punkte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erzeugende Punkte</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sGerade.schnitt">
+<code class="descname">schnitt</code><span class="sig-paren">(</span><em>sobjekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sGerade.schnitt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Schnitt mit einem anderen sphärischen Objekt</p>
+<p><em>sobjekt</em> : sphärische(r) Punkt, Gerade, Kreis</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sGerade.traeger">
+<code class="descname">traeger</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sGerade.traeger" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidischer Kreis</p>
+<p>Synonym: <strong>e</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sGerade.winkel">
+<code class="descname">winkel</code><span class="sig-paren">(</span><em>sgerade</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sGerade.winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Winkel der sphärischen Geraden mit einer anderen sphärischen
+Geraden im gemeinsamen Schnittpunkt</p>
+<p><em>sgerade</em> : sphärische Gerade</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="spharische-strecke">
+<span id="sstrecke"></span><h2>sphärische Strecke<a class="headerlink" href="#spharische-strecke" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="class">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.sphaer_geometrie.</code><code class="descname">sStrecke</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>sStrecke  - sphärische Strecke</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>sStrecke ( <em>spunkt1, spunkt2</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><em>spunkt</em> : sphärischer Punkt</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke.ber">
+<code class="descname">ber</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke.ber" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameterbereich</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildstrecke bei einer Abbildung</p>
+<p><em>abbildung</em> : Isometrie der Einheitssphäre</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke.gerade">
+<code class="descname">gerade</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke.gerade" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Sphärische Trägergerade</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke.laenge">
+<code class="descname">laenge</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke.laenge" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Länge</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke.mitte">
+<code class="descname">mitte</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke.mitte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Mittelpunkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke.mitt_senkr">
+<code class="descname">mitt_senkr</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke.mitt_senkr" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Mittelsenkrechte der Strecke</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke.normale">
+<code class="descname">normale</code><span class="sig-paren">(</span><em>spunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke.normale" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Normale in einem Streckenpunkt</p>
+<p><em>spunkt</em> : Punkt der sphärischen Strecke</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke.pkt">
+<code class="descname">pkt</code><span class="sig-paren">(</span><em>/[wert]</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke.pkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Punkt der spärischen Strecke</p>
+<p><em>wert</em> : Wert des Streckenparameters aus [0, 1]</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Streckenpunkt, der zu diesem Wert gehört</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>allgemeiner Punkt der Strecke</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke.punkte">
+<code class="descname">punkte</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke.punkte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erzeugende Punkte</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke.traeger">
+<code class="descname">traeger</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke.traeger" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidischer Trägerkreis</p>
+<p>Synonym: <strong>e</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke.winkel">
+<code class="descname">winkel</code><span class="sig-paren">(</span><em>sstrecke</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke.winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Winkel der sphärischen Strecke mit einer anderen sphärischen
+Strecke in einem gemeinsamen Endpunkt</p>
+<p><em>sstrecke</em> : sphärische Strecke</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sStrecke.wink_halb">
+<code class="descname">wink_halb</code><span class="sig-paren">(</span><em>sstrecke</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sStrecke.wink_halb" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Winkelhalbierende der sphärischen Strecke mit einer anderen
+sphärischen Strecke in einem gemeinsamen Endpunkt</p>
+<p><em>sstrecke</em> : sphärische Strecke</p>
+</dd></dl>
+
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">mitt_senkr</span> <span class="pre">:</span>&#160; <span class="pre">mittSenkr</span></code></p>
+<p><code class="docutils literal"><span class="pre">wink_halb</span>&#160; <span class="pre">:</span>&#160; <span class="pre">winkHalb</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="spharisches-dreieck">
+<span id="sdreieck"></span><h2>sphärisches Dreieck<a class="headerlink" href="#spharisches-dreieck" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="class">
+<dt id="agla.lib.objekte.sphaer_geometrie.sDreieck">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.sphaer_geometrie.</code><code class="descname">sDreieck</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sDreieck" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>sDreieck  - sphärisches Dreieck</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>sDreieck ( <em>spunkt1, spunkt2, spunkt3</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><em>spunkt</em> : sphärischer Punkt</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sDreieck.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sDreieck.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sDreieck.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sDreieck.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bilddreieck bei einer Abbildung</p>
+<p><em>abbildung</em> : Isometrie der Einheitssphäre</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sDreieck.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sDreieck.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sDreieck.flaeche">
+<code class="descname">flaeche</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sDreieck.flaeche" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Flächeninhalt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sDreieck.inkreis">
+<code class="descname">inkreis</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sDreieck.inkreis" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Inkreis</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sDreieck.laengen">
+<code class="descname">laengen</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sDreieck.laengen" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Seitenlängen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sDreieck.punkte">
+<code class="descname">punkte</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sDreieck.punkte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Eckpunkte</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sDreieck.seiten">
+<code class="descname">seiten</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sDreieck.seiten" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Seiten</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sDreieck.umfang">
+<code class="descname">umfang</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sDreieck.umfang" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umfang</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sDreieck.winkel">
+<code class="descname">winkel</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sDreieck.winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Innenwinkel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sDreieck.wink_summe">
+<code class="descname">wink_summe</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sDreieck.wink_summe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Innenwinkelsumme</p>
+</dd></dl>
+
+<p><strong>Synonymer Bezeichner</strong></p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">wink_summe</span> <span class="pre">:</span>&#160; <span class="pre">winkSumme</span></code></div></blockquote>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="spharischer-kreis">
+<span id="skreis"></span><h2>sphärischer Kreis<a class="headerlink" href="#spharischer-kreis" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="class">
+<dt id="agla.lib.objekte.sphaer_geometrie.sKreis">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.sphaer_geometrie.</code><code class="descname">sKreis</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sKreis" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>sKreis  - sphärischer Kreis</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>sKreis ( <em>mitte, radius</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>mitte</em> : sphärischer Punkt - Mittelpunkt</p>
+<p><em>radius</em> : Radius</p>
+</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sKreis.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sKreis.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sKreis.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sKreis.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildkreis bei einer Abbildung</p>
+<p><em>abbildung</em> : Isometrie der Einheitssphäre</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sKreis.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sKreis.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sKreis.flaeche">
+<code class="descname">flaeche</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sKreis.flaeche" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Flächeninhalt</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sKreis.flaeche_">
+<code class="descname">flaeche_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sKreis.flaeche_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Flächeninhalt, Dezimalausgabe</p>
+<p>Zusatz : <cite>f=1</cite> - Formel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sKreis.mitte">
+<code class="descname">mitte</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sKreis.mitte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Mittelpunkt</p>
+<p>Synonyme: <strong>M</strong>, <strong>m</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sKreis.radius">
+<code class="descname">radius</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sKreis.radius" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Radius</p>
+<p>Synonym: <strong>r</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sKreis.schnitt">
+<code class="descname">schnitt</code><span class="sig-paren">(</span><em>sgerade</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sKreis.schnitt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Schnitt mit einer sphärischen Geraden</p>
+<p><em>sgerade</em> : sphärische Gerade</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sKreis.traeger">
+<code class="descname">traeger</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sKreis.traeger" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidischer Träger-Kreis</p>
+<p>Synonym: <strong>e</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sKreis.umfang">
+<code class="descname">umfang</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sKreis.umfang" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umfang</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sKreis.umfang_">
+<code class="descname">umfang_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sKreis.umfang_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umfang, Dezimalausgabe</p>
+<p>Zusatz : <cite>f=1</cite> - Formel</p>
+</dd></dl>
+
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">fläche_</span> <span class="pre">:</span>&#160; <span class="pre">Fläche</span></code></p>
+<p><code class="docutils literal"><span class="pre">umfang_</span> <span class="pre">:</span>&#160; <span class="pre">Umfang</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="spharisches-zweieck">
+<span id="szweieck"></span><h2>sphärisches Zweieck<a class="headerlink" href="#spharisches-zweieck" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="class">
+<dt id="agla.lib.objekte.sphaer_geometrie.sZweieck">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.sphaer_geometrie.</code><code class="descname">sZweieck</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sZweieck" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>sZweieck  - sphärisches Zweieck</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>sZweieck ( <em>ecke, spunkt1, spunkt2</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>ecke</em> : sphärischer Punkt - eine Ecke</p>
+<p><em>spunkt</em> : sphärischer Punkt - ein Punkt je Seite</p>
+</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sZweieck.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sZweieck.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.sphaer_geometrie.sZweieck.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sZweieck.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildzweieck bei einer Abbildung</p>
+<p><em>abbildung</em> : Isometrie der Einheitssphäre</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sZweieck.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sZweieck.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sZweieck.flaeche">
+<code class="descname">flaeche</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sZweieck.flaeche" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Flächeninhalt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sZweieck.punkte">
+<code class="descname">punkte</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sZweieck.punkte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ecke und ein Punkt je Seite</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sZweieck.seiten">
+<code class="descname">seiten</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sZweieck.seiten" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Seiten</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sZweieck.umfang">
+<code class="descname">umfang</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sZweieck.umfang" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umfang</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.sphaer_geometrie.sZweieck.winkel">
+<code class="descname">winkel</code><a class="headerlink" href="#agla.lib.objekte.sphaer_geometrie.sZweieck.winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Innenwinkel</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Inhalt</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Klassen der sphärischen Geometrie</a><ul>
+<li><a class="reference internal" href="#spharischer-punkt">sphärischer Punkt</a></li>
+<li><a class="reference internal" href="#spharische-gerade">sphärische Gerade</a></li>
+<li><a class="reference internal" href="#spharische-strecke">sphärische Strecke</a></li>
+<li><a class="reference internal" href="#spharisches-dreieck">sphärisches Dreieck</a></li>
+<li><a class="reference internal" href="#spharischer-kreis">sphärischer Kreis</a></li>
+<li><a class="reference internal" href="#spharisches-zweieck">sphärisches Zweieck</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="gleichung.html"
+                        title="vorheriges Kapitel">Gleichung</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="klassen_hyp_geometrie.html"
+                        title="nächstes Kapitel">Klassen der hyperbolischen Geometrie</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/klassen_sphaer_geometrie.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="klassen_hyp_geometrie.html" title="Klassen der hyperbolischen Geometrie"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="gleichung.html" title="Gleichung"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="andere_klassen.html" >Andere Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

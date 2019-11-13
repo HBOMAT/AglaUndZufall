@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Nutzung von SymPy-Anweisungen &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="next" title="Kleiner Python-Exkurs" href="python_exkurs.html" />
+    <link rel="prev" title="Jupyter-Notebook" href="notebook.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="python_exkurs.html" title="Kleiner Python-Exkurs"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="notebook.html" title="Jupyter-Notebook"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nutzung-von-sympy-anweisungen">
+<h1>Nutzung von SymPy-Anweisungen<a class="headerlink" href="#nutzung-von-sympy-anweisungen" title="Link zu dieser Überschrift">¶</a></h1>
+<p>In <em>agla</em> sind folgende Elemente von SymPy integriert:</p>
+<p><code class="docutils literal"><span class="pre">Symbol</span></code>, <code class="docutils literal"><span class="pre">symbols</span></code> - zur Definition von (freien) Bezeichnern</p>
+<p><code class="docutils literal"><span class="pre">Rational</span></code> - zur Eingaber von rationalen Zahlen</p>
+<p><code class="docutils literal"><span class="pre">solve</span></code>, <code class="docutils literal"><span class="pre">solveset</span></code>, <code class="docutils literal"><span class="pre">expand</span></code>, <code class="docutils literal"><span class="pre">collect</span></code>, <code class="docutils literal"><span class="pre">factor</span></code>, <code class="docutils literal"><span class="pre">simplify</span></code>,
+<code class="docutils literal"><span class="pre">nsimplify</span></code>, <code class="docutils literal"><span class="pre">sympify</span></code></p>
+<p><code class="docutils literal"><span class="pre">N</span></code> - zur Umwandlung in Dezimalzahlen; der Wert ist überschreibbar</p>
+<p><code class="docutils literal"><span class="pre">pi</span></code> - die Kreiszahl</p>
+<p><code class="docutils literal"><span class="pre">E</span></code> - die Basis der natürlichen Logarithmen <span class="math">\(e\)</span>
+(der Wert ist überschreibbar)</p>
+<p><code class="docutils literal"><span class="pre">I</span></code> - die imaginäre Einheit <span class="math">\(i\)</span> (der Wert ist überschreibbar)</p>
+<p>Sollen weitere Elemente benutzt werden, sind diese zu importieren, z.B.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">Piecewise</span>
+</pre></div>
+</div>
+<p>(eventuell ist der Pfad im  SymPy-Verzeichnis-Baum anzugeben)</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="notebook.html"
+                        title="vorheriges Kapitel">Jupyter-Notebook</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="python_exkurs.html"
+                        title="nächstes Kapitel">Kleiner Python-Exkurs</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sympy_anweisungen.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="python_exkurs.html" title="Kleiner Python-Exkurs"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="notebook.html" title="Jupyter-Notebook"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

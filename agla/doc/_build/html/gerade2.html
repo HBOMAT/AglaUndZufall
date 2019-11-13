@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gerade &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen in der Ebene" href="klassenr2.html" />
+    <link rel="next" title="Parallelogramm" href="parallelogramm2.html" />
+    <link rel="prev" title="Vektor" href="vektor2.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="parallelogramm2.html" title="Parallelogramm"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="vektor2.html" title="Vektor"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" accesskey="U">Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="gerade">
+<h1>Gerade<a class="headerlink" href="#gerade" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.gerade.Gerade">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.gerade.</code><code class="descname">Gerade</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gerade im Raum und in der Ebene</p>
+<p><strong>Erzeugung im Raum und in der Ebene</strong></p>
+<blockquote>
+<div><p>Gerade ( <em>stütz, richt /[, par ]</em> )</p>
+<p><em>oder</em></p>
+<p>Gerade ( <em>schar /[, par ]</em> )</p>
+</div></blockquote>
+<p><strong>Erzeugung nur in der Ebene</strong></p>
+<blockquote>
+<div><p>Gerade ( <em>m, n</em> )</p>
+<p><em>oder</em></p>
+<p>Gerade ( <em>a, b, c</em> )</p>
+</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>stütz</em> :    Stützvektor</p>
+<p><em>richt</em> :    Richtungsvektor</p>
+<p><em>par</em> :      Geradenparameter; <em>t</em> falls nicht angegeben</p>
+<dl class="docutils">
+<dt><em>schar</em>:    </dt>
+<dd><div class="first last line-block">
+<div class="line">Punkteschar, die eine Gerade bildet</div>
+<div class="line"><em>par</em> muss bei mehr als einem Parameter in <em>schar</em> 
+angegeben werden   </div>
+</div>
+</dd>
+</dl>
+<p><em>m, n</em> :     Koeffizienten der Gleichung  <em>y=mx+n</em></p>
+<p><em>a, b, c</em> :     Koeffizienten der Gleichung  <em>ax+by+c=0</em></p>
+</div></blockquote>
+<p><strong>Vordefinierte Geraden</strong></p>
+<p><code class="docutils literal"><span class="pre">x_achse</span></code> : <em>x</em> -Achse im Raum</p>
+<p><code class="docutils literal"><span class="pre">y_achse</span></code> : ebenso, <em>y</em> -Achse</p>
+<p><code class="docutils literal"><span class="pre">z_achse</span></code> : ebenso, <em>z</em> -Achse</p>
+<p><code class="docutils literal"><span class="pre">x_achse2</span></code> : <em>x</em> -Achse in der Ebene</p>
+<p><code class="docutils literal"><span class="pre">y_achse2</span></code> : ebenso, <em>y</em> -Achse</p>
+<p><strong>Eigenschaften und Methoden</strong> für Geraden <strong>in der Ebene</strong></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.aagl">
+<code class="descname">aagl</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.aagl" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Achsenabschnittsgleichung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.anstieg">
+<code class="descname">anstieg</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.anstieg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Anstieg</p>
+<p>Synonym: <strong>m</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.fkt">
+<code class="descname">fkt</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.fkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Funktionsgleichung; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.gerade.Gerade.fkt_">
+<code class="descname">fkt_</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.fkt_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Auswertung der Fuktionsgleichung in einem Punkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.hnf">
+<code class="descname">hnf</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.hnf" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Hessesche Normalenform; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.koord">
+<code class="descname">koord</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.koord" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Koordinatengleichung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.gerade.Gerade.koord_">
+<code class="descname">koord_</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.koord_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Auswertung der Koordinatengleichung in einem Punkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.nf">
+<code class="descname">nf</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.nf" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gleichung in Normalenform; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.gerade.Gerade.nf_">
+<code class="descname">nf_</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.nf_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Auswertung der Normalenform der Gleichung in einem Punkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.norm">
+<code class="descname">norm</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.norm" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Normalenvektor</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.par">
+<code class="descname">par</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameter der Geraden</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.prg">
+<code class="descname">prg</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.prg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parametergleichung; nur zur Ausgabe</p>
+<p>Synonym: <strong>gleich</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.gerade.Gerade.prg_">
+<code class="descname">prg_</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.prg_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Auswertung der Parametergleichung in einem Punkt</p>
+<p>Synonym: <strong>gleich_</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.punkte">
+<code class="descname">punkte</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.punkte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Zwei Geradenpunkte</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.gerade.Gerade.punkte_">
+<code class="descname">punkte_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.punkte_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>zu punkte zugehörig; Erläuterung der Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.richt">
+<code class="descname">richt</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.richt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Richtungsvektor</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Scharparameter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.stuetz">
+<code class="descname">stuetz</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.stuetz" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Stützvektor</p>
+<p>Synonym: <strong>auf_pkt</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.gerade.Gerade.y_abschn">
+<code class="descname">y_abschn</code><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.y_abschn" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Abschnitt auf der <em>y</em> -Achse</p>
+<p>Synonym: <strong>n</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.gerade.Gerade.abstand">
+<code class="descname">abstand</code><span class="sig-paren">(</span><em>objekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.abstand" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Abstand der Geraden zu einem anderen Objekt</p>
+<p><em>objekt</em> : Punkt, Gerade</p>
+<p>Zusatz : <cite>d=n</cite> - Dezimaldarstellung mit <em>n</em> Nachkomma-/Stellen</p>
+<p>Rückgabe : 0, wenn die Gerade <em>objekt</em> schneidet</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.gerade.Gerade.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildgerade bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung der Ebene</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.gerade.Gerade.normale">
+<code class="descname">normale</code><span class="sig-paren">(</span><em>/[ punkt | wert ]</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.normale" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Synonym: <strong>senkrechte</strong></p>
+<p>Normale in einem Geradenpunkt</p>
+<p><em>punkt</em> : Punkt der Geraden</p>
+<p><em>wert</em> : Wert des Geradenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Punktes oder Parameterwertes:</dt>
+<dd>Normale (im zugehörigen) Geradenpunkt</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>Normale im allgemeinen Geradenpunkt</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.gerade.Gerade.parallele">
+<code class="descname">parallele</code><span class="sig-paren">(</span><em>punkt | abstand</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.parallele" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parallele Gerade durch einen gegebenen Punkt oder in einem
+gegebenen Abstand</p>
+<p><em>punkt</em> :      Punkt</p>
+<p><em>abstand</em> :    Zahl; das Vorzeichen bestimmt die Lage</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.gerade.Gerade.pkt">
+<code class="descname">pkt</code><span class="sig-paren">(</span><em>/[wert]</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.pkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Punkt der Geraden</p>
+<p><em>wert</em> : Wert des Geradenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Geradenenpunkt, der zu diesem Wert gehört</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>allgemeiner Punkt der Geraden</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.gerade.Gerade.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Geradenschar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.gerade.Gerade.schnitt">
+<code class="descname">schnitt</code><span class="sig-paren">(</span><em>objekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.schnitt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Schnittmenge der Geraden mit einem anderen Objekt</p>
+<p><em>objekt</em> : Punkt, Gerade, Strecke, Kreis</p>
+<p>Zusatz: <cite>l=1</cite> - Lageinformationen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.gerade.Gerade.winkel">
+<code class="descname">winkel</code><span class="sig-paren">(</span><em>objekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.gerade.Gerade.winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Winkel der Geraden mit einem anderen Objekt (in Grad)</p>
+<p><em>objekt</em> : Vektor, Gerade</p>
+<p>Zusatz : <cite>d=n</cite> - Dezimaldarstellung mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p><strong>Synonyme Bezeichner in der Ebene</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">hilfe</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">h</span></code></p>
+<p><code class="docutils literal"><span class="pre">auf_pkt</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">aufPkt</span></code></p>
+<p><code class="docutils literal"><span class="pre">gleich_</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Gleich</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">fkt_</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Fkt</span></code></p>
+<p><code class="docutils literal"><span class="pre">koord_</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Koord</span></code></p>
+<p><code class="docutils literal"><span class="pre">nf_</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Nf</span></code></p>
+<p><code class="docutils literal"><span class="pre">prg_</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Prg</span></code></p>
+<p><code class="docutils literal"><span class="pre">punkte_</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Punkte</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+<p><code class="docutils literal"><span class="pre">y_abschn</span>&#160; <span class="pre">:</span>&#160; <span class="pre">yAbschn</span></code></p>
+</div></blockquote>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="vektor2.html"
+                        title="vorheriges Kapitel">Vektor</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="parallelogramm2.html"
+                        title="nächstes Kapitel">Parallelogramm</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gerade2.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="parallelogramm2.html" title="Parallelogramm"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="vektor2.html" title="Vektor"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" >Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

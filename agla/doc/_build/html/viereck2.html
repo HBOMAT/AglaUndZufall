@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Viereck &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen in der Ebene" href="klassenr2.html" />
+    <link rel="next" title="Kreis" href="kreis2.html" />
+    <link rel="prev" title="Dreieck" href="dreieck2.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="kreis2.html" title="Kreis"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="dreieck2.html" title="Dreieck"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" accesskey="U">Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="viereck">
+<h1>Viereck<a class="headerlink" href="#viereck" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.viereck.Viereck">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.viereck.</code><code class="descname">Viereck</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Viereck im Raum und in der Ebene</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div><p>Viereck ( <em>punkt1, punkt2, punkt3, punkt4</em> )</p>
+<p><em>oder</em></p>
+<p>Viereck ( /[ stütz, ] spann1, spann2 )</p>
+<blockquote>
+<div>(Erzeugung wie Parallelogramm)</div></blockquote>
+</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>punkt</em> : Eckpunkt</p>
+<p><em>stütz</em> : Stützvektor; bei Fehlen Nullvektor</p>
+<p><em>spann</em> : Spannvektor</p>
+</div></blockquote>
+<p>Ist  bei der Erzeugung über vier Punkte als letztes Argument <cite>kontrolle=nein</cite> 
+angegeben, wird nicht geprüft, ob die Reihenfolge der Punkte korrekt ist</p>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.dreiecke">
+<code class="descname">dreiecke</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.dreiecke" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Zerlegungsdreiecke</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.ebene">
+<code class="descname">ebene</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.ebene" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Trägerebene; nur im Raum</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.flaeche">
+<code class="descname">flaeche</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.flaeche" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Flächeninhalt</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.viereck.Viereck.flaeche_">
+<code class="descname">flaeche_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.flaeche_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Flächeninhalt; Dezimaldarstellung</p>
+<p>Zusatz :</p>
+<blockquote>
+<div><p><cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+<p><cite>f=1</cite> - Formeln</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.form">
+<code class="descname">form</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.form" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Form</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.in_figur">
+<code class="descname">in_figur</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.in_figur" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konvertierung in Figur; nur in der Ebene</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.in_koerper">
+<code class="descname">in_koerper</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.in_koerper" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konvertierung in Körper; nur im Raum</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.is_konvex">
+<code class="descname">is_konvex</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.is_konvex" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Konvexität</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.is_pargramm">
+<code class="descname">is_pargramm</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.is_pargramm" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Parallelogramm</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.laengen">
+<code class="descname">laengen</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.laengen" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Seitenlängen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.viereck.Viereck.laengen_">
+<code class="descname">laengen_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.laengen_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Seitenlängen; Dezimaldarstellung</p>
+<p>Zusatz : <cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.punkte">
+<code class="descname">punkte</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.punkte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Eckpunkte</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.viereck.Viereck.punkte_">
+<code class="descname">punkte_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.punkte_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>zu punkte zugehörig; Erläuterung der Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Scharparameter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.schwer_pkt">
+<code class="descname">schwer_pkt</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.schwer_pkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Schwerpunkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.seiten">
+<code class="descname">seiten</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.seiten" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Seiten</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.viereck.Viereck.seiten_">
+<code class="descname">seiten_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.seiten_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>zu seiten zugehörig; Erläuterung der Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.umfang">
+<code class="descname">umfang</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.umfang" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umfang</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.viereck.Viereck.umfang_">
+<code class="descname">umfang_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.umfang_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umfang; Dezimaldarstellung</p>
+<p>Zusatz : <cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.viereck.Viereck.winkel">
+<code class="descname">winkel</code><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Innenwinkel</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.viereck.Viereck.winkel_">
+<code class="descname">winkel_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.winkel_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Innenwinkel; Dezimaldarstellung</p>
+<p>Zusatz : <cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.viereck.Viereck.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildviereck bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.viereck.Viereck.pkt">
+<code class="descname">pkt</code><span class="sig-paren">(</span><em>/[wert]</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.pkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Punkt des Vierecks</p>
+<dl class="docutils">
+<dt><em>wert</em> :</dt>
+<dd>Wert des Viereckparameters (Parameter ist die Weglänge vom
+ersten Punkt aus, die Gesamtlänge der Seiten wird auf 1 gesetzt -
+es ergeben sich Parameterwerte aus dem Intervall [0, 1])</dd>
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Viereckpunkt, der zu diesem Wert gehört</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>allgemeiner Punkt des Vierecks</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.viereck.Viereck.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>/[wert]</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Viereckschar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.viereck.Viereck.schnitt">
+<code class="descname">schnitt</code><span class="sig-paren">(</span><em>objekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.viereck.Viereck.schnitt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Schnittmenge des Vierecks mit einem anderen Objekt</p>
+<p><em>objekt</em> im Raum : Punkt, Gerade</p>
+<p><em>objekt</em> in der Ebene : Punkt</p>
+<p>Zusatz: <cite>l=1</cite> - Lageinformationen</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">fläche_</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Fläche</span></code></p>
+<p><code class="docutils literal"><span class="pre">in_figur</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">inFigur</span></code></p>
+<p><code class="docutils literal"><span class="pre">in_körper</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">inKörper</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_pargramm</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">isPargramm</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">längen_</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Längen</span></code></p>
+<p><code class="docutils literal"><span class="pre">punkte_</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Punkte</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+<p><code class="docutils literal"><span class="pre">schwer_pkt</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schwerPkt</span></code></p>
+<p><code class="docutils literal"><span class="pre">seiten_</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Seiten</span></code></p>
+<p><code class="docutils literal"><span class="pre">umfang_</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Umfang</span></code></p>
+<p><code class="docutils literal"><span class="pre">winkel_</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Winkel</span></code></p>
+</div></blockquote>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="dreieck2.html"
+                        title="vorheriges Kapitel">Dreieck</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="kreis2.html"
+                        title="nächstes Kapitel">Kreis</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/viereck2.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="kreis2.html" title="Kreis"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="dreieck2.html" title="Dreieck"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" >Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

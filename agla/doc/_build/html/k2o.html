@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Kurve2terOrdnung &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen in der Ebene" href="klassenr2.html" />
+    <link rel="next" title="Kurve" href="kurve2.html" />
+    <link rel="prev" title="Parabel" href="parabel.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="kurve2.html" title="Kurve"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="parabel.html" title="Parabel"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" accesskey="U">Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="kurve2terordnung">
+<h1>Kurve2terOrdnung<a class="headerlink" href="#kurve2terordnung" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.k2o.Kurve2terOrdnung">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.k2o.</code><code class="descname">Kurve2terOrdnung</code><a class="headerlink" href="#agla.lib.objekte.k2o.Kurve2terOrdnung" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kurve 2. Ordnung in der Ebene</p>
+<p><strong>Kurzform</strong></p>
+<blockquote>
+<div><strong>K2O</strong></div></blockquote>
+<p><strong>Synonym</strong></p>
+<blockquote>
+<div><strong>KegelSchnitt</strong></div></blockquote>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div><p>Kurve2terOrdnung ( <em>gleichung</em> )</p>
+<p><em>oder</em></p>
+<p>K2O ( <em>gleichung</em> )</p>
+</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><em>gleichung</em> : Gleichung der Kurve 2. Ordnung in den Variablen <em>x, y</em> als 
+Zeichenkette &#8216;<em>F(x, y) = 0</em> &#8216; oder als Ausdruck <em>F(x, y)</em>  (rechte Seite 
+wird mit 0 angenommen); die Variablennamen sind zwingend</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.k2o.Kurve2terOrdnung.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.k2o.Kurve2terOrdnung.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.k2o.Kurve2terOrdnung.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.k2o.Kurve2terOrdnung.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.k2o.Kurve2terOrdnung.geich">
+<code class="descname">geich</code><a class="headerlink" href="#agla.lib.objekte.k2o.Kurve2terOrdnung.geich" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gleichung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.k2o.Kurve2terOrdnung.gleich_">
+<code class="descname">gleich_</code><span class="sig-paren">(</span><em>x-wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.k2o.Kurve2terOrdnung.gleich_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ermittlung von Punkten der Kurve anhand eines <em>x</em>-Wertes</p>
+<p><em>x-wert</em> : <em>x</em> - Wert</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.k2o.Kurve2terOrdnung.gleich_m">
+<code class="descname">gleich_m</code><a class="headerlink" href="#agla.lib.objekte.k2o.Kurve2terOrdnung.gleich_m" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gleichung in Matrixform; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.k2o.Kurve2terOrdnung.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.k2o.Kurve2terOrdnung.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.k2o.Kurve2terOrdnung.M">
+<code class="descname">M</code><a class="headerlink" href="#agla.lib.objekte.k2o.Kurve2terOrdnung.M" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Matrix der Gleichung</p>
+<p>Synonym: <strong>m</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.k2o.Kurve2terOrdnung.MM">
+<code class="descname">MM</code><a class="headerlink" href="#agla.lib.objekte.k2o.Kurve2terOrdnung.MM" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erweiterte Matrix der Gleichung</p>
+<p>Synonym: <strong>mm</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.k2o.Kurve2terOrdnung.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.k2o.Kurve2terOrdnung.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Scharparameter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.k2o.Kurve2terOrdnung.typ">
+<code class="descname">typ</code><a class="headerlink" href="#agla.lib.objekte.k2o.Kurve2terOrdnung.typ" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kurventyp</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.k2o.Kurve2terOrdnung.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.k2o.Kurve2terOrdnung.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildkurve bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.k2o.Kurve2terOrdnung.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.k2o.Kurve2terOrdnung.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer K2O-Schar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">gleich_</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Gleich</span></code></p>
+<p><code class="docutils literal"><span class="pre">gleich_m</span>&#160; <span class="pre">:</span>&#160; <span class="pre">gleichM</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="parabel.html"
+                        title="vorheriges Kapitel">Parabel</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="kurve2.html"
+                        title="nächstes Kapitel">Kurve</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/k2o.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="kurve2.html" title="Kurve"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="parabel.html" title="Parabel"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" >Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

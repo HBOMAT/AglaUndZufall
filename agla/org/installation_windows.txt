@@ -1,0 +1,96 @@
+
+
+Installation von Python und seinen Paketen auf Windows-Computern
+
+(Beschreibung der Installation auf dem Computer des Entwicklers der 
+Pakete agla und zufall)
+
+
+Es wird die Anaconda - Distribution benutzt
+
+1. Herunterladen des Installers 
+
+	Anaconda3-4.2.0-Windows-x86.exe
+
+   von der Anaconda installer archive - Seite  
+   
+        https://repo.continuum.io/archive/
+
+   und Ausführen der Datei; Installation des vollen Paketes
+
+   Im Ordner Anaconda3 ist Python mit einer Vielzahl von Paketen (sie 
+   befinden sich im Ordner Lib/site-packages) enthalten
+
+   Es wird lediglich das erzeugte root- oder base-environment benötigt
+
+2. Verwaltung der Pakete im Anaconda Prompt - Fenster
+
+       (Anaconda Prompt ist z.B. über die Windows-Taste erreichbar)
+
+   Die Verwaltung erfolgt mit dem Programm conda 
+
+   a)  Kontrolle der bereits installierten Pakete
+       
+       conda list   	/ Auflistung der verfügbaren Pakete
+
+             Folgende Pakete sind nach dem Ausführen des Installers 
+             installiert und erscheinen in der Auflistung
+
+       	     Python 3.5.2
+             jupyter 1.0.0
+             ipython 5.1.0          
+             matpotlib 1.5.1  / enthält numpy 1.11.1
+             scipy 0.18.1
+             sympy 1.0
+			
+    b)  Installation weiterer Pakete
+
+             conda install -c anaconda pyqt=4.11.4  
+		
+             conda install -c menpo mayavi=4.5.0     (nur in agla gebraucht)
+
+             conda install statsmodels=0.6.1         (nur in zufall gebraucht)	
+		
+3. Starten / Beenden des Notebook Servers im Anaconda Prompt - Fenster
+
+   Der Ordner, der zur Aufnahme der Notebook- (.ipynb)-Dateien vorgesehen 
+   ist, habe den Namen c:\users\user1\notebooks
+
+   Durch 
+
+        cd c:\users\user1\notebooks 
+
+        jupyter notebook
+
+    oder
+
+        jupyter notebook --notebook-dir='C:\\users\\user1\\notebooks'
+
+   wird der Notebook-Server hochgefahren, durch Strg+C (2-mal) wird er 
+   ordnungsgemäß beendet (Abfrage mit j beantworten)
+
+   Der Server muss am Beginn jeder Sitzung hochgefahren sein / werden
+
+4. Die Dateien mit den Paketen agla und zufall werden in einem eigenen
+   Ordner, z.B. mit dem Namen c:\users\user1\agla+zufall gespeichert
+
+5. In den Ordner .ipython\profile_default\startup wird eine Python-Datei mit 
+   dem Namen start.py und dem Inhalt (Python-Code)
+
+       import os
+       filepath = 'C:/users/user1/agla+zufall'   # Ordner mit den Paketen
+       os.chdir(filepath)
+
+   aufgenommen. Dadurch sind die beiden Pakete bei jedem Start des Notebook- 
+   Servers verfügbar; innerhalb eines Notebooks genügt die Jupyter-Anweisung
+ 
+       %run agla/start         bzw.          %run zufall/start
+
+   um mit einem der Pakete arbeiten zu können
+
+6. Es wird empfohlen, Kopien aller von agla und zufall mitgelieferten Notebook-ipynb-
+   Dateien in den eigenen Notebook-Ordner (hier c:\users\user1\notebooks)  
+   aufzunehmen, um sie bequem als Vorlagen benutzen zu können
+
+
+

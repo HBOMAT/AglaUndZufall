@@ -1,0 +1,699 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Funktionen &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="next" title="Operatoren" href="operatoren.html" />
+    <link rel="prev" title="Klassen der hyperbolischen Geometrie" href="klassen_hyp_geometrie.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="operatoren.html" title="Operatoren"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="klassen_hyp_geometrie.html" title="Klassen der hyperbolischen Geometrie"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="funktionen">
+<h1>Funktionen<a class="headerlink" href="#funktionen" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Als Zahl ist auch jeder Audruck zu verstehen, dessen Evaluierung (nach
+einer eventuellen Substitution von Variablen durch Zahlen) eine Zahl ergibt</p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">oe</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ö</span></code> <em>geschrieben werden/</em></p>
+<div class="section" id="allgemeine-funktionen">
+<span id="allg"></span><h2>Allgemeine Funktionen<a class="headerlink" href="#allgemeine-funktionen" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><dl class="function">
+<dt id="Hilfe">
+<code class="descname">Hilfe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Hilfefunktion</p>
+<p>Zusatz: <cite>h=n</cite>, <em>n</em> = 1, 2, ...</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Determinante">
+<code class="descname">Determinante</code><span class="sig-paren">(</span><em>vektor1</em>, <em>vektor2 /</em><span class="optional">[</span>, <em>vektor3</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#Determinante" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Determinante von drei Vektoren des Raumes oder von zwei Vektoren der
+Ebene</p>
+<p>Synonym:   <strong>det</strong></p>
+<p><em>vekor</em> : Vektor</p>
+<p>Zusatz: <cite>d=1</cite>  Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="linear_abh">
+<code class="descname">linear_abh</code><span class="sig-paren">(</span><em>vektor1</em>, <em>vektor2</em>, <em>...</em><span class="sig-paren">)</span><a class="headerlink" href="#linear_abh" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf lineare Abhängigkeit von Vektoren im Raum und
+in der Ebene</p>
+<p>Synonym:   <strong>linearAbh</strong></p>
+<p><em>vekor</em> : Vektor</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="kollinear">
+<code class="descname">kollinear</code><span class="sig-paren">(</span><em>vektor1</em>, <em>vektor2</em><span class="sig-paren">)</span><a class="headerlink" href="#kollinear" title="Link zu dieser Definition">¶</a></dt>
+<dd><p><em>oder</em></p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="descname">kollinear</code><span class="sig-paren">(</span><em>punkt1</em>, <em>punkt2</em>, <em>punkt3</em><span class="sig-paren">)</span></dt>
+<dd><p>Test auf Kollinearität von zwei Vektoren oder drei Punkten im Raum
+und in der Ebene</p>
+<p><em>vekor</em> : Vektor</p>
+<p><em>punkt</em> : Punkt</p>
+<p>Zusatz: <cite>d=1</cite>  Darstellung des einen Vektors durch den anderen</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="komplanar">
+<code class="descname">komplanar</code><span class="sig-paren">(</span><em>vektor1</em>, <em>vektor2</em>, <em>vektor3</em><span class="sig-paren">)</span><a class="headerlink" href="#komplanar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p><em>oder</em></p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="descname">komplanar</code><span class="sig-paren">(</span><em>punkt1</em>, <em>punkt2</em>, <em>punkt3</em>, <em>punkt4</em><span class="sig-paren">)</span></dt>
+<dd><p>Test auf Komplanarität von drei Vektoren oder vier Punkten im Raum</p>
+<p><em>vekor</em> : Vektor</p>
+<p><em>punkt</em> : Punkt</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>l=1</cite>  Verschwindende Linearkombination (bei Komplanarität)</p>
+<p class="last"><cite>d=1</cite>  Darstellung jedes Vektors durch die beiden anderen (bei Komplanarität)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="parallel">
+<code class="descname">parallel</code><span class="sig-paren">(</span><em>objekt1</em>, <em>objekt2</em><span class="sig-paren">)</span><a class="headerlink" href="#parallel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Parallelität von Objekten im Raum und in der Ebene</p>
+<p><em>objekt</em> im Raum:   Vektor, Gerade, Ebene, Strecke</p>
+<p><em>objekt</em> in der Ebene:   Vektor, Gerade, Strecke</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="orthogonal">
+<code class="descname">orthogonal</code><span class="sig-paren">(</span><em>objekt1</em>, <em>objekt2</em><span class="sig-paren">)</span><a class="headerlink" href="#orthogonal" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Parallelität von Objekten im Raum und in der Ebene</p>
+<p>Synonym: <strong>senkrecht</strong></p>
+<p><em>objekt</em> im Raum:   Vektor, Gerade, Ebene, Strecke</p>
+<p><em>objekt</em> in der Ebene:   Vektor, Gerade, Strecke</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="identisch">
+<code class="descname">identisch</code><span class="sig-paren">(</span><em>objekt1</em>, <em>objekt2</em><span class="sig-paren">)</span><a class="headerlink" href="#identisch" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Identität von zwei Geraden oder zwei Ebenen</p>
+<p><em>objekt</em> :   Gerade, Ebene</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Abstand">
+<code class="descname">Abstand</code><span class="sig-paren">(</span><em>objekt1</em>, <em>objekt2</em><span class="sig-paren">)</span><a class="headerlink" href="#Abstand" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Abstand zweier Objekte voneinander</p>
+<p><em>objekt</em> im Raum:   Punkt, Gerade, Ebene, Kugel</p>
+<p><em>objekt</em> in der Ebene:   Punkt, Gerade</p>
+<p>Zusatz: <cite>d=n</cite>   Dezimaldarstellung, <em>n</em> - Anzahl der Nachkommastellen</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Winkel">
+<code class="descname">Winkel</code><span class="sig-paren">(</span><em>objekt1</em>, <em>objekt2</em><span class="sig-paren">)</span><a class="headerlink" href="#Winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Winkel zwischen zwei Objekten (in Grad)</p>
+<p><em>objekt</em> im Raum:   Vektor, Gerade, Ebene</p>
+<p><em>objekt</em> in der Ebene:   Vektor, Gerade</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>d=n</cite>   Dezimaldarstellung mit <em>n</em> Nachkommastellen</p>
+<p><cite>b=1</cite>   Ausgabe in Bogenmaß</p>
+<p class="last"><cite>d=n</cite>   ebenso, Dezimaldarstellung mit <em>n</em> Nachkommastellen</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Lage">
+<code class="descname">Lage</code><span class="sig-paren">(</span><em>objekt1</em>, <em>objekt2</em><span class="sig-paren">)</span><a class="headerlink" href="#Lage" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Lage zweier Objekte zueinander</p>
+<p><em>objekt</em> im Raum:   Vektor/Punkt, Gerade, Ebene, Strecke, Kugel, Dreieck, Viereck</p>
+<p><em>objekt</em> in der Ebene:   Vektor/Punkt, Gerade, Strecke, Kreis, Dreieck, Viereck</p>
+<p>Für die beiden Objekte muss eine passende schnitt-Methode definiert sein</p>
+<p>Zusatz: <cite>l=1</cite>   Lageinformationen</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="loese">
+<code class="descname">loese</code><span class="sig-paren">(</span><em>gleich /</em><span class="optional">[</span>, <em>variable</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#loese" title="Link zu dieser Definition">¶</a></dt>
+<dd><p><em>oder</em></p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="descname">loese</code><span class="sig-paren">(</span><em>ungleich /</em><span class="optional">[</span>, <em>variable</em><span class="optional">]</span><span class="sig-paren">)</span></dt>
+<dd><p>Lösen von normalen und Vektor-Gleichungen sowie von Ungleichungen</p>
+<p><em>gleich</em> : linke Seite einer Gleichung der Form <code class="docutils literal"><span class="pre">ausdruck</span> <span class="pre">=</span> <span class="pre">0</span></code>
+oder Liste mit solchen Elementen (Gleichungssystem)</p>
+<p><em>variable</em> : einzelne oder Liste von Variablen</p>
+<p><em>ausdruck</em>: Ausdruck in den Variablen; bei einer einzelnen Gleichung
+kann es auch ein Vektor-Ausdruck sein; rechts steht dann der Nullvektor</p>
+<p><em>ungleich</em>:  Ungleichung der Form <code class="docutils literal"><span class="pre">ausdruck1</span></code> <em>rel</em> <code class="docutils literal"><span class="pre">ausdruck2</span></code></p>
+<p><em>rel</em> : Relation  &lt; | &lt;= | &gt; | &gt;=</p>
+<p>Zusatz: <cite>set=ja</cite>   Verwendung von solveset; standardmäßig wird
+solve verwendet (siehe SymPy-Dokumentation)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="einfach">
+<code class="descname">einfach</code><span class="sig-paren">(</span><em>objekt</em><span class="sig-paren">)</span><a class="headerlink" href="#einfach" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Vereinfachung von Objekten</p>
+<p><em>objekt</em> : nummerischer Ausdruck, Vektor, Matrix</p>
+<p>Falls <code class="docutils literal"><span class="pre">UMG.SIMPL</span></code> gleich <code class="docutils literal"><span class="pre">False</span></code> ist, wird nicht vereinfacht</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>rad=ja</cite> Einsatz von radsimp</p>
+<p><cite>trig=ja</cite>  Einsatz von trigsimp</p>
+<p><cite>num=ja</cite> Einsatz von nsimplify</p>
+<p><cite>sign=ja</cite>  Einsatz von signsimp</p>
+<p class="last">(siehe SymPy-Dokumentation)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="grafik"></span><dl class="function">
+<dt id="Grafik">
+<code class="descname">Grafik</code><span class="sig-paren">(</span><em>eintrag1</em>, <em>eintrag2</em>, <em>... /</em><span class="optional">[</span>, <em>gestalt</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#Grafik" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Zeichnen einer Grafik in 3D oder 2D</p>
+<p>Synonym: <strong>zeichne</strong></p>
+<p><em>eintrag</em> : objekt | [objekt, spez]</p>
+<p><em>objekt</em> : grafikfähiges Objekt</p>
+<p><em>spez</em> : Spezifikationsangaben</p>
+<p><em>gestalt</em> : ein oder mehrere Zusatzangaben zur
+Gestaltung der Grafik</p>
+<p>Zu den möglichen Spezifikations- und Zusatzangaben
+<a class="reference internal" href="grafik_spezifikationen.html#grafik-spezifikationen"><span class="std std-ref">siehe hier</span></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sicht_box">
+<code class="descname">sicht_box</code><span class="sig-paren">(</span><em>/[xu, xo /[, yu, yo /[, zu, zo]]]</em><span class="sig-paren">)</span><a class="headerlink" href="#sicht_box" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Einstellen des Sichtbereiches für eine Grafik</p>
+<p>Synonym: <strong>sichtBox</strong></p>
+<p><em>xu, xo</em> : untere und obere Grenze auf der <em>x</em> -Achse</p>
+<p><em>yu, yo</em> : analog für die <em>y</em> -Achse</p>
+<p><em>zu, zo</em> : analog für die <em>z</em> -Achse</p>
+<p>Der Wert 0 muss in jedem dieser Bereiche enthalten sein</p>
+<p>Sind nur zwei Argumente angegeben, werden diese für alle Achsen
+angenommen</p>
+<p>Ist kein Argument angegeben, wird die aktuelle Einstellung angezeigt</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="farben">
+<code class="descname">farben</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#farben" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Überblick über die Farben in Grafiken</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="abbildungen-der-modelle-der-hyperbolischen-geometrie">
+<h2>Abbildungen der Modelle der hyperbolischen Geometrie<a class="headerlink" href="#abbildungen-der-modelle-der-hyperbolischen-geometrie" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><dl class="function">
+<dt id="D2H">
+<code class="descname">D2H</code><span class="sig-paren">(</span><em>hPunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#D2H" title="Link zu dieser Definition">¶</a></dt>
+<dd><p><em>D</em>-Modell <span class="math">\(\rightarrow\)</span> <em>H</em>-Modell</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="D2D3">
+<code class="descname">D2D3</code><span class="sig-paren">(</span><em>hPunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#D2D3" title="Link zu dieser Definition">¶</a></dt>
+<dd><p><em>D</em>-Modell <span class="math">\(\rightarrow\)</span> <em>D3</em>-Modell</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="H2D">
+<code class="descname">H2D</code><span class="sig-paren">(</span><em>hPunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#H2D" title="Link zu dieser Definition">¶</a></dt>
+<dd><p><em>H</em>-Modell <span class="math">\(\rightarrow\)</span> <em>D</em>-Modell</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="H2D3">
+<code class="descname">H2D3</code><span class="sig-paren">(</span><em>hPunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#H2D3" title="Link zu dieser Definition">¶</a></dt>
+<dd><p><em>H</em>-Modell <span class="math">\(\rightarrow\)</span> <em>D3</em>-Modell</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="D32D">
+<code class="descname">D32D</code><span class="sig-paren">(</span><em>hPunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#D32D" title="Link zu dieser Definition">¶</a></dt>
+<dd><p><em>D3</em>-Modell <span class="math">\(\rightarrow\)</span> <em>D</em>-Modell</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="D32H">
+<code class="descname">D32H</code><span class="sig-paren">(</span><em>hPunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#D32H" title="Link zu dieser Definition">¶</a></dt>
+<dd><p><em>D3</em>-Modell <span class="math">\(\rightarrow\)</span> <em>H</em>-Modell</p>
+<blockquote>
+<div><em>hPunkt</em> : hyperbolischer Punkt im jeweiligen Modell</div></blockquote>
+</dd></dl>
+
+</div></blockquote>
+<blockquote id="mathe">
+<div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="mathematische-funktionen">
+<h2>Mathematische Funktionen<a class="headerlink" href="#mathematische-funktionen" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><dl class="function">
+<dt id="sqrt">
+<code class="descname">sqrt</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#sqrt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>(Quadrat-) Wurzel -  Funktion</p>
+<p><em>x</em> : Zahl</p>
+<p>Rückgabe einer reellen Zahl bei <em>x</em> &gt; 0</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="exp">
+<code class="descname">exp</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#exp" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Exponential - Funktion</p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ln">
+<code class="descname">ln</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#ln" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Logarithmus - Funktion (natürlicher Logarithmus)</p>
+<p>Synonym: <strong>log</strong></p>
+<p><em>x</em> : Zahl</p>
+<p>Rückgabe einer reellen Zahl bei <em>x</em> &gt; 0</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lg">
+<code class="descname">lg</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#lg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Logarithmus - Funktion (dekadischer Logarithmus)</p>
+<p><em>x</em> : Zahl</p>
+<p>Rückgabe einer reellen Zahl bei <em>x</em> &gt; 0</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="abs">
+<code class="descname">abs</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#abs" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Betrags - Funktion</p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sin">
+<code class="descname">sin</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#sin" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Sinus - Funktion (Winkel in Bogenmaß)</p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="arcsin">
+<code class="descname">arcsin</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#arcsin" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Arkussinus -Funktion (Winkel in Bogenmaß)</p>
+<p>Synonym: <strong>asin</strong></p>
+<p><em>x</em> : Zahl</p>
+<p>Rückgabe einer reellen Zahl bei <em>x</em> <span class="math">\(\in [-1, 1]\)</span></p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sing">
+<code class="descname">sing</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#sing" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Sinus - Funktion (Winkel in Grad)</p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="arcsing">
+<code class="descname">arcsing</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#arcsing" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Arkussinus - Funktion (Winkel in Grad)</p>
+<p>Synonym: <strong>asing</strong></p>
+<p>Rückgabe einer reellen Zahl bei <em>x</em> <span class="math">\(\in [-1, 1]\)</span></p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cos">
+<code class="descname">cos</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#cos" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kosinus - Funktion (Winkel in Bogenmaß)</p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="arccos">
+<code class="descname">arccos</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#arccos" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Arkuskosinus - Funktion (Winkel in Bogenmaß)</p>
+<p>Synonym: <strong>acos</strong></p>
+<p><em>x</em> : Zahl</p>
+<p>Rückgabe einer reellen Zahl bei <em>x</em> <span class="math">\(\in [-1, 1]\)</span></p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cosg">
+<code class="descname">cosg</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#cosg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kosinus - Funktion (Winkel in Grad)</p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="arccosg">
+<code class="descname">arccosg</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#arccosg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Arkuskosinus - Funktion (Winkel in Grad)</p>
+<p>Synonym: <strong>acosg</strong></p>
+<p><em>x</em> : Zahl</p>
+<p>Rückgabe einer reellen Zahl bei <em>x</em> <span class="math">\(\in [-1, 1]\)</span></p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tan">
+<code class="descname">tan</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#tan" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Tangens - Funktion (Winkel in Bogenmaß)</p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="arctan">
+<code class="descname">arctan</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#arctan" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Arkustangens - Funktion (Winkel in Bogenmaß)</p>
+<p>Synonym: <strong>atan</strong></p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tang">
+<code class="descname">tang</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#tang" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Tangens  - Funktion (Winkel in Grad)</p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="arctang">
+<code class="descname">arctang</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#arctang" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Arkustangens - Funktion (Winkel in Grad)</p>
+<p>Synonym: <strong>atang</strong></p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sinh">
+<code class="descname">sinh</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#sinh" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Sinus hyperbolikus - Funktion</p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="arsinh">
+<code class="descname">arsinh</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#arsinh" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Areasinus hyperbolikus - Funktion</p>
+<p>Synonym: <strong>asinh</strong></p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cosh">
+<code class="descname">cosh</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#cosh" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kosinus hyperbolikus  - Funktion</p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="arcosh">
+<code class="descname">arcosh</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#arcosh" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Areakosinus hyperbolikus - Funktion</p>
+<p>Synonym: <strong>acosh</strong></p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tanh">
+<code class="descname">tanh</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#tanh" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Tangens hyperbolikus - Funktion</p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="artanh">
+<code class="descname">artanh</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#artanh" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Areatangens hyperbolikus - Funktion</p>
+<p>Synonym: <strong>atanh</strong></p>
+<p><em>x</em> : Zahl</p>
+<p>Zusatz: <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="deg">
+<code class="descname">deg</code><span class="sig-paren">(</span><em>winkel</em><span class="sig-paren">)</span><a class="headerlink" href="#deg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umrechnung Bogen- in Gradmaß</p>
+<p>Synonym: <strong>grad</strong></p>
+<p><em>winkel</em> : Winkel in Radian</p>
+<p>Rückgabe: <em>Winkel in Grad</em></p>
+<p>Zusatz: <cite>d=n</cite> Dezimaldarstellung mit <em>n</em> Kommastellen</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="rad">
+<code class="descname">rad</code><span class="sig-paren">(</span><em>winkel</em><span class="sig-paren">)</span><a class="headerlink" href="#rad" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umrechnung Grad- in Bogenmaß</p>
+<p>Synonym: <strong>bog</strong></p>
+<p><em>winkel</em> : Winkel in Grad</p>
+<p>Rückgabe: <em>Winkel in Radian</em></p>
+<p>Zusatz: <cite>d=n</cite> Dezimaldarstellung mit <em>n</em> Kommastellen</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="kug_koord">
+<code class="descname">kug_koord</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span><a class="headerlink" href="#kug_koord" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umrechnung in Kugelkoordinaten</p>
+<p>Synonym: <strong>kugKoord</strong></p>
+<p><em>punkt</em> : Punkt der Einheitssphäre oder sPunkt</p>
+<p>Rückgabe: <em>Länge, Breite</em></p>
+<p>Zusatz: <cite>g=1</cite> Ausgaben in Grad</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="min">
+<code class="descname">min</code><span class="sig-paren">(</span><em>zahl1</em>, <em>zahl2</em>, <em>...</em><span class="sig-paren">)</span><a class="headerlink" href="#min" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kleinste Zahl in einer Folge von zwei oder mehr Zahlen</p>
+<p><em>zahl</em> : Zahl</p>
+<p>Rückgabe: <em>kleinste Zahl</em></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="max">
+<code class="descname">max</code><span class="sig-paren">(</span><em>zahl1</em>, <em>zahl2</em>, <em>...</em><span class="sig-paren">)</span><a class="headerlink" href="#max" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Größte Zahl in einer Folge von zwei oder mehr Zahlen</p>
+<p><em>zahl</em> : Zahl</p>
+<p>Rückgabe: <em>größte Zahl</em></p>
+</dd></dl>
+
+</div></blockquote>
+<blockquote id="konst">
+<div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="konstanten">
+<h2>Konstanten<a class="headerlink" href="#konstanten" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><dl class="attribute">
+<dt id="pi">
+<code class="descname">pi</code><a class="headerlink" href="#pi" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Zahl <span class="math">\(\pi\)</span> (3.1415...)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="E">
+<code class="descname">E</code><a class="headerlink" href="#E" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Eulersche Zahl <span class="math">\(e\)</span> (2.7182...)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="I">
+<code class="descname">I</code><a class="headerlink" href="#I" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Imaginäre Einheit <span class="math">\(i\)</span></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">ja, nein, mit, ohne, Ja, Nein, Mit, Ohne</code></dt>
+<dd><p>Hilfsgrößen für True/False</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+<div class="admonition warning">
+<p class="first admonition-title">Warnung</p>
+<p class="last">Die Namen <strong>E, I</strong> können kommentarlos überschrieben werden</p>
+</div>
+<blockquote id="sympy">
+<div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="sympy-funktionen">
+<h2>SymPy - Funktionen<a class="headerlink" href="#sympy-funktionen" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><dl class="function">
+<dt id="N">
+<code class="descname">N</code><span class="sig-paren">(</span><em>ausdruck</em>, <em>/</em><span class="optional">[</span>, <em>m</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#N" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umwandlung von SymPy-Zahlen / -Ausdrücken in Dezimal-Zahlen
+/ -Ausdrücke</p>
+<p><em>ausdruck</em> : nummerischer Ausdruck</p>
+<p><em>m</em> : Anzahl der Stellen</p>
+<p>Es kann auch die entsprechende <strong>n</strong>-Methode eines SymPy-Ausdruckes
+verwendet werden: <code class="docutils literal"><span class="pre">ausdruck.n(/[m])</span></code></p>
+</dd></dl>
+
+<p>Weiterhin sind die SymPy-Funktionen <strong>solve, solveset, expand, collect,
+factor, simplify, nsimplify, radsimp, trigsimp, nsolve, re, im, diff</strong>
+sowie die Klasse <strong>Rational</strong> direkt verwendbar</p>
+<p>Werden weitere SymPy-Elemente benötigt, können sie importiert werden</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+<div class="admonition warning">
+<p class="first admonition-title">Warnung</p>
+<p class="last">Der Name <strong>N</strong> kann kommentarlos überschrieben werden</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Inhalt</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Funktionen</a><ul>
+<li><a class="reference internal" href="#allgemeine-funktionen">Allgemeine Funktionen</a></li>
+<li><a class="reference internal" href="#abbildungen-der-modelle-der-hyperbolischen-geometrie">Abbildungen der Modelle der hyperbolischen Geometrie</a></li>
+<li><a class="reference internal" href="#mathematische-funktionen">Mathematische Funktionen</a></li>
+<li><a class="reference internal" href="#konstanten">Konstanten</a></li>
+<li><a class="reference internal" href="#sympy-funktionen">SymPy - Funktionen</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="klassen_hyp_geometrie.html"
+                        title="vorheriges Kapitel">Klassen der hyperbolischen Geometrie</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="operatoren.html"
+                        title="nächstes Kapitel">Operatoren</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/funktionen.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="operatoren.html" title="Operatoren"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="klassen_hyp_geometrie.html" title="Klassen der hyperbolischen Geometrie"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

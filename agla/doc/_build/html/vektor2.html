@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Vektor &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen in der Ebene" href="klassenr2.html" />
+    <link rel="next" title="Gerade" href="gerade2.html" />
+    <link rel="prev" title="Klassen in der Ebene" href="klassenr2.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="gerade2.html" title="Gerade"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="klassenr2.html" title="Klassen in der Ebene"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" accesskey="U">Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="vektor">
+<h1>Vektor<a class="headerlink" href="#vektor" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.vektor.Vektor">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.vektor.</code><code class="descname">Vektor</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Vektor im <em>n</em>-dimensionalen Euklidischen Raum</p>
+<p><strong>Synonym</strong></p>
+<blockquote>
+<div><strong>Punkt</strong> (Punkte werden mit ihren Ortsvektoren identifiziert)</div></blockquote>
+<p><strong>Kurzform</strong></p>
+<blockquote>
+<div><strong>v</strong> (reservierter Bezeichner)</div></blockquote>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div><p>Vektor ( <em>komponente1, komponente2, ...</em> ) <em>oder</em></p>
+<blockquote>
+<div><p>v ( <em>komponente1, komponente2, ...</em> ) <em>bzw.</em></p>
+<p>Vektor ( <em>vektor1, vektor2</em> ) <em>oder</em></p>
+<p>v ( <em>vektor1, vektor2</em> )</p>
+<blockquote>
+<div>Bei Angabe von zwei Vektoren wird der Differenzvektor erzeugt</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>komponente</em> : nummerischer Ausdruck</p>
+<p><em>vektor</em> : Vektor</p>
+<p><code class="docutils literal"><span class="pre">float</span></code>- und <code class="docutils literal"><span class="pre">Float</span></code>-Komponenten werden standardmäßig in rationale  
+Zahlen umgewandelt. Die Umwandlung entfällt bei Angabe von <cite>simpl=nein</cite> 
+als letztem Argument. Ebenso wird nicht konvertiert, wenn mit der  
+Anweisung <code class="docutils literal"><span class="pre">UMG.SIMPL</span> <span class="pre">=</span> <span class="pre">nein</span></code> die Umgebungsvariable <code class="docutils literal"><span class="pre">UMG.SIMPL</span></code> 
+global eingestellt wurde</p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Operatoren</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">+</span></code></td>
+<td>Addition von zwei Vektoren</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">-</span></code></td>
+<td>Negation / Subtraktion von Vektoren</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">*</span></code></td>
+<td>Multiplikation eines Vektors mit einem Skalar</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">/</span></code></td>
+<td>Division eines Vektors durch einen Skalar</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">*</span></code></td>
+<td>Skalarprodukt von zwei Vektoren</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">°</span></code></td>
+<td>ebenso</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&gt;&lt;</span></code></td>
+<td>Vektorprodukt von zwei Vektoren (nur im Raum)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">|</span></code></td>
+<td>Verketten von zwei Vektoren</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Vordefinierte Vektoren</strong> im Raum und in der Ebene</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">O</span></code>  :  Nullvektor/Ursprung im Raum</p>
+<p><code class="docutils literal"><span class="pre">O2</span></code> :  Nullvektor/Ursprung in der Ebene</p>
+<p><code class="docutils literal"><span class="pre">X</span></code>  :  Allgemeiner Vektor/Punkt im Raum</p>
+<p><code class="docutils literal"><span class="pre">X2</span></code> :  Allgemeiner Vektor/Punkt in der Ebene</p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Der <strong>lesende Zugriff</strong> auf die <em>i</em>. Komponente eines Vektors <em>a</em> der</p>
+<blockquote>
+<div><p>Dimension <em>2</em> erfolgt neben <code class="docutils literal"><span class="pre">a.x</span></code> und <code class="docutils literal"><span class="pre">a.y</span></code> auch mittels</p>
+<p><code class="docutils literal"><span class="pre">a[i]</span></code>   <em>oder auch</em>   <code class="docutils literal"><span class="pre">a.komp[i]</span></code>, <em>i = 0, 1</em></p>
+<p>Eine Änderung einzelner Komponenten ist nicht implementiert</p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Die unten aufgeführten <strong>Eigenschaften und Methoden</strong> betreffen Vektoren
+in der Ebene und im Raum. Für <a class="reference internal" href="vektor_n.html#hoehdim"><span class="std std-ref">höhere Dimensionen</span></a> sind
+nicht alle verfügbar</p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.betrag">
+<code class="descname">betrag</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.betrag" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Betrag des Vektors</p>
+<p>Synonym: <strong>laenge</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.vektor.Vektor.betrag_">
+<code class="descname">betrag_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.betrag_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Betrag des Vektors; Dezimaldarstellung</p>
+<p>Synonym: <strong>laenge_</strong></p>
+<p>Zusatz : <cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.d">
+<code class="descname">d</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.d" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ableitungsvektor für eine Variable</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.dez">
+<code class="descname">dez</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.dez" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.vektor.Vektor.dez_">
+<code class="descname">dez_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.dez_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dezimaldarstellung</p>
+<p>Zusatz : <cite>d=n</cite>  - mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Anzahl der Komponenten (Dimension) des Vektors</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.einfach">
+<code class="descname">einfach</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.einfach" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Vereinfachung des Vektors</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.einh_vekt">
+<code class="descname">einh_vekt</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.einh_vekt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Einheitsvektor in Richtung des Vektors</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf eine Schar von Vektoren mit einem Parameter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.komp">
+<code class="descname">komp</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.komp" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Komponenten des Vektors / Koordinaten des Punktes</p>
+<p>Synonym: <strong>kooord</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.O">
+<code class="descname">O</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.O" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Nullvektor in der Dimension des Vektors</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.punkt_ausg">
+<code class="descname">punkt_ausg</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.punkt_ausg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ausgabe als Punkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameter einer Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.vektor2sympy">
+<code class="descname">vektor2sympy</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.vektor2sympy" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konvertierung in eine Sympy-Matrix</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.x">
+<code class="descname">x</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.x" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erste Komponente des Vektors (Dimension 2 oder 3)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.y">
+<code class="descname">y</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.y" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Zweite  Komponente des Vektors (Dimension 2 oder 3)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.z">
+<code class="descname">z</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.z" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dritte Komponente des Vektors (Dimension 3)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.vektor.Vektor.zeil">
+<code class="descname">zeil</code><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.zeil" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Zeilenvektor</p>
+<p>Synonym: <strong>T</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.vektor.Vektor.abstand">
+<code class="descname">abstand</code><span class="sig-paren">(</span><em>objekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.abstand" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Abstand des Punktes zu einem anderen Objekt</p>
+<p><em>objekt</em> im Raum: Punkt, Gerade, Ebene, Kugel</p>
+<p><em>objekt</em> in der Ebene: Punkt, Gerade</p>
+<p>Zusatz : <cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+<p>Rückgabe : 0, wenn der Punkt in <em>objekt</em> enthalten bzw. mit diesem
+identisch ist</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.vektor.Vektor.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildvektor/-punkt bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung des Raumes oder der Ebene</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.vektor.Vektor.diff">
+<code class="descname">diff</code><span class="sig-paren">(</span><em>variable</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.diff" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Partielle Ableitung eines Vektors mit mehreren Variablen nach
+einer der Variablen</p>
+<p><em>variable</em> : Variable, nach der abgeleitet wird</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.vektor.Vektor.kette">
+<code class="descname">kette</code><span class="sig-paren">(</span><em>vektor1</em>, <em>vektor2</em>, <em>...</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.kette" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Verketten von Vektoren zu einer Matrix</p>
+<p><em>vektor</em> : Vektor</p>
+<p>Mit dem Operator <code class="docutils literal"><span class="pre">|</span></code> kann die Verkettung auch so erfolgen</p>
+<blockquote>
+<div><em>vektor</em> | <em>vektor1</em> | <em>vektor2</em> ...</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.vektor.Vektor.kollinear">
+<code class="descname">kollinear</code><span class="sig-paren">(</span><em>vektor</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.kollinear" title="Link zu dieser Definition">¶</a></dt>
+<dd><p><em>oder</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">kollinear</code><span class="sig-paren">(</span><em>punkt1</em>, <em>punkt2</em><span class="sig-paren">)</span></dt>
+<dd><p>Test auf Kollinearität für 2 Vektoren bzw. 3 Punkte</p>
+<p><em>vektor</em> : Vektor</p>
+<p><em>punkt</em> : Punkt</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.vektor.Vektor.komplanar">
+<code class="descname">komplanar</code><span class="sig-paren">(</span><em>vektor1</em>, <em>vektor2</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.komplanar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p><em>oder</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">komplanar</code><span class="sig-paren">(</span><em>punkt1</em>, <em>punkt2</em>, <em>punkt3</em><span class="sig-paren">)</span></dt>
+<dd><p>Test auf Komplanararität für 3 Vektoren bzw. 4 Punkte</p>
+<p><em>vektor</em> : Vektor</p>
+<p><em>punkt</em> : Punkt</p>
+<p>Nur im Raum verfügbar</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.vektor.Vektor.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Schar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.vektor.Vektor.schnitt">
+<code class="descname">schnitt</code><span class="sig-paren">(</span><em>objekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.schnitt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Schnittmenge des Punktes mit einem anderen Objekt</p>
+<p><em>objekt</em> im Raum: Punkt, Gerade, Ebene, Kugel, Strecke, Dreieck, Viereck</p>
+<p><em>objekt</em> in der Ebene: Punkt, Gerade, Strecke, Dreieck, Viereck</p>
+<p>Zusatz : <cite>l=1</cite> - Lageinformationen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.vektor.Vektor.sp">
+<code class="descname">sp</code><span class="sig-paren">(</span><em>vektor</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.sp" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Skalarprodukt mit einem anderen Vektor</p>
+<p><em>vektor</em> : Vektor</p>
+<p>Mit den Operatoren <code class="docutils literal"><span class="pre">*</span></code> oder <code class="docutils literal"><span class="pre">°</span></code> kann das Skalarprodukt zweier</p>
+<p>Vektoren auch so erhalten werden:</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">vektor1</span> <span class="pre">*</span> <span class="pre">vektor2</span></code> <em>oder</em></p>
+<p><code class="docutils literal"><span class="pre">vektor1</span> <span class="pre">°</span> <span class="pre">vektor2</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.vektor.Vektor.vp">
+<code class="descname">vp</code><span class="sig-paren">(</span><em>vektor</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.vp" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Vektorprodukt mit einem anderen Vektor</p>
+<p><em>vektor</em> : Vektor</p>
+<p>Mit dem Operator <code class="docutils literal"><span class="pre">&gt;&lt;</span></code> kann das Vektorprodukt zweier Vektoren auch
+so erhalten werden:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">vektor1</span> <span class="pre">&gt;&lt;</span> <span class="pre">vektor2</span></code></div></blockquote>
+<p>Nur im Raum verfügbar</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.vektor.Vektor.winkel">
+<code class="descname">winkel</code><span class="sig-paren">(</span><em>objekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.vektor.Vektor.winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Winkel des Vektors mit einem anderen Objekt (in Grad)</p>
+<p><em>objekt</em> im Raum: Vektor, Gerade, Ebene</p>
+<p><em>objekt</em> in der Ebene: Vektor, Gerade</p>
+<p>Zusatz : <cite>d=n</cite> - Dezimaldarstellung mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">betrag_</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Betrag</span></code></p>
+<p><code class="docutils literal"><span class="pre">dez_</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Dez</span></code></p>
+<p><code class="docutils literal"><span class="pre">einh_vekt</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">einhVekt</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">länge_</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Länge</span></code></p>
+<p><code class="docutils literal"><span class="pre">punkt_ausg</span>&#160; <span class="pre">:</span>&#160; <span class="pre">punktAusg</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+</div></blockquote>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="klassenr2.html"
+                        title="vorheriges Kapitel">Klassen in der Ebene</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="gerade2.html"
+                        title="nächstes Kapitel">Gerade</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/vektor2.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="gerade2.html" title="Gerade"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="klassenr2.html" title="Klassen in der Ebene"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" >Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

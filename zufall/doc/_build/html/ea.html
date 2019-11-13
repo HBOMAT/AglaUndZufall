@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>EA - EreignisAlgebra &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen" href="klassen.html" />
+    <link rel="next" title="VT - VierFelderTafel" href="vt.html" />
+    <link rel="prev" title="DR - DatenReihe" href="dr.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="vt.html" title="VT - VierFelderTafel"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="dr.html" title="DR - DatenReihe"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" accesskey="U">Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ea-ereignisalgebra">
+<h1>EA - EreignisAlgebra<a class="headerlink" href="#ea-ereignisalgebra" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="zufall.lib.objekte.ereignis_algebra.EreignisAlgebra">
+<em class="property">class </em><code class="descclassname">zufall.lib.objekte.ereignis_algebra.</code><code class="descname">EreignisAlgebra</code><a class="headerlink" href="#zufall.lib.objekte.ereignis_algebra.EreignisAlgebra" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ereignisalgebra</p>
+<p><strong>Kurzname</strong> <strong>EA</strong></p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>EA( <em>/[grundmenge]</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><em>grundmenge</em> : Menge/Liste/Tupel (i.a. Ergbnismenge)</div></blockquote>
+<p>Wird kein Argument angegeben, wird eine Ereignisalgebra mit den 
+englischen Großbuchstaben als Grundmenge erzeugt</p>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="zufall.lib.objekte.ereignis_algebra.EreignisAlgebra.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#zufall.lib.objekte.ereignis_algebra.EreignisAlgebra.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.ereignis_algebra.EreignisAlgebra.omega">
+<code class="descname">omega</code><a class="headerlink" href="#zufall.lib.objekte.ereignis_algebra.EreignisAlgebra.omega" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Grundmenge</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.ereignis_algebra.EreignisAlgebra.berechnen">
+<code class="descname">berechnen</code><span class="sig-paren">(</span><em>A</em>, <em>B</em>, <em>ausdruck</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.ereignis_algebra.EreignisAlgebra.berechnen" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Berechnen von Ereignissen mittels Mengenalgebra</p>
+<dl class="docutils">
+<dt><em>A</em>, <em>B</em> :</dt>
+<dd>Ereignisse (Teilmengen der Grundmenge als Liste/Tupel/
+Menge/Zeichenkette angegeben)</dd>
+</dl>
+<p><em>ausdruck</em> : zu berechnender Ausdruck in <em>A</em>, <em>B</em>; die Namen sind
+zwingend</p>
+<p>Der Ausdruck wird nach den Regeln für logische Ausdrücke gebildet,
+er ist immer als Zeichenkette einzugeben; als Operatoren werden
+verwendet</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">nicht</span></code>, <code class="docutils literal"><span class="pre">und</span></code>, <code class="docutils literal"><span class="pre">oder</span></code></div></blockquote>
+<p>oder die entsprechenden englischen Wörter</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">not</span></code>, <code class="docutils literal"><span class="pre">and</span></code>, <code class="docutils literal"><span class="pre">or</span></code></div></blockquote>
+<p>Als Operanden dienen die Bezeichner <em>A</em> und <em>B</em>; sie beziehen sich
+auf die ersten beiden Argumente (die eventuell andere Namen erhalten
+hatten). Neben den damit erzeugbaren Ausdrücken sind folgende
+erlaubt, sie sind exakt in der angeführten Form zu schreiben und
+können auch als Operanden in anderen Ausdrücken dienen, wobei sie
+hier in Klammern zu schreiben sind (statt <em>B</em> kann auch <em>A</em> stehen
+und umgekehrt)</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">gegen</span> <span class="pre">A</span></code> (für das Gegenereignis)</p>
+<p><code class="docutils literal"><span class="pre">sowohl</span> <span class="pre">A</span> <span class="pre">als</span> <span class="pre">auch</span> <span class="pre">B</span></code></p>
+<p><code class="docutils literal"><span class="pre">entweder</span> <span class="pre">A</span> <span class="pre">oder</span> <span class="pre">B</span></code></p>
+<p><code class="docutils literal"><span class="pre">weder</span> <span class="pre">A</span> <span class="pre">noch</span> <span class="pre">B</span></code></p>
+<p><code class="docutils literal"><span class="pre">mindestens</span> <span class="pre">A</span> <span class="pre">oder</span> <span class="pre">B</span></code></p>
+<p><code class="docutils literal"><span class="pre">höchstens</span> <span class="pre">A</span> <span class="pre">oder</span> <span class="pre">B</span></code></p>
+</div></blockquote>
+<p>Wird als Grundmenge das (große englische) Alphabet benutzt,
+müssen <em>A</em> und <em>B</em> als Wörter (Zeichenketten oder Symbole)
+angegeben werden</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>t=ja</cite> - Erläuterung mit Vier-Felder-Tafel</p>
+<p><cite>v=ja</cite> - zusätzliche Erzeugung eines Venn-Diagramms</p>
+<p><cite>vt=ja</cite> - alleinige Erzeugung der Vier-Felder-Tafel</p>
+<p class="last"><cite>ve=ja</cite> - alleinige Erzeugung des Venn-Diagramms</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.ereignis_algebra.EreignisAlgebra.einordnen">
+<code class="descname">einordnen</code><span class="sig-paren">(</span><em>A</em>, <em>B</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.ereignis_algebra.EreignisAlgebra.einordnen" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Einordnen in eine Vier-Felder-Tafel</p>
+<dl class="docutils">
+<dt><em>A</em>, <em>B</em> :</dt>
+<dd><p class="first">Ereignisse (Teilmengen der Grundmenge als Liste/Tupel/
+Menge/Zeichenkette angegeben; Grundlage für die
+Vier-Felder-Tafel)</p>
+<p class="last">Wird als Grundmenge das (große englische) Alphabet
+benutzt, müssen <em>A</em> und <em>B</em> als Wörter (Zeichenketten
+oder Symbole) angegeben werden</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.ereignis_algebra.EreignisAlgebra.venn">
+<code class="descname">venn</code><span class="sig-paren">(</span><em>A</em>, <em>B</em>, <em>ausdruck</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.ereignis_algebra.EreignisAlgebra.venn" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Venn-Diagramm zur Darstellung der Verknüpfung von Ereignissen</p>
+<dl class="docutils">
+<dt><em>A</em>, <em>B</em> :</dt>
+<dd>Ereignisse (Teilmengen der Grundmenge) als Liste/Tupel/
+Menge/Zeichenkette angegeben</dd>
+</dl>
+<p><em>ausdruck</em> :  Ausdruck in <em>A</em>, <em>B</em></p>
+<p>Näheres siehe bei der Methode berechnen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.ereignis_algebra.EreignisAlgebra.vt">
+<code class="descname">vt</code><span class="sig-paren">(</span><em>A</em>, <em>B</em>, <em>ausdruck</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.ereignis_algebra.EreignisAlgebra.vt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Vier-Felder-Tafel-Diagramm zur Darstellung der Verknüpfung von
+Ereignissen</p>
+<dl class="docutils">
+<dt><em>A</em>, <em>B</em> :</dt>
+<dd>Ereignisse (Teilmengen der Grundmenge) als Liste/Tupel/
+Menge/Zeichenkette angegeben</dd>
+</dl>
+<p><em>ausdruck</em> :  Ausdruck in <em>A</em>, <em>B</em></p>
+<p>Näheres siehe bei der Methode berechnen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.ereignis_algebra.EreignisAlgebra.wort2menge">
+<code class="descname">wort2menge</code><span class="sig-paren">(</span><em>wort</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.ereignis_algebra.EreignisAlgebra.wort2menge" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wort <span class="math">\(\rightarrow\)</span> Menge seiner Buchstaben</p>
+<p><em>wort</em> : Wort - Zeichenkette (in &#8216; &#8216; bzw. &#8221; &#8221;) oder Symbol</p>
+<p>Gebrauch bei einer Ereignisalgebra mit dem englischen
+Alphabet als Grundmenge</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="dr.html"
+                        title="vorheriges Kapitel">DR - DatenReihe</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="vt.html"
+                        title="nächstes Kapitel">VT - VierFelderTafel</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ea.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="vt.html" title="VT - VierFelderTafel"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="dr.html" title="DR - DatenReihe"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" >Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

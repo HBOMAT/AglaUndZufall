@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Figur &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen in der Ebene" href="klassenr2.html" />
+    <link rel="next" title="Ellipse" href="ellipse.html" />
+    <link rel="prev" title="Kreis" href="kreis2.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="ellipse.html" title="Ellipse"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="kreis2.html" title="Kreis"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" accesskey="U">Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="figur">
+<h1>Figur<a class="headerlink" href="#figur" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.figur.Figur">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.figur.</code><code class="descname">Figur</code><a class="headerlink" href="#agla.lib.objekte.figur.Figur" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Figur in der Ebene</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div><p>Figur ( <em>ecke1, ecke2</em>, ... )</p>
+<blockquote>
+<div><p><em>ecke</em> : Eckpunkt</p>
+<blockquote>
+<div>Zur Ermittlung der Eckenfolge wird bei einer Ecke begonnen und 
+die gesamte Kantenmenge der Figur in einem Zug durchlaufen, 
+wobei alle auf dem Weg liegenden Ecken eingetragen werden; wird 
+eine Ecke erneut durchlaufen, ist sie erneut zu notieren</div></blockquote>
+</div></blockquote>
+<p><em>oder</em></p>
+<p>Figur ( <em>ecken, kanten</em> )</p>
+<blockquote>
+<div><p><em>ecken</em> : Liste mit den Eckpunkten; jeder Eckpunkt  ist ein Mal enthalten</p>
+<p><em>kanten</em> : Liste mit den Kanten (2-elementige Listen/Tupel mit den 
+Indizes von Anfangs- und Endpunkt jeder Kante in der Eckenliste)</p>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.figur.Figur.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.figur.Figur.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.figur.Figur.anz_ecken">
+<code class="descname">anz_ecken</code><a class="headerlink" href="#agla.lib.objekte.figur.Figur.anz_ecken" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Synonym: <strong>anz_punkte</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.figur.Figur.anz_kanten">
+<code class="descname">anz_kanten</code><a class="headerlink" href="#agla.lib.objekte.figur.Figur.anz_kanten" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Anzahl Kanten</p>
+<p>Synonym: <strong>anz_linien</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.figur.Figur.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.figur.Figur.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.figur.Figur.ecken">
+<code class="descname">ecken</code><a class="headerlink" href="#agla.lib.objekte.figur.Figur.ecken" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Eckenliste</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.figur.Figur.is_geschlossen">
+<code class="descname">is_geschlossen</code><a class="headerlink" href="#agla.lib.objekte.figur.Figur.is_geschlossen" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Synonym: <strong>is_zu</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.figur.Figur.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.figur.Figur.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.figur.Figur.kanten">
+<code class="descname">kanten</code><a class="headerlink" href="#agla.lib.objekte.figur.Figur.kanten" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kantenliste</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.figur.Figur.pfad">
+<code class="descname">pfad</code><a class="headerlink" href="#agla.lib.objekte.figur.Figur.pfad" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Pfad; Durchlaufen aller Kanten der Figur in einem Zug</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">kanten</code></dt>
+<dd><p>Synonym: <strong>linien</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.figur.Figur.matrix">
+<code class="descname">matrix</code><a class="headerlink" href="#agla.lib.objekte.figur.Figur.matrix" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Matrix (aus den Punkten des Pfades)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.figur.Figur.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.figur.Figur.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameter einer Schar</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.figur.Figur.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.figur.Figur.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildfigur bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.figur.Figur.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.figur.Figur.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Figurschar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">hilfe</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">h</span></code></p>
+<p><code class="docutils literal"><span class="pre">anz_ecken</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">anzEcken</span></code></p>
+<p><code class="docutils literal"><span class="pre">anz_kanten</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">anzKanten</span></code></p>
+<p><code class="docutils literal"><span class="pre">anz_linien</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">anzLinien</span></code></p>
+<p><code class="docutils literal"><span class="pre">anz_punkte</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">anzPunkte</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_geschlossen</span> <span class="pre">:</span>&#160; <span class="pre">isGeschlossen</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_zu</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">isZu</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="kreis2.html"
+                        title="vorheriges Kapitel">Kreis</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="ellipse.html"
+                        title="nächstes Kapitel">Ellipse</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/figur.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="ellipse.html" title="Ellipse"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="kreis2.html" title="Kreis"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" >Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

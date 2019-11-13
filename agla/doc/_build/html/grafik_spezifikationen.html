@@ -1,0 +1,584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Grafik-Spezifikationen &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="next" title="Animationen" href="animationen.html" />
+    <link rel="prev" title="2D-Grafiken (matplotlib)" href="grafik2d.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="animationen.html" title="Animationen"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="grafik2d.html" title="2D-Grafiken (matplotlib)"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="grafik-spezifikationen">
+<span id="id1"></span><h1>Grafik-Spezifikationen<a class="headerlink" href="#grafik-spezifikationen" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Grafiken werden mittels der Anweisung:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">Grafik</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>   <span class="c1"># oder</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">zeichne</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>hergestellt (siehe <a class="reference internal" href="funktionen.html#grafik"><span class="std std-ref">Grafik-Funktion</span></a>).
+Als Argumente werden Angaben zu den darzustellenden Objekten,
+durch Komma getrennt, gemacht. Wird dabei lediglich der Name eines Objektes
+angegeben, erfolgt seine Darstellung mit Hilfe von Standardannahmen, z.B.
+werden Linien schwarz und Flächen grün gezeichnet:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">zeichne</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">g</span><span class="p">)</span>     <span class="c1"># e sei eine Ebene, g eine Gerade</span>
+</pre></div>
+</div>
+<p>Außerdem sind für die Gestaltung einer Grafik einige (globale) Zusatzangaben
+möglich</p>
+<p>Soll die Darstellung geändert werden, kann das durch eine geeignete
+Spezifikation erfolgen. Dazu wird als Argument eine Liste (mit eckigen
+Klammern) übergeben, deren erstes Element das Objekt selbst ist, danach
+folgen Angaben zur Farbe und/oder zur Punkt/Linienstärke. Weiterhin können
+für eine Reihe von Objekten zusätzliche Angaben, z.B. zur gefüllten
+Darstellung, gemacht werden. Beispiele sind:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">zeichne</span><span class="p">(</span> <span class="p">[</span><span class="n">e</span><span class="p">,</span> <span class="n">rot</span><span class="p">],</span> <span class="p">[</span><span class="n">g</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">grün</span><span class="p">]</span> <span class="p">)</span> <span class="c1"># e rot, g grün+stark</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">zeichne</span><span class="p">(</span> <span class="p">[</span><span class="n">d</span><span class="p">,</span> <span class="n">blau</span><span class="p">,</span> <span class="s1">&#39;füll=ja&#39;</span><span class="p">]</span> <span class="p">)</span>   <span class="c1"># Dreieck d, blau gefüllt</span>
+</pre></div>
+</div>
+<p>Eine etwas modifizierte Spezifikationsangabe gilt für Vektor-/Punkt-Objekte:
+Ist in der Liste nur das erste Element ein Vektor-Objekt, z.B. <code class="docutils literal"><span class="pre">P</span></code>, wird
+der entsprechende Punkt dargestellt:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">zeichne</span><span class="p">(</span> <span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">rot</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>   <span class="c1"># ein roter Punkt mittlerer Größe )</span>
+</pre></div>
+</div>
+<p>Ist auch das zweite Listenelement ein Vektor, etwa <code class="docutils literal"><span class="pre">Q</span></code>, wird <code class="docutils literal"><span class="pre">P</span></code>
+als Vektor (Pfeil) gezeichnet, wobei im Punkt <code class="docutils literal"><span class="pre">Q</span></code> begonnen wird:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">zeichne</span><span class="p">(</span> <span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">rot</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>   <span class="c1"># ein starker roter Pfeil</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Überblick über die Spezifikationsangaben</strong></p>
+<p>x - Angabe möglich</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="16%" />
+<col width="18%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Objekt</th>
+<th class="head">farbe</th>
+<th class="head">stärke</th>
+<th class="head">Zusatz / Bemerkung</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Vektor</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>siehe obigen Text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Gerade</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Ebene</span></code></td>
+<td>x</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Kugel</span></code></td>
+<td>x</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Strecke</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Dreieck</span></code></td>
+<td>x</td>
+<td>x</td>
+<td><cite>&#8216;füll=ja&#8217;</cite> Füllen des Dreiecks</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Viereck</span></code></td>
+<td>x</td>
+<td>x</td>
+<td><cite>&#8216;füll=ja&#8217;</cite> Füllen des Vierecks</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Kreis</span></code></td>
+<td>x</td>
+<td>x</td>
+<td><cite>&#8216;füll=ja&#8217;</cite> Füllen des Kreises</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ParGramm</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Spat</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Pyramide</span></code></td>
+<td>x</td>
+<td>x</td>
+<td><cite>&#8216;füll=ja&#8217;</cite> Füllen der Pyramide</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><cite>&#8216;kanten=nein&#8217;</cite> kein Zeichnen der Kanten</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Prisma</span></code></td>
+<td>x</td>
+<td>x</td>
+<td><cite>&#8216;füll=ja&#8217;</cite> Füllen des Prismas</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><cite>&#8216;kanten=nein&#8217;</cite> kein Zeichnen der Kanten</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Kegel</span></code></td>
+<td>x</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Zylinder</span></code></td>
+<td>x</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Körper</span></code></td>
+<td>x</td>
+<td>x</td>
+<td><cite>&#8216;füll=ja&#8217;</cite> Füllen des Körpers</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><cite>&#8216;kanten=nein&#8217;</cite> kein Zeichnen der Kanten</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">K2O</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Ellipse</span></code></td>
+<td>x</td>
+<td>x</td>
+<td><cite>&#8216;füll=ja&#8217;</cite> Füllen der Ellipse</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Hyperbel</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">Parabel</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Kurve</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>für Raumkurven:</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><cite>&#8216;fein=ja&#8217;</cite>   verfeinerte Darstellung</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><cite>&#8216;fein=n&#8217;</cite>  <em>n</em>-Anzahl Stützst.; Standad 100</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><cite>&#8216;radius=ja&#8217;</cite> Darstellung als Röhre</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><cite>&#8216;radius=wert&#8217;</cite> ebenso; Standard 0.02</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>für mit impl. Gleichung erzeugte ebene Kurven</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><cite>&#8216;punkte=(nx, ny)&#8217;</cite> Punktdichte in <em>x</em>-</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>und <em>y</em>-Richtung; Standard 300</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">Fläche</span></code></td>
+<td>x</td>
+<td>&nbsp;</td>
+<td><cite>&#8216;gitter=ja&#8217;</cite> Flächengitter</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><cite>&#8216;gitter=(nu, nw)&#8217;</cite> ebenso; Anzahl</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>der <em>u</em>-, <em>w</em>-Linien; Standard 12</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><cite>&#8216;draht=ja&#8217;</cite> Drahtgitter</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><cite>&#8216;&#8217;draht=(nu, nw)&#8217;</cite> ebenso; Anzahl der</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><em>u</em>-, <em>w</em>-Linien; Standard 12</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>für mit impl. Gleichung erzeugte Flächen</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><cite>&#8216;punkte=(nx, ny, nz)&#8217;</cite> Festlegen der</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Punktdichte in <em>x</em>-, <em>y</em>- und <em>z</em>-Richtung;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Standard 100</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">F2O</span></code></td>
+<td>x</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">sPunkt</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">sGerade</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">sStrecke</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">sDreieck</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">sZweieck</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">sKreis</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">hPunkt</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">hStrecke</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">hGerade</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">hStrahl</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">hDreieck</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">hKreis</span></code></td>
+<td>x</td>
+<td>x</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Angaben zu Farben</strong></p>
+<blockquote>
+<div><p>Die möglichen Farbangaben sind durch Aufruf der Funktion <code class="docutils literal"><span class="pre">farben</span></code> zu
+erfragen:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">farben</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Wird keine Farbe angegeben, gilt der Standard</p>
+<blockquote>
+<div>Punkte und Linien werden schwarz, Flächen grün gezeichnet</div></blockquote>
+</div></blockquote>
+<p><strong>Angaben zur Punkt-/Linienstärke</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">1</span></code> - klein</li>
+<li><code class="docutils literal"><span class="pre">2</span></code> - mittel</li>
+<li><code class="docutils literal"><span class="pre">3</span></code> - groß</li>
+</ul>
+<p>der Standardwert ist <code class="docutils literal"><span class="pre">1</span></code></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Zur <strong>Gestaltung</strong> einer Grafik können mittels Schlüsselwortparametern
+zusätzliche Angaben gemacht werden</p>
+<p>Zusatzangaben für <strong>3D-Grafiken</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Angabe</th>
+<th class="head">Reaktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><cite>achsen = nein</cite></td>
+<td>Abschalten der Achsen</td>
+</tr>
+<tr class="row-odd"><td><cite>achsen = (bez_x, bez_y, bez_z)</cite></td>
+<td>Bezeichner der Achsen; Zeichenketten</td>
+</tr>
+<tr class="row-even"><td><cite>box = nein</cite></td>
+<td>Abschalten der Box</td>
+</tr>
+<tr class="row-odd"><td><cite>xy_gitter = ja</cite></td>
+<td>Anschalten eines Gitters in der <em>xy</em> - Ebene</td>
+</tr>
+<tr class="row-even"><td><cite>xyz_gitter = ja</cite></td>
+<td>Anschalten eines dreiseitigen Gitters</td>
+</tr>
+<tr class="row-odd"><td><cite>skalen = nein</cite></td>
+<td>Abschalten der Skalen</td>
+</tr>
+<tr class="row-even"><td><cite>x_skala = nein</cite></td>
+<td>Abschalten der <em>x</em>-Skala</td>
+</tr>
+<tr class="row-odd"><td><cite>y_skala = nein</cite></td>
+<td>Abschalten der <em>y</em> - Skala</td>
+</tr>
+<tr class="row-even"><td><cite>z_skala = nein</cite></td>
+<td>Abschalten der <em>z</em>-Skala</td>
+</tr>
+<tr class="row-odd"><td><cite>text = tupel</cite></td>
+<td>Zeichnen von Text; <cite>tupel</cite> hat Elemente der Form</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><cite>( x, y, z, &#8216;text&#8217; /[, text_größe ] )</cite></td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><cite>x, y, z</cite> - Position</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><cite>text_größe</cite> aus <cite>{1:kleiner, 2:größer}</cite></td>
+</tr>
+<tr class="row-odd"><td><cite>bez</cite></td>
+<td><cite>bez = text</cite></td>
+</tr>
+</tbody>
+</table>
+<p>Zusatzangaben für <strong>2D-Grafiken</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Angabe</th>
+<th class="head">Reaktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><cite>achsen = nein</cite></td>
+<td>Abschalten der Achsen</td>
+</tr>
+<tr class="row-odd"><td><cite>achsen = (bez_x, bez_y)</cite></td>
+<td>Bezeichner der Achsen; Zeichenketten</td>
+</tr>
+<tr class="row-even"><td><cite>box = nein</cite></td>
+<td>Abschalten der Box</td>
+</tr>
+<tr class="row-odd"><td><cite>gitter = ja</cite></td>
+<td>Anschalten eines Gitters</td>
+</tr>
+<tr class="row-even"><td><cite>skalen = nein</cite></td>
+<td>Abschalten der Skalen</td>
+</tr>
+<tr class="row-odd"><td><cite>x_skala = nein</cite></td>
+<td>Abschalten der <em>x</em>-Skala</td>
+</tr>
+<tr class="row-even"><td><cite>y_skala = nein</cite></td>
+<td>Abschalten der <em>y</em>-Skala</td>
+</tr>
+<tr class="row-odd"><td><cite>größe = (x, y)</cite></td>
+<td>Größe der Grafik; Standard = (8, 6)</td>
+</tr>
+<tr class="row-even"><td><cite>text = tupel</cite></td>
+<td>Zeichnen von Text; <cite>tupel</cite> hat Elemente der Form</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><cite>( x, y, z, &#8216;text&#8217; /[, text_größe ] )</cite></td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><cite>x, y, z</cite> - Position</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><cite>text_größe</cite> aus <cite>{1:kleiner, 2:größer}</cite></td>
+</tr>
+<tr class="row-even"><td><cite>bez</cite></td>
+<td><cite>bez = text</cite></td>
+</tr>
+</tbody>
+</table>
+<p>Anstelle von <code class="docutils literal"><span class="pre">ja</span></code> kann synonym <code class="docutils literal"><span class="pre">Ja,</span> <span class="pre">mit,</span> <span class="pre">Mit</span></code> oder <code class="docutils literal"><span class="pre">True</span></code> verwendet
+werden, anstelle von <code class="docutils literal"><span class="pre">nein</span></code> - <code class="docutils literal"><span class="pre">Nein,</span> <span class="pre">ohne,</span> <span class="pre">Ohne</span></code> oder <code class="docutils literal"><span class="pre">False</span></code></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">Zusatzangaben innerhalb einer Spezifikationsliste müssen immer als
+Zeichenkette geschrieben werden, bei globalen Angaben zur Gestalt der
+Grafik sind beide Schreibweisen möglich</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="grafik2d.html"
+                        title="vorheriges Kapitel">2D-Grafiken (matplotlib)</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="animationen.html"
+                        title="nächstes Kapitel">Animationen</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/grafik_spezifikationen.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="animationen.html" title="Animationen"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="grafik2d.html" title="2D-Grafiken (matplotlib)"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

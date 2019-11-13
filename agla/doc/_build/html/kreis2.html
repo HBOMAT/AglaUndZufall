@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Kreis &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen in der Ebene" href="klassenr2.html" />
+    <link rel="next" title="Figur" href="figur.html" />
+    <link rel="prev" title="Viereck" href="viereck2.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="figur.html" title="Figur"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="viereck2.html" title="Viereck"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" accesskey="U">Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="kreis">
+<h1>Kreis<a class="headerlink" href="#kreis" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.kreis.Kreis">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.kreis.</code><code class="descname">Kreis</code><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kreis im Raum und in der Ebene</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div><p>Kreis ( <em>ebene, mitte, radius</em> )</p>
+<blockquote>
+<div>(im Raum)</div></blockquote>
+<p>Kreis ( <em>mitte, radius</em> )</p>
+<blockquote>
+<div>(in der Ebene)</div></blockquote>
+</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>ebene</em> :    Trägerebene</p>
+<p><em>mitte</em> :    Mittelpunkt</p>
+<p><em>radius</em> :   Radius</p>
+</div></blockquote>
+<p><strong>Vordefinierte Kreise</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">EinhKreis</span></code> :   Einheitskreis im Raum</p>
+<p><code class="docutils literal"><span class="pre">EinhKreis2</span></code> :  Einheitskreis in der Ebene</p>
+</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.kreis.Kreis.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kreis.Kreis.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kreis.Kreis.ebene">
+<code class="descname">ebene</code><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.ebene" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Trägerebene; nur im Raum</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kreis.Kreis.flaeche">
+<code class="descname">flaeche</code><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.flaeche" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Flächeninhalt</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kreis.Kreis.flaeche_">
+<code class="descname">flaeche_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.flaeche_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Flächeninhalt; Dezimaldarstellung</p>
+<dl class="docutils">
+<dt>Zusatz :</dt>
+<dd><p class="first"><cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+<p class="last"><cite>f=1</cite> - Formel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kreis.Kreis.gleich">
+<code class="descname">gleich</code><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.gleich" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gleichung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kreis.Kreis.gleich_">
+<code class="descname">gleich_</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.gleich_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Auswertung der Gleichung in einem Punkt; nur in der Ebene</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kreis.Kreis.in_kurve">
+<code class="descname">in_kurve</code><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.in_kurve" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konvertierung in Kurve</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kreis.Kreis.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kreis.Kreis.mitte">
+<code class="descname">mitte</code><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.mitte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Mittelpunkt</p>
+<p>Synonyme: <strong>M</strong>, <strong>m</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kreis.Kreis.prg">
+<code class="descname">prg</code><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.prg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parametergleichung; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kreis.Kreis.radius">
+<code class="descname">radius</code><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.radius" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Radius</p>
+<p>Synonym: <strong>r</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kreis.Kreis.radius_">
+<code class="descname">radius_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.radius_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Radius; Dezimaldarstellung</p>
+<p>Synonym: <strong>r_</strong></p>
+<p>Zusatz : <cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kreis.Kreis.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Scharparameter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kreis.Kreis.umfang">
+<code class="descname">umfang</code><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.umfang" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umfang</p>
+<p>Synonym: <strong>laenge</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kreis.Kreis.umfang_">
+<code class="descname">umfang_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.umfang_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umfang; Dezimaldarstellung</p>
+<p>Synonym: <strong>laenge_</strong></p>
+<dl class="docutils">
+<dt>Zusatz :</dt>
+<dd><p class="first"><cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+<p class="last"><cite>f=1</cite> - Formel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kreis.Kreis.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildkreis bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kreis.Kreis.bogen">
+<code class="descname">bogen</code><span class="sig-paren">(</span><em>par_unt</em>, <em>par_ob</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.bogen" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kreisbogen</p>
+<p><em>par_unt</em> : untere Bereichsgrenze des Kreisparameters (in Grad)</p>
+<p><em>par_ob</em> : ebenso, obere Grenze</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kreis.Kreis.pkt">
+<code class="descname">pkt</code><span class="sig-paren">(</span><em>/[wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.pkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Punkt des Kreises</p>
+<p><em>wert</em> : Wert des Kreisparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Kreispunkt, der zu diesem Wert gehört</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>allgemeiner Punkt des Kreises</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kreis.Kreis.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Kreisschar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kreis.Kreis.schnitt">
+<code class="descname">schnitt</code><span class="sig-paren">(</span><em>objekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.schnitt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Schnittmenge des Kreises mit einem anderen Objekt; nur in der Ebene</p>
+<p><em>objekt</em> : Punkt, Gerade, Kreis</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>l=1</cite> - Lageinformationen</p>
+<p class="last"><cite>exakt=nein</cite> - näherungsweise Berechnung</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kreis.Kreis.tangente">
+<code class="descname">tangente</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kreis.Kreis.tangente" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Tangente in einem Kreispunkt oder von einem Punkt außerhalb; nur in der Ebene</p>
+<p><em>punkt</em> : Kreispunkt oder Punkt außerhalb</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">fläche_</span>&#160; <span class="pre">:</span>&#160; <span class="pre">Fläche</span></code></p>
+<p><code class="docutils literal"><span class="pre">gleich_</span>&#160; <span class="pre">:</span>&#160; <span class="pre">Gleich</span></code></p>
+<p><code class="docutils literal"><span class="pre">in_kurve</span> <span class="pre">:</span>&#160; <span class="pre">inKurve</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span> <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">länge_</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Länge</span></code></p>
+<p><code class="docutils literal"><span class="pre">radius_</span>&#160; <span class="pre">:</span>&#160; <span class="pre">Radius</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+<p><code class="docutils literal"><span class="pre">umfang_</span>&#160; <span class="pre">:</span>&#160; <span class="pre">Umfang</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="viereck2.html"
+                        title="vorheriges Kapitel">Viereck</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="figur.html"
+                        title="nächstes Kapitel">Figur</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/kreis2.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="figur.html" title="Figur"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="viereck2.html" title="Viereck"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" >Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

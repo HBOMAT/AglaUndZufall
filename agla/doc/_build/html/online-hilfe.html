@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Online - Hilfe &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="next" title="Bezeichner" href="bezeichner.html" />
+    <link rel="prev" title="Einleitung" href="einleitung.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="bezeichner.html" title="Bezeichner"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="einleitung.html" title="Einleitung"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="online-hilfe">
+<h1>Online - Hilfe<a class="headerlink" href="#online-hilfe" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Das Paket <em>agla</em> verfügt über ein eigenes Hilfesysten, sodass in einer
+Jupytersitzung jederzeit entsprechende Informationen erhalten werden können</p>
+<p>Unter dem Namen <code class="docutils literal"><span class="pre">Hilfe</span></code> steht eine Funktion zur Verfügung, über die zentrale
+Hilfeinformationen erfügbar sind. Mit der Eingabe</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">Hilfe</span><span class="p">()</span>     <span class="c1"># oder Hilfe(h=1)</span>
+</pre></div>
+</div>
+<p>in eine Code-Zelle des Notebooks wird man auf einzelne Seiten geleitet (der
+erste Teil <code class="docutils literal"><span class="pre">In</span> <span class="pre">[..]:</span></code> wird von Jupyter selbst erzeugt, die vorgenommene
+Nummerierung entspricht der Reihenfolge, in der die Zellen ausgeführt
+wurden)</p>
+<p>Weitere Hilfeinformationen können zu jedem <em>agla</em>-Objekt und zu den Methoden
+eines Objektes gewonnen werden, indem bei der Erzeugung des Objektes mit
+Hilfe seiner Erzeugerfunktion oder beim Aufruf der Methode als letzter (oder
+einziger) Eintrag in der Argumentenliste <cite>h=1</cite> geschrieben wird. Man erhält
+dann unmittelbar die gewünschte Information oder wird auf eine andere
+Hilfeseite geleitet</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">Ebene</span><span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>   <span class="c1"># Hilfe über die Erzeugerfunktion</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="c1"># Hilfe für eine Methode</span>
+         <span class="n">e</span> <span class="o">=</span> <span class="n">Ebene</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>   <span class="c1"># ein Objekt (Ebene-Instanz)</span>
+         <span class="n">e</span><span class="o">.</span><span class="n">schnitt</span><span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>           <span class="c1"># und seine Methode</span>
+</pre></div>
+</div>
+<p>Analoges gilt für die Funktionen, die von <em>agla</em> zur Verfügung gestellt werden</p>
+<p>Weiterhin ist für jedes Objekt eine Eigenschaft mit dem Namen <code class="docutils literal"><span class="pre">h</span></code> (Kurzform
+von <code class="docutils literal"><span class="pre">hilfe</span></code>) vorhanden, bei deren Aufruf die für dieses Objekt verfügbaren
+Eigenschaften und Methoden aufgelistet werden</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">e</span><span class="o">.</span><span class="n">h</span>   <span class="c1"># Hilfe für ein Objekt mit dem Namen e</span>
+</pre></div>
+</div>
+<p>Tritt in einer Syntaxdarstellung die Konstruktion <code class="docutils literal"><span class="pre">/[...]</span></code> auf, kann die
+Angabe zwischen den eckigen Klammern entfallen. Ein <code class="docutils literal"><span class="pre">|</span></code>-Zeichen bedeutet im
+Allgemeinen, dass zwischen zwei Angaben ausgewählt werden kann</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="einleitung.html"
+                        title="vorheriges Kapitel">Einleitung</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="bezeichner.html"
+                        title="nächstes Kapitel">Bezeichner</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/online-hilfe.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="bezeichner.html" title="Bezeichner"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="einleitung.html" title="Einleitung"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>KI - KonfidenzIntervall &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen" href="klassen.html" />
+    <link rel="next" title="STP - SignifikanzTestP" href="stp.html" />
+    <link rel="prev" title="AT - AlternativTest" href="at.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="stp.html" title="STP - SignifikanzTestP"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="at.html" title="AT - AlternativTest"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" accesskey="U">Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ki-konfidenzintervall">
+<h1>KI - KonfidenzIntervall<a class="headerlink" href="#ki-konfidenzintervall" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall">
+<em class="property">class </em><code class="descclassname">zufall.lib.objekte.konfidenz_intervall.</code><code class="descname">KonfidenzIntervall</code><a class="headerlink" href="#zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konfidenzintervall</p>
+<p><strong>Kurzname</strong> <strong>KI</strong></p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>KI( <em>umfang, treffer, konf_niveau, verfahren</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>umfang</em> : Stichprobenumfang</p>
+<p><em>treffer</em> : Anzahl Treffer in der Stichprobe</p>
+<p><em>konf_niveau</em> :</p>
+<blockquote>
+<div>Konfidenzniveau/Sicherheitswarscheinlichkei/
+Vertrauenszahl</div></blockquote>
+<p><em>verfahren</em> :</p>
+<blockquote>
+<div><p>&#8216;S&#8217; | &#8216;Sigma&#8217; - bei Konfidenzniveau aus {0.9, 0.95, 0.99} Benutzung der 
+Sigma-Umgebung des Erwartungswertes</p>
+<p>&#8216;N&#8217; | &#8216;NV&#8217; : Benutzung der Approximation durch die Normalverteilung</p>
+<p>&#8216;T&#8217; | &#8216;Tsch&#8217; : Benutzung der Tschebyschew-Ungleichung</p>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall.konf_int">
+<code class="descname">konf_int</code><a class="headerlink" href="#zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall.konf_int" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konfidenzintervall</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall.konf_niv">
+<code class="descname">konf_niv</code><a class="headerlink" href="#zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall.konf_niv" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konfidenzniveau</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall.n">
+<code class="descname">n</code><a class="headerlink" href="#zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall.n" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Stichprobenumfang</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall.quantil_nv">
+<code class="descname">quantil_nv</code><span class="sig-paren">(</span><em>q</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall.quantil_nv" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Quantile der (0,1)-Normalverteilung</p>
+<p><em>q</em> : Zahl aus [0, 1]</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall.treffer">
+<code class="descname">treffer</code><a class="headerlink" href="#zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall.treffer" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Trefferanzahl</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall.verf">
+<code class="descname">verf</code><a class="headerlink" href="#zufall.lib.objekte.konfidenz_intervall.KonfidenzIntervall.verf" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Verfahren</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">konf_niv</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">konfNiv</span></code></p>
+<p><code class="docutils literal"><span class="pre">konf_int</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">konfInt</span></code></p>
+<p><code class="docutils literal"><span class="pre">quantil_nv</span>&#160; <span class="pre">:</span>&#160; <span class="pre">quantilNV</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="at.html"
+                        title="vorheriges Kapitel">AT - AlternativTest</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="stp.html"
+                        title="nächstes Kapitel">STP - SignifikanzTestP</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ki.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="stp.html" title="STP - SignifikanzTestP"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="at.html" title="AT - AlternativTest"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" >Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

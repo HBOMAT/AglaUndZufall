@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Lineares Gleichungssystem &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Andere Klassen" href="andere_klassen.html" />
+    <link rel="next" title="Gleichung" href="gleichung.html" />
+    <link rel="prev" title="Matrix (Zeilen-, Spaltenanzahl &gt; 3)" href="matrix_n.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="gleichung.html" title="Gleichung"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="matrix_n.html" title="Matrix (Zeilen-, Spaltenanzahl &gt; 3)"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="andere_klassen.html" accesskey="U">Andere Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="lineares-gleichungssystem">
+<h1>Lineares Gleichungssystem<a class="headerlink" href="#lineares-gleichungssystem" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.lgs.LinearesGleichungsSystem">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.lgs.</code><code class="descname">LinearesGleichungsSystem</code><a class="headerlink" href="#agla.lib.objekte.lgs.LinearesGleichungsSystem" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>LinearesGleichungsSystem</p>
+<p><strong>Kurzform</strong></p>
+<blockquote>
+<div><strong>LGS</strong></div></blockquote>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div><p>LGS ( <em>[gleich1, gleich2 , ...] /[, var_liste]</em> ) <em>oder</em></p>
+<p>LGS ( <em>vekt_gleich  /[, var_liste</em> )</p>
+</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>gleich</em> : lineare Gleichung (linke Seite; rechte Seite = 0 angenommen)</p>
+<p><em>vekt_gleich</em> : Vektor-Gleichung (linke Seite; rechte Seite als Nullvektor 
+angenommen)</p>
+<p><em>var_liste</em> : Liste von Variablen</p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Eigenschaften</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">oe</span></code>,  <code class="docutils literal"><span class="pre">ss</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ö</span></code>, <code class="docutils literal"><span class="pre">ß</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.lgs.LinearesGleichungsSystem.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.lgs.LinearesGleichungsSystem.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.lgs.LinearesGleichungsSystem.ausg">
+<code class="descname">ausg</code><a class="headerlink" href="#agla.lib.objekte.lgs.LinearesGleichungsSystem.ausg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.lgs.LinearesGleichungsSystem.ausg_ohne_nr">
+<code class="descname">ausg_ohne_nr</code><a class="headerlink" href="#agla.lib.objekte.lgs.LinearesGleichungsSystem.ausg_ohne_nr" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ausgabe ohne Gleichungsnummern</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.lgs.LinearesGleichungsSystem.cramer">
+<code class="descname">cramer</code><a class="headerlink" href="#agla.lib.objekte.lgs.LinearesGleichungsSystem.cramer" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Lösung mit der Cramer&#8217;schen Regel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.lgs.LinearesGleichungsSystem.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.lgs.LinearesGleichungsSystem.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.lgs.LinearesGleichungsSystem.erw_matrix">
+<code class="descname">erw_matrix</code><a class="headerlink" href="#agla.lib.objekte.lgs.LinearesGleichungsSystem.erw_matrix" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erweiterte Matrix</p>
+<p>Synonym: <strong>AA</strong>, <strong>aa</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.lgs.LinearesGleichungsSystem.gauss">
+<code class="descname">gauss</code><a class="headerlink" href="#agla.lib.objekte.lgs.LinearesGleichungsSystem.gauss" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Lösung mit dem Gauß-Verfahren</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.lgs.LinearesGleichungsSystem.graf_loes">
+<code class="descname">graf_loes</code><a class="headerlink" href="#agla.lib.objekte.lgs.LinearesGleichungsSystem.graf_loes" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Grafische Lösung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.lgs.LinearesGleichungsSystem.kurz_ausg">
+<code class="descname">kurz_ausg</code><a class="headerlink" href="#agla.lib.objekte.lgs.LinearesGleichungsSystem.kurz_ausg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ausgabe in Kurzform</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.lgs.LinearesGleichungsSystem.loes">
+<code class="descname">loes</code><a class="headerlink" href="#agla.lib.objekte.lgs.LinearesGleichungsSystem.loes" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Lösungsmenge</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.lgs.LinearesGleichungsSystem.matrix">
+<code class="descname">matrix</code><a class="headerlink" href="#agla.lib.objekte.lgs.LinearesGleichungsSystem.matrix" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Matrix</p>
+<p>Synonym: <strong>A</strong>, <strong>a</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.lgs.LinearesGleichungsSystem.re_seite">
+<code class="descname">re_seite</code><a class="headerlink" href="#agla.lib.objekte.lgs.LinearesGleichungsSystem.re_seite" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Rechte Seite</p>
+<p>Synonym: <strong>b</strong></p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">ausg_ohne_nr</span> <span class="pre">:</span>&#160; <span class="pre">ausgOhneNr</span></code></p>
+<p><code class="docutils literal"><span class="pre">erw_matrix</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">erwMatrix</span></code></p>
+<p><code class="docutils literal"><span class="pre">graf_lös</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">grafLös</span></code></p>
+<p><code class="docutils literal"><span class="pre">kurz_ausg</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">kurzAusg</span></code></p>
+<p><code class="docutils literal"><span class="pre">re_seite</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">reSeite</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="matrix_n.html"
+                        title="vorheriges Kapitel">Matrix (Zeilen-, Spaltenanzahl &gt; 3)</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="gleichung.html"
+                        title="nächstes Kapitel">Gleichung</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/lgs.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="gleichung.html" title="Gleichung"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="matrix_n.html" title="Matrix (Zeilen-, Spaltenanzahl &gt; 3)"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="andere_klassen.html" >Andere Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

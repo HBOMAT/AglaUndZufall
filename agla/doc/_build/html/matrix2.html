@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Matrix &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen in der Ebene" href="klassenr2.html" />
+    <link rel="next" title="Abbildung" href="abbildung2.html" />
+    <link rel="prev" title="Kurve" href="kurve2.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="abbildung2.html" title="Abbildung"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="kurve2.html" title="Kurve"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" accesskey="U">Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="matrix">
+<h1>Matrix<a class="headerlink" href="#matrix" title="Link zu dieser Überschrift">¶</a></h1>
+<blockquote>
+<div><p>Das Paket <em>agla</em> besitzt keine eigene Matrix-Klasse, es wird direkt die
+(angepaßte) <strong>MutableDenseMatrix</strong>-Klasse von SymPy verwendet</p>
+<p>Matrizen können eine beliebige Dimension <em>mxn</em> haben, <em>m</em>, <em>n</em> &gt; 1</p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div><p>Matrix ( <em>vektor1, vektor2,</em> ... )</p>
+<p><em>oder</em></p>
+<p>vektor1 | vektor2 | ...</p>
+<blockquote>
+<div><p><em>vektor</em> : (Spalten-)Vektor; alle Vektoren müssen die gleiche Dimension
+haben</p>
+<p><code class="docutils literal"><span class="pre">|</span></code> : Verkettungsoperator</p>
+</div></blockquote>
+<p><em>oder</em></p>
+<p>Erzeugung auf die in SymPy verwendete Art (siehe SymPy-Dokumentation)</p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p><strong>Zugriff</strong> auf das Element in Zeile <em>i</em> und Spalte <em>j</em> der <em>mxn</em> -
+Matrix <em>M</em>:</p>
+<blockquote>
+<div><p><em>M[i, j], i=0...m-1, j=0...n-1</em></p>
+<p>mittels Zuweisung können so auch einzelne Elemente verändert werden</p>
+</div></blockquote>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Operatoren</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">+</span></code></td>
+<td>Addition von zwei Matrizen</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">-</span></code></td>
+<td>Negation / Subtraktion von Matrizen</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">*</span></code></td>
+<td>Multiplikation mit Skalar, Vektor, Matrix</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">^</span></code></td>
+<td>Potenzieren einer Matrix mit einer ganzen Zahl</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">**</span></code></td>
+<td>ebenso</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">|</span></code></td>
+<td>Verketten einer Matrix mit einem Vektor</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Vordefinierte Matrizen</strong> im Raum und in der Ebene</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">NullMat</span></code>   : Nullmatrix im Raum</p>
+<p><code class="docutils literal"><span class="pre">EinhMat</span></code>   :      Einheitsmatrix im Raum</p>
+<p><code class="docutils literal"><span class="pre">NullMat2</span></code>  : Nullmatrix in der Ebene</p>
+<p><code class="docutils literal"><span class="pre">EinhMat2</span></code>  :      Einheitsmatrix in der Ebene</p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Die unten aufgeführten <strong>Eigenschaften und Methoden</strong> betreffen Matrizen mit
+einer Zeilenanzahl &lt; 4. Für höhere Dimensionen siehe
+<a class="reference internal" href="andere_klassen.html#andere-klassen"><span class="std std-ref">Andere Klassen</span></a></p>
+<dl class="attribute">
+<dt id="hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="anz_spalt">
+<code class="descname">anz_spalt</code><a class="headerlink" href="#anz_spalt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Anzahl Spalten</p>
+<p>SymPy-Zugriff: <strong>cols</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="anz_zeil">
+<code class="descname">anz_zeil</code><a class="headerlink" href="#anz_zeil" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Anzahl Zeilen</p>
+<p>SymPy-Zugriff: <strong>rows</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="char_poly">
+<code class="descname">char_poly</code><a class="headerlink" href="#char_poly" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Charakteristisches Polynom; nur für <em>2x2</em>- und <em>3x3</em>-Matrizen</p>
+<p>SymPy-Zugriff: <strong>charpoly()</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="D">
+<code class="descname">D</code><a class="headerlink" href="#D" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Determinante; nur für <em>2x2</em>- und <em>3x3</em>-Matrizen</p>
+<p>SymPy-Zugriff: <strong>det()</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dim">
+<code class="descname">dim</code><a class="headerlink" href="#dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+<p>SymPy-Zugriff: <strong>shape</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="eig_wert">
+<code class="descname">eig_wert</code><a class="headerlink" href="#eig_wert" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Eigenvwerte; nur für <em>2x2</em>- und <em>3x3</em>-Matrizen</p>
+<p>SymPy-Zugriff: <strong>eigenvects()</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="eig_vekt">
+<code class="descname">eig_vekt</code><a class="headerlink" href="#eig_vekt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Eigenvektoren; nur für <em>2x2</em>- und <em>3x3</em>-Matrizen</p>
+<p>SymPy-Zugriff: <strong>eigenvects()</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="einfach">
+<code class="descname">einfach</code><a class="headerlink" href="#einfach" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Vereinfachung</p>
+<p>SymPy-Zugriff: <strong>simplify</strong> (<em>matrix</em>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="inverse">
+<code class="descname">inverse</code><a class="headerlink" href="#inverse" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Inverse; nur für <em>2x2</em>- und <em>3x3</em>-Matrizen</p>
+<p>SymPy-Zugriff: <strong>inv()</strong></p>
+<p>Es kann auch <code class="docutils literal"><span class="pre">m^-1</span></code> benutzt werden, <em>m</em> - Matrix</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>/[wert]</em><span class="sig-paren">)</span><a class="headerlink" href="#sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Schar</p>
+<p><em>wert</em> : Wert des  Scharparameters</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Scharparameter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="transp">
+<code class="descname">transp</code><a class="headerlink" href="#transp" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Transponierte</p>
+<p>SymPy-Zugriff: <strong>T</strong> <em>oder</em>       <strong>transpose()</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vekt">
+<code class="descname">vekt</code><a class="headerlink" href="#vekt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Spaltenvektoren</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">anz_spalt</span> <span class="pre">:</span>&#160; <span class="pre">anzSpalt</span></code></p>
+<p><code class="docutils literal"><span class="pre">anz_zeil</span>&#160; <span class="pre">:</span>&#160; <span class="pre">anzZeil</span></code></p>
+<p><code class="docutils literal"><span class="pre">char_poly</span> <span class="pre">:</span>&#160; <span class="pre">charPoly</span></code></p>
+<p><code class="docutils literal"><span class="pre">eig_wert</span>&#160; <span class="pre">:</span>&#160; <span class="pre">eigWert</span></code></p>
+<p><code class="docutils literal"><span class="pre">eig_vekt</span>&#160; <span class="pre">:</span>&#160; <span class="pre">eigVekt</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="kurve2.html"
+                        title="vorheriges Kapitel">Kurve</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="abbildung2.html"
+                        title="nächstes Kapitel">Abbildung</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/matrix2.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="abbildung2.html" title="Abbildung"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="kurve2.html" title="Kurve"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" >Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

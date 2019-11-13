@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Zugriff auf Eigenschaften und Methoden &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="next" title="Jupyter-Notebook" href="notebook.html" />
+    <link rel="prev" title="Bezeichner" href="bezeichner.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="notebook.html" title="Jupyter-Notebook"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="bezeichner.html" title="Bezeichner"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="zugriff-auf-eigenschaften-und-methoden">
+<h1>Zugriff auf Eigenschaften und Methoden<a class="headerlink" href="#zugriff-auf-eigenschaften-und-methoden" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Die <em>zufall</em>-Objekte haben verschiedene Eigenschaften und Methoden (die
+letzteren erwarten für ihre Ausführung Argumente - ein weiteres Objekt, einen
+Parameterwert o.ä.). Die implementierten Eigenschaften und Methoden eines
+Objektes können z.B. über die Hilfeseite seiner Klasse, etwa mit</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">BV</span><span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>   <span class="c1"># führt auf h=3</span>
+</pre></div>
+</div>
+<p>ermittelt werden. Eine BinomialVerteilung-Instanz <code class="docutils literal"><span class="pre">bv</span></code> hat z.B. die
+Eigenschaft <code class="docutils literal"><span class="pre">vert</span></code> (Wahrscheinlichkeitsverteilung) und die Methode <code class="docutils literal"><span class="pre">P</span></code>
+(zur Berechnung von Wahrscheinlichkeiten). Der Zugriff erfolgt mittels des <code class="docutils literal"><span class="pre">.</span></code>
+- Operators, der allgemein in der Objektorientierten Programmierung
+Verwendung findet. Sei</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">bv</span> <span class="o">=</span> <span class="n">BV</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>so kann der Zugriff auf die genannte Eigenschaft und die genannte Methode mit
+den Anweisungen</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">bv</span><span class="o">.</span><span class="n">vert</span>   <span class="c1"># die Verteilung (als dict/dictionary)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">bv</span><span class="o">.</span><span class="n">P</span><span class="p">(</span> <span class="n">X</span> <span class="o">&lt;</span> <span class="mi">12</span> <span class="p">)</span>   <span class="c1"># die Wahrscheinlichkeit für Trefferanzahl</span>
+                          <span class="c1"># kleiner 12</span>
+</pre></div>
+</div>
+<p>erfolgen</p>
+<p>Der Zugriff auf eine Methode wird generell über einen Funktionsaufruf
+realisiert, der Argumente erwartet, die in Klammern einzuschließen sind. Hier
+ist das einzige Argument der Vergleichsausdrck <code class="docutils literal"><span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">12</span></code> angegeben, der
+das Ereignis &#8220;Die Anzahl der Treffer ist kleiner als 12&#8221; beschreibt. Sind
+mehrere Argumente anzugeben, sind sie durch Komma zu trennen</p>
+<p>Zu einigen Eigenschaften existiert eine Methode mit gleichem Namen, der auf
+einen Unterstrich <code class="docutils literal"><span class="pre">_</span></code> endet. Damit besteht die Möglichkeit, mittels des
+entsprechenden Funktionsaufrufes zusätzliche Informationen/Leistungen
+anzufordern. Welche das sind, kann über die Hilfeanforderung (<cite>h=1</cite> als
+letzter Eintrag in der Argumentliste) erfahren werden. Diese zu Eigenschaften
+gehörenden Methoden können auch über den Namen der Eigenschaft mit großem
+Anfangsbuchstaben aufgerufen werden, also z.B. für die Eigenschaft <code class="docutils literal"><span class="pre">vert_</span></code>
+von <code class="docutils literal"><span class="pre">bv</span></code></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">bv</span><span class="o">.</span><span class="n">vert_</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>    <span class="c1"># oder</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">bv</span><span class="o">.</span><span class="n">Vert</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Das Ergebnis eines Eigenschafts-/Methodenaufrufes kann ein dictionary sein,
+etwa die Wahrscheinlichkeitsverteilung <code class="docutils literal"><span class="pre">bv.vert</span></code>. Auf ein einzelnes
+Argument kann mit dem Schlüssel zugegriffen werden, etwa mit</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">bv</span><span class="o">.</span><span class="n">vert</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Auf einzelne Elemente von Tupeln oder Listen kann mittels Index bzw. darauf
+basierendem Ausdruck zugegriffen werden, etwa auf einzelne Elemente einer
+DatenReihe (Kurzform DR)</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">dr</span> <span class="o">=</span> <span class="n">DR</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">dr</span><span class="o">.</span><span class="n">daten</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># eine Liste mit den ersten drei Datenelementen</span>
+</pre></div>
+</div>
+<p>Zu beachten ist, dass die Zählung gemäß der Python-Konvention bei 0 beginnt</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="bezeichner.html"
+                        title="vorheriges Kapitel">Bezeichner</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="notebook.html"
+                        title="nächstes Kapitel">Jupyter-Notebook</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/zugriff.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="notebook.html" title="Jupyter-Notebook"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="bezeichner.html" title="Bezeichner"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

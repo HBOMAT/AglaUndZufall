@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Pyramide &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen im Raum" href="klassenr3.html" />
+    <link rel="next" title="Prisma" href="prisma.html" />
+    <link rel="prev" title="Kreis" href="kreis.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="prisma.html" title="Prisma"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="kreis.html" title="Kreis"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr3.html" accesskey="U">Klassen im Raum</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pyramide">
+<h1>Pyramide<a class="headerlink" href="#pyramide" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.pyramide.Pyramide">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.pyramide.</code><code class="descname">Pyramide</code><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Pyramide im Raum</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div><p>Pyramide ( <em>grund, höhe</em> )</p>
+<blockquote>
+<div><p><em>grund</em> :   Grundfläche (Dreieck oder Viereck)</p>
+<p><em>höhe</em> :    Höhe (Zahl); wird im Schwerpunkt von <em>grund</em> senkrecht zu diesem errichtet, das Vorzeichen bestimmt die Richtung</p>
+</div></blockquote>
+<p><em>oder</em>   F</p>
+<p>Pyramide ( <em>grund, spitze</em> )</p>
+<blockquote>
+<div><em>spitze</em> : Punkt; damit sind auch schiefe Pyramiden möglich</div></blockquote>
+<p><em>oder</em></p>
+<p>Pyramide ( <em>/[ stütz, ] spann1, spann2, spann3 )</em> )</p>
+<blockquote>
+<div><p><em>stütz</em> :    Stützvektor; bei Fehlen Nullvektor</p>
+<p><em>spann</em> :   Spannvektor</p>
+<p>(dreiseitige Pyramide, über Vektoren erzeugt)</p>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code>, <code class="docutils literal"><span class="pre">oe</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code>, <code class="docutils literal"><span class="pre">ö</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.pyramide.Pyramide.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.pyramide.Pyramide.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.pyramide.Pyramide.g_flaeche">
+<code class="descname">g_flaeche</code><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.g_flaeche" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Grundflächeninhalt</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.pyramide.Pyramide.g_fläche_">
+<code class="descname">g_fläche_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.g_fläche_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Grundflächeninhalt; Dezimaldarstellung</p>
+<p>Zusatz : <cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.pyramide.Pyramide.grund">
+<code class="descname">grund</code><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.grund" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Grundfläche</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.pyramide.Pyramide.hoehe">
+<code class="descname">hoehe</code><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.hoehe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Höhe</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.pyramide.Pyramide.hoehe_">
+<code class="descname">hoehe_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.hoehe_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Höhe; Dezimaldarstellung</p>
+<p>Zusatz : <cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.pyramide.Pyramide.in_koerper">
+<code class="descname">in_koerper</code><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.in_koerper" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konvertierung in Körper</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.pyramide.Pyramide.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.pyramide.Pyramide.m_flaeche">
+<code class="descname">m_flaeche</code><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.m_flaeche" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Mantelflächeninhalt</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.pyramide.Pyramide.m_flaeche_">
+<code class="descname">m_flaeche_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.m_flaeche_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Mantelflächeninhalt; Dezimaldarstellung</p>
+<p>Zusatz : <cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.pyramide.Pyramide.o_flaeche">
+<code class="descname">o_flaeche</code><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.o_flaeche" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Oberflächeninhalt</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.pyramide.Pyramide.o_flaeche_">
+<code class="descname">o_flaeche_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.o_flaeche_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Oberflächeninhalt; Dezimaldarstellung</p>
+<p>Zusatz : <cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.pyramide.Pyramide.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameter einer Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.pyramide.Pyramide.seiten">
+<code class="descname">seiten</code><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.seiten" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Seitenflächen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.pyramide.Pyramide.spitze">
+<code class="descname">spitze</code><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.spitze" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Spitze</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.pyramide.Pyramide.volumen">
+<code class="descname">volumen</code><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.volumen" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Volumen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.pyramide.Pyramide.volumen_">
+<code class="descname">volumen_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.volumen_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Volumen; Dezimaldarstellung</p>
+<dl class="docutils">
+<dt>Zusatz :</dt>
+<dd><p class="first"><cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+<p class="last"><cite>f=1</cite> - Formel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.pyramide.Pyramide.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildpyramide bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung des Raumes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.pyramide.Pyramide.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.pyramide.Pyramide.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Pyramidenschar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">g_fläche</span>&#160; <span class="pre">:</span>&#160; <span class="pre">gFläche</span></code></p>
+<p><code class="docutils literal"><span class="pre">g_fläche_</span> <span class="pre">:</span>&#160; <span class="pre">GFläche</span></code></p>
+<p><code class="docutils literal"><span class="pre">höhe_</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Höhe</span></code></p>
+<p><code class="docutils literal"><span class="pre">in_körper</span> <span class="pre">:</span>&#160; <span class="pre">inKörper</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">m_fläche</span>&#160; <span class="pre">:</span>&#160; <span class="pre">mFläche</span></code></p>
+<p><code class="docutils literal"><span class="pre">m_fläche_</span> <span class="pre">:</span>&#160; <span class="pre">MFläche</span></code></p>
+<p><code class="docutils literal"><span class="pre">o_fläche</span>&#160; <span class="pre">:</span>&#160; <span class="pre">oFläche</span></code></p>
+<p><code class="docutils literal"><span class="pre">o_fläche_</span> <span class="pre">:</span>&#160; <span class="pre">OFläche</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+<p><code class="docutils literal"><span class="pre">volumen_</span>&#160; <span class="pre">:</span>&#160; <span class="pre">Volumen</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="kreis.html"
+                        title="vorheriges Kapitel">Kreis</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="prisma.html"
+                        title="nächstes Kapitel">Prisma</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pyramide.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="prisma.html" title="Prisma"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="kreis.html" title="Kreis"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr3.html" >Klassen im Raum</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

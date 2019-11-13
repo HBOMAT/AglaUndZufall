@@ -1,0 +1,642 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Kurve &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen in der Ebene" href="klassenr2.html" />
+    <link rel="next" title="Matrix" href="matrix2.html" />
+    <link rel="prev" title="Kurve2terOrdnung" href="k2o.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="matrix2.html" title="Matrix"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="k2o.html" title="Kurve2terOrdnung"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" accesskey="U">Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="kurve">
+<h1>Kurve<a class="headerlink" href="#kurve" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.kurve.Kurve">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.kurve.</code><code class="descname">Kurve</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kurve im Raum und in der Ebene</p>
+<p><strong>Erzeugung im Raum und in der Ebene</strong></p>
+<blockquote>
+<div><p>Kurve ( <em>par_form, (par_name, par_unt, par_ob)</em> )</p>
+<p><em>oder</em></p>
+<p>Kurve ( <em>allg_punkt, (par_name, par_unt, par_ob)</em> )</p>
+</div></blockquote>
+<p><strong>Erzeugung nur in der Ebene</strong></p>
+<blockquote>
+<div>Kurve ( <em>gleichung /[, (par_name, par_unt, par_ob)]</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>par_form</em> :     Parameterform der Kurve</p>
+<p><em>allg_punkt</em> :   allgemeiner Kurvenpunkt</p>
+<p><em>par_name</em> :     Name des Kurvenparameters; freier Bezeichner; Standard <em>t</em></p>
+<p><em>par_unt, par_ob</em> :      untere, obere Grenzen des Parameterbereiches</p>
+<p><em>gleichung</em> : gleichung kann sein (die Hochkomma sind mitzuschreiben)</p>
+<ul>
+<li><dl class="first docutils">
+<dt>&#8216;<em>y = f(x)</em> &#8216;     Funktionsgleichung   (1)</dt>
+<dd><p class="first last"><em>x, y</em> - kartesische Koordinaten</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>&#8216;<em>r = f(phi)</em> &#8216;   Gleichung in Polarkoordinaten   (2)      </dt>
+<dd><p class="first last"><em>r, phi</em> - Polarkoordinaten</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">&#8216;<em>F(x, y) = 0</em> &#8216;  Implizite Gleichung    <em>oder</em></p>
+</li>
+<li><p class="first"><em>F(x, y)</em>        ebenso, rechte Seite = 0 angenommen</p>
+</li>
+</ul>
+<p>Die Verwendung der Bezeichner <em>x</em> und <em>y</em> bzw. <em>r</em> und <em>phi</em> ist 
+zwingend</p>
+<p>Bei (1) wird parametrisiert,wobei eventuell mitgeteilte Parameterangaben 
+benutzt werden; bei Fehlen derselben wird (<em>t, -10, 10</em>) verwendet</p>
+<p>Bei (2) wird automatisch in kartesische Koordinaten transformiert, <em>phi</em> 
+wird durch den angegebenen Parameter ersezt; bei Fehlen von 
+Parameterangaben wird wie bei (1) verfahren</p>
+<p>Für die Parameterangaben kann statt eines Tupels eine  Liste benutzt 
+werden</p>
+<p>Sollen weitere Gleichungen einer Kurve in der Ebene mit gespeichert werden, 
+sind sie über Schlüsselwortparameter mitzuteilen, wobei nur die rechte bzw. 
+linke Seite der jeweiligen Gleichung geschrieben wird</p>
+<ul>
+<li><dl class="first docutils">
+<dt><em>prg = (...)</em> oder <em>v(...)</em>   Parameterform bzw. allgemeiner </dt>
+<dd><p class="first last">Kurvenpunkt</p>
+</dd>
+</dl>
+</li>
+<li><p class="first"><em>fkt = f(x)</em>      - Funktionsgleichung (rechte Seite)</p>
+</li>
+<li><p class="first"><em>pol = f(phi)</em>    - Gleichung in Polarkoordinaten (rechte Seite)</p>
+</li>
+<li><p class="first"><em>imp = F(x, y)</em>   - Implizite Gleichung (linke Seite; rechte Seite = 0 
+angenommen)</p>
+</li>
+</ul>
+<p>Es wird nicht geprüft, ob diese Gleichungen zu der erzeugten Kurve gehören</p>
+</div></blockquote>
+<p><strong>Eigenschaften und Methoden für parametrisierte Kurven in der Ebene</strong></p>
+<p>(die Kurven werden mittels Parameterform/-gleichung, Funktionsgleichung
+oder Polarkoordinaten erzeugt)</p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code>, <code class="docutils literal"><span class="pre">ue</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code>, <code class="docutils literal"><span class="pre">ü</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.ber">
+<code class="descname">ber</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.ber" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameterbereich</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.bog_laenge">
+<code class="descname">bog_laenge</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.bog_laenge" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bogenlänge</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.evolute">
+<code class="descname">evolute</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.evolute" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Evolute</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.fkt">
+<code class="descname">fkt</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.fkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Funktionsgleichung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.formeln">
+<code class="descname">formeln</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.formeln" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Formeln</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.gleich">
+<code class="descname">gleich</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.gleich" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Eingabegleichung; nach eventueller Parametrisierung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.imp">
+<code class="descname">imp</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.imp" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Implizite Gleichung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.in_raum">
+<code class="descname">in_raum</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.in_raum" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konvertierung in Raumkurve</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.par">
+<code class="descname">par</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kurvenparameter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.pf">
+<code class="descname">pf</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.pf" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameterform; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.pol">
+<code class="descname">pol</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.pol" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gleichung in Polarkoordinaten</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.prg">
+<code class="descname">prg</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.prg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parametergleichung; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.kurve.Kurve.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameter einer Schar</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.beschl">
+<code class="descname">beschl</code><span class="sig-paren">(</span><em>/[wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.beschl" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Beschleunigungsvektor</p>
+<p><em>wert</em> : Wert des Kurvenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Beschleunigungsvektor im zugehörigen Punkt der Kurve</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>Beschleunigungsvektor im allgemeinen Punkt der Kurve</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildkurve bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.geschw">
+<code class="descname">geschw</code><span class="sig-paren">(</span><em>/[wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.geschw" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Geschwindigkeits- / Tangentialvektor</p>
+<p>Synonym: <strong>tang_vekt</strong></p>
+<p><em>wert</em> : Wert des Kurvenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Geschwindigkeitsvektor im zugehörigen Punkt der Kurve</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>Geschwindigkeitsvektor im allgemeinen Punkt der Kurve</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.kruemm">
+<code class="descname">kruemm</code><span class="sig-paren">(</span><em>/[wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.kruemm" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Krümmung</p>
+<p><em>wert</em> : Wert des Kurvenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Krümmung im zugehörigen Punkt der Kurve</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>Krümmung im allgemeinen Punkt der Kurve</dd>
+</dl>
+</dd>
+</dl>
+<p>Zusatz : <cite>d=1</cite> - Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.kr_kreis">
+<code class="descname">kr_kreis</code><span class="sig-paren">(</span><em>/[wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.kr_kreis" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Krümmungskreis</p>
+<p><em>wert</em> : Wert des Kurvenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Krümmungskreis im zugehörigen Punkt der Kurve</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>Krümmungskreis im allgemeinen Punkt der Kurve</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.kr_radius">
+<code class="descname">kr_radius</code><span class="sig-paren">(</span><em>/[wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.kr_radius" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Krümmungsradius</p>
+<p><em>wert</em> : Wert des Kurvenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Krümmungsradius im zugehörigen Punkt der Kurve</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>Krümmungsradius im allgemeinen Punkt der Kurve</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.normale">
+<code class="descname">normale</code><span class="sig-paren">(</span><em>/[wert]</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.normale" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Normale</p>
+<p><em>wert</em> : Wert des Kurvenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Normale im zugehörigen Punkt der Kurve</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>Normale im allgemeinen Punkt der Kurve</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.par_wert">
+<code class="descname">par_wert</code><span class="sig-paren">(</span><em>punkt</em>, <em>start</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.par_wert" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameterwert eines Kurvenpunktes</p>
+<p><em>punkt</em> : Punkt</p>
+<p><em>start</em> : Startwert des nummerischen Verfahrens</p>
+<p>Der Parameterwert wird über die Minimierung des Abstandes des Punktes
+zu einem Kurvenpunkt gesucht; es wird <code class="xref py py-func docutils literal"><span class="pre">nsolve</span></code> verwendet
+(siehe SymPy-Dokumentation)</p>
+<dl class="docutils">
+<dt>Zusatz :</dt>
+<dd><p class="first"><cite>d=1</cite> - Dezimaldarstellung</p>
+<p class="last"><cite>g=1</cite> - Grafik der Abstandsfunktion (Abstand des gegebenen
+Punktes zu den Kurvenpunkten)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.pkt">
+<code class="descname">pkt</code><span class="sig-paren">(</span><em>/[wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.pkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Punkt der Kurve</p>
+<p><em>wert</em> : Wert des Kurvenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Kurvenpunkt, der zu diesem Wert gehört</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>allgemeiner Punkt der Kurve</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Kurvenschar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.schnitt">
+<code class="descname">schnitt</code><span class="sig-paren">(</span><em>kurve</em>, <em>start1</em>, <em>start2</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.schnitt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Schnitt mit einer anderen Kurve</p>
+<p><em>kurve</em> :      parametrisierte Kurve</p>
+<p><em>start</em> : Startwert des nummerischen Verfahrens</p>
+<p>Rückgabe : (Parameterwert für die gegebene Kurve, Parameterwert für
+die andere Kurve)</p>
+<p>Die beiden Startwerte für die Kurven sind so genau wie möglich anzugeben;
+die Parameterwerte werden über die Minimierung des Abstandes der
+Kurvenpunkte zueinander gesucht; es wird <code class="xref py py-func docutils literal"><span class="pre">nsolve</span></code> verwendet
+(siehe SymPy-Dokumentation)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.stueck">
+<code class="descname">stueck</code><span class="sig-paren">(</span><em>par_unt</em>, <em>par_ob</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.stueck" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kurvenstück</p>
+<p><em>par_unt, par_ob</em> : untere und obere Bereichsgrenzen des Kurvenparameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.tangente">
+<code class="descname">tangente</code><span class="sig-paren">(</span><em>/[wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.tangente" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Tangente</p>
+<p><em>wert</em> : Wert des Kurvenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Tangente im zugehörigen Punkt der Kurve</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>Tangente im allgemeinen Punkt der Kurve</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.winkel">
+<code class="descname">winkel</code><span class="sig-paren">(</span><em>objekt</em>, <em>par_wert_kurve /</em><span class="optional">[</span>, <em>par_wert_objekt</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Winkel mit einem anderen Objekt (in Grad)</p>
+<p><em>objekt</em> : Gerade, Kurve</p>
+<p><em>par_wert</em> :   Parameterwert des Schnittpunktes</p>
+<p><em>par_wert_objekt</em> ist nur anzugeben, wenn <em>objekt</em> eine Kurve ist,
+die nicht mit impliziter Gleichung erzeugt wurde</p>
+<p>Es wird nicht geprüft, ob die angegebenen Parameterwerte zu einem
+Schnittpunkt gehören</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.kurve.Kurve.zwei_bein">
+<code class="descname">zwei_bein</code><span class="sig-paren">(</span><em>/[wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.kurve.Kurve.zwei_bein" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Begleitendes Zweibein</p>
+<p><em>wert</em> : Wert des Kurvenparameters</p>
+<p>Rückgabe :</p>
+<blockquote>
+<div><p>(Tangenteneinheitsvektor, Normaleneinheitsvektor)</p>
+<dl class="docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Zweibein im zugehörigen Punkt der Kurve</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>Zweibein im allgemeinen Punkt der Kurve</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<p><strong>Eigenschaften und Methoden für Kurven in der Ebene, die mittels
+impliziter Gleichung erzeugt wurden</strong></p>
+<dl class="attribute">
+<dt>
+<code class="descname">hilfe</code></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">dim</code></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">formeln</code></dt>
+<dd><p>Formeln</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">gleich</code></dt>
+<dd><p>Eingabegleichung; nach eventueller Parametrisierung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">imp</code></dt>
+<dd><p>Implizite Gleichung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">is_schar</code></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">sch_par</code></dt>
+<dd><p>Parameter einer Schar</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span></dt>
+<dd><p>Bildkurve bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">geschw</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span></dt>
+<dd><p>Geschwindigkeits- / Tangentialvektor</p>
+<p>Synonym: <strong>tang_vekt</strong></p>
+<blockquote>
+<div><em>punkt</em> : Punkt der Kurve</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">kruemm</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span></dt>
+<dd><p>Krümmung</p>
+<p><em>punkt</em> : Punkt der Kurve</p>
+<p>Zusatz : <cite>d=1</cite> Dezimaldarstellung</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">kr_kreis</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span></dt>
+<dd><p>Krümmungskreis</p>
+<p><em>punkt</em> : Punkt der Kurve</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">kr_radius</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span></dt>
+<dd><p>Krümmungsradius</p>
+<p><em>punkt</em> : Punkt der Kurve</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">normale</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span></dt>
+<dd><p>Normale</p>
+<p><em>punkt</em> : Punkt der Kurve</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span></dt>
+<dd><p>Element einer Kurvenschar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">tangente</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span></dt>
+<dd><p>Tangente</p>
+<p><em>punkt</em> : Punkt der Kurve</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">winkel</code><span class="sig-paren">(</span><em>objekt</em>, <em>/</em><span class="optional">[</span>, <em>par_wert_objekt</em><span class="optional">]</span><span class="sig-paren">)</span></dt>
+<dd><p>Winkel mit einem anderen Objekt (in Grad)</p>
+<p><em>objekt</em> : Gerade, Kurve</p>
+<p><em>par_wert</em> :   Parameterwert des Schnittpunktes</p>
+<p><em>par_wert_objekt</em> ist nur anzugeben, wenn <em>objekt</em> eine Kurve ist,
+die nicht mit impliziter Gleichung erzeugt wurde</p>
+<p>Es wird nicht geprüft, ob der angegebene Parameterwert zu einem
+Schnittpunkt gehören</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">zwei_bein</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span></dt>
+<dd><p>Begleitendes Zweibein</p>
+<p><em>punkt</em> : Punkt der Kurve</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">hilfe</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">h</span></code></p>
+<p><code class="docutils literal"><span class="pre">bog_länge</span> <span class="pre">:</span>&#160; <span class="pre">bogLänge</span></code></p>
+<p><code class="docutils literal"><span class="pre">in_raum</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">inRaum</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">kr_kreis</span>&#160; <span class="pre">:</span>&#160; <span class="pre">krKreis</span></code></p>
+<p><code class="docutils literal"><span class="pre">kr_radius</span> <span class="pre">:</span>&#160; <span class="pre">krRadius</span></code></p>
+<p><code class="docutils literal"><span class="pre">par_wert</span>&#160; <span class="pre">:</span>&#160; <span class="pre">parWert</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+<p><code class="docutils literal"><span class="pre">tang_vekt</span> <span class="pre">:</span>&#160; <span class="pre">tangVekt</span></code></p>
+<p><code class="docutils literal"><span class="pre">zwei_bein</span> <span class="pre">:</span>&#160; <span class="pre">zweiBein</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="k2o.html"
+                        title="vorheriges Kapitel">Kurve2terOrdnung</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="matrix2.html"
+                        title="nächstes Kapitel">Matrix</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/kurve2.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="matrix2.html" title="Matrix"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="k2o.html" title="Kurve2terOrdnung"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" >Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

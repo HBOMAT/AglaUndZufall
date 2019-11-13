@@ -1,0 +1,90 @@
+
+Körper
+======
+
+.. currentmodule:: agla.lib.objekte.koerper
+
+.. autoclass:: Koerper
+   
+   **Eigenschaften und Methoden**
+   
+   .. autoattribute:: hilfe
+   
+         Synonym: **h**   
+   
+   .. autoattribute:: anz_ecken
+   
+   .. autoattribute:: anz_kanten
+   
+   .. autoattribute:: anz_seiten
+   
+   .. autoattribute:: dim
+   
+   .. autoattribute:: ecken
+   
+   .. autoattribute:: in_2d
+   
+   .. autoattribute:: is_eben
+   
+   .. autoattribute:: is_schar
+   
+   .. autoattribute:: kanten
+   
+   .. autoattribute:: mark_ecken
+   
+   .. autoattribute:: mark_kanten
+   
+   .. autoattribute:: mark_seiten
+   
+   .. autoattribute:: matrix
+   
+   .. autoattribute:: pfad
+   
+   .. autoattribute:: sch_par
+   
+   .. autoattribute:: seiten
+   
+   .. method:: bild(abbildung)
+   
+         Bildkörper bei einer Abbildung
+		 
+         *abbildung* : Abbildung des Raumes 
+   
+   .. method:: sch_el(wert)
+
+         Element einer Körperschar mit einem Parameter
+   	 
+         *wert* : Wert des Scharparameters
+   
+   .. method:: vereinigen(körper)
+   
+         Vereinigen mit einem anderen Körper 
+
+         *körper* : Körper		 
+   
+   |
+
+   **Synonyme Bezeichner**
+   		
+        ``anz_ecken   :  anzEcken``
+		
+        ``anz_kanten  :  anzKanten``
+		
+        ``anz_seiten  :  anzSeiten``
+		
+        ``in_2d       :  in2d``
+		
+        ``is_eben     :  isEben``
+		
+        ``is_schar    :  isSchar``
+		
+        ``mark_ecken  :  markEcken``
+		
+        ``mark_kanten :  markKanten``
+		
+        ``mark_seiten :  markSeiten``
+		
+        ``sch_par     :  schPar``
+		
+        ``sch_el      :  schEl``
+   

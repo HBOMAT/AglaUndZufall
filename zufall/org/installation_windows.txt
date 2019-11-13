@@ -1,0 +1,6 @@
+Die Installation der Pakete agla und zufall suf Wuindows-Computer erfolgt 
+gemäß der Anleitung in 
+
+	agla/org/installation_windows
+
+für beide Pakete gemeinsam

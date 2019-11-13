@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Craps &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen" href="klassen.html" />
+    <link rel="next" title="Toto - FussballToto" href="toto.html" />
+    <link rel="prev" title="Chuck - ChuckALuck" href="chuck.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="toto.html" title="Toto - FussballToto"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="chuck.html" title="Chuck - ChuckALuck"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" accesskey="U">Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="craps">
+<h1>Craps<a class="headerlink" href="#craps" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="zufall.lib.objekte.craps.Craps">
+<em class="property">class </em><code class="descclassname">zufall.lib.objekte.craps.</code><code class="descname">Craps</code><a class="headerlink" href="#zufall.lib.objekte.craps.Craps" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Craps</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>Craps( )</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="zufall.lib.objekte.craps.Craps.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#zufall.lib.objekte.craps.Craps.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.craps.Craps.formeln">
+<code class="descname">formeln</code><a class="headerlink" href="#zufall.lib.objekte.craps.Craps.formeln" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Formeln für Crapsspiel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.craps.Craps.regeln">
+<code class="descname">regeln</code><a class="headerlink" href="#zufall.lib.objekte.craps.Craps.regeln" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Regeln für Crapsspiel</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.craps.Craps.spiel">
+<code class="descname">spiel</code><span class="sig-paren">(</span><em>/</em><span class="optional">[</span>, <em>m</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.craps.Craps.spiel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Spiel</p>
+<p><em>m</em> : Anzahl Spiele; Standard=1</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>g=ja</cite> - Grafik des Gewinn-Verlaufes</p>
+<p><cite>d=ja</cite> - Grafik des Verlaufes der mittleren Spieldauer</p>
+<p><cite>dr=ja</cite> - Bei Angabe von <em>m</em> &gt; 1 Rückgabe von zwei DatenReihen</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">- mit 1 (Gewinn) oder -1 (Verlust) je Spiel <em>und</em></div>
+<div class="line">- mit der Spieldauer je Spiel</div>
+</div>
+</div></blockquote>
+<p><cite>gdr=ja</cite> - Gewinnverlauf + DatenReihen</p>
+<p class="last"><cite>ddr=ja</cite> - ebenso mittlere Dauer</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="chuck.html"
+                        title="vorheriges Kapitel">Chuck - ChuckALuck</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="toto.html"
+                        title="nächstes Kapitel">Toto - FussballToto</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/craps.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="toto.html" title="Toto - FussballToto"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="chuck.html" title="Chuck - ChuckALuck"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" >Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

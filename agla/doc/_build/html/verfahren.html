@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Verfahren &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="next" title="3D-Grafiken (Mayavi)" href="grafik3d.html" />
+    <link rel="prev" title="Vordefinierte Abbildungen" href="vordefinierte_abbildungen.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="grafik3d.html" title="3D-Grafiken (Mayavi)"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="vordefinierte_abbildungen.html" title="Vordefinierte Abbildungen"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="verfahren">
+<h1>Verfahren<a class="headerlink" href="#verfahren" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Verfahren sind für wiederkehrende Aufgaben im Raum vorgesehen und sollen den
+Lernvorgang direkt unterstützen</p>
+<p>Die Verfahren brauchen nicht weiter erläutert zu werden, sie werden mit einem
+einprägsamen Kurznamen aktiviert, der auch ihren Inhalt charakterisiert</p>
+<p>Zu ihrem Gebrauch wird empfohlen, die entsprechende Hilfeseite einzusehen,
+etwa:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">AGG</span><span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Es sind folgende Verfahren implementiert:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="54%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Bedeutung</th>
+<th class="head">Version</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">AEE</span></code></td>
+<td>Abstand-Ebene-Ebene</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">AGE</span></code></td>
+<td>Abstand-Gerade-Ebene</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">AGG</span></code></td>
+<td>Abstand-Gerade-Gerade</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">AGG1</span></code></td>
+<td>ebenso</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">AGG2</span></code></td>
+<td>ebenso</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">APE</span></code></td>
+<td>Abstand-Punkt-Ebene</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">APE1</span></code></td>
+<td>ebenso</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">APE2</span></code></td>
+<td>ebenso</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">APG</span></code></td>
+<td>Abstand-Punkt-Gerade</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">APG1</span></code></td>
+<td>ebenso</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">APG2</span></code></td>
+<td>ebenso</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">APG3</span></code></td>
+<td>ebenso</td>
+<td>3</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">APP</span></code></td>
+<td>Abstand-Punkt-Punkt</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">LEE</span></code></td>
+<td>Lage-Ebene-Ebene</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">LGE</span></code></td>
+<td>Lage-Gerade-Ebene</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">LGE1</span></code></td>
+<td>ebenso</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">LGG</span></code></td>
+<td>Lage-Gerade-Gerade</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">LGG1</span></code></td>
+<td>ebenso</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">LPD</span></code></td>
+<td>Lage-Punkt-Dreieck</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">LPD1</span></code></td>
+<td>ebenso</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">LPE</span></code></td>
+<td>Lage-Punkt-Ebene</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">LPG</span></code></td>
+<td>Lage-Punkt-Gerade</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">LPV</span></code></td>
+<td>Lage-Punkt-Viereck</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">LPK</span></code></td>
+<td>Lage-Punkt-Kugel</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">LGK</span></code></td>
+<td>Lage-Gerade-Kugel</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">LEK</span></code></td>
+<td>Lage-Ebene-Kugel</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">WEE</span></code></td>
+<td>Winkel-Ebene-Ebene</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">WGE</span></code></td>
+<td>Winkel-Gerade-Ebene</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">WVV</span></code></td>
+<td>Winkel-Vektor-Vektor</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Auf Ebenen bezogene Verfahren</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="26%" />
+<col width="8%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Bedeutung</th>
+<th class="head">Vers.</th>
+<th class="head">Bemerkung</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ERV</span></code></td>
+<td>Richtungs-Vektor</td>
+<td>&nbsp;</td>
+<td>= <code class="docutils literal"><span class="pre">RV</span></code>  Ermittlung von 2 Richt.vektoren</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ENV</span></code></td>
+<td>Normalen-Vektor</td>
+<td>0</td>
+<td>= <code class="docutils literal"><span class="pre">NV</span></code>  Ermittlung eines Norm.vektors</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ENV1</span></code></td>
+<td>ebenso</td>
+<td>1</td>
+<td>= <code class="docutils literal"><span class="pre">NV1</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Umformung von Gleichungen</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="24%" />
+<col width="7%" />
+<col width="53%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">EK2P</span></code></td>
+<td>Ebene-Koord-2-Prg</td>
+<td>0</td>
+<td>Koordinatenform <span class="math">\(\rightarrow\)</span> Parameterform</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">EK2P1</span></code></td>
+<td>ebenso</td>
+<td>1</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">EN2P</span></code></td>
+<td>Ebene-Nf-2-Prg</td>
+<td>&nbsp;</td>
+<td>Normalenform <span class="math">\(\rightarrow\)</span> Parameterform</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">EP2K</span></code></td>
+<td>Ebene-Prg-2-Koord</td>
+<td>0</td>
+<td>Parameterform <span class="math">\(\rightarrow\)</span> Koordinatenform</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">EP2K1</span></code></td>
+<td>ebenso</td>
+<td>1</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">EP2N</span></code></td>
+<td>Ebene-Prg-2-Nf</td>
+<td>&nbsp;</td>
+<td>Parameterform <span class="math">\(\rightarrow\)</span> Normalenform</td>
+</tr>
+</tbody>
+</table>
+<p>( &#8216;2&#8217; = &#8216;t(w)o&#8217; )</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="vordefinierte_abbildungen.html"
+                        title="vorheriges Kapitel">Vordefinierte Abbildungen</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="grafik3d.html"
+                        title="nächstes Kapitel">3D-Grafiken (Mayavi)</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/verfahren.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="grafik3d.html" title="3D-Grafiken (Mayavi)"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="vordefinierte_abbildungen.html" title="Vordefinierte Abbildungen"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

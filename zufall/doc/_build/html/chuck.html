@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Chuck - ChuckALuck &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen" href="klassen.html" />
+    <link rel="next" title="Craps" href="craps.html" />
+    <link rel="prev" title="Roulette" href="roulette.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="craps.html" title="Craps"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="roulette.html" title="Roulette"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" accesskey="U">Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="chuck-chuckaluck">
+<h1>Chuck - ChuckALuck<a class="headerlink" href="#chuck-chuckaluck" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="zufall.lib.objekte.chuck.ChuckALuck">
+<em class="property">class </em><code class="descclassname">zufall.lib.objekte.chuck.</code><code class="descname">ChuckALuck</code><a class="headerlink" href="#zufall.lib.objekte.chuck.ChuckALuck" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Chuck a Luck - ein Würfelspiel aus den USA</p>
+<p><strong>Kurzname</strong>     <strong>Chuck</strong></p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>Chuck( )</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="zufall.lib.objekte.chuck.ChuckALuck.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#zufall.lib.objekte.chuck.ChuckALuck.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.chuck.ChuckALuck.formeln">
+<code class="descname">formeln</code><a class="headerlink" href="#zufall.lib.objekte.chuck.ChuckALuck.formeln" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Formeln für Chuck</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.chuck.ChuckALuck.regeln">
+<code class="descname">regeln</code><a class="headerlink" href="#zufall.lib.objekte.chuck.ChuckALuck.regeln" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Regeln für Chuck</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.chuck.ChuckALuck.gewinn">
+<code class="descname">gewinn</code><a class="headerlink" href="#zufall.lib.objekte.chuck.ChuckALuck.gewinn" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>ZufallsGröße &#8220;Gewinn&#8221;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.chuck.ChuckALuck.spiel">
+<code class="descname">spiel</code><span class="sig-paren">(</span><em>/[zahl /</em><span class="optional">[</span>, <em>m</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.chuck.ChuckALuck.spiel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Spiel</p>
+<p><em>zahl</em> :</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">genannte Zahl aus {0, 1, 2, 3, 4, 5, 6}</div>
+<div class="line">fehlt die Angabe, wird eine zufällige Zahl angenommen</div>
+</div>
+</div></blockquote>
+<p><em>m</em> : Anzahl Spiele (mit der selben Zahl); Standard=1</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>z=ja</cite> - Es wird eine zufällige Zahl angenommen; eine eventuell
+angegebene Zahl wird nicht beachtet</p>
+<p class="last"><cite>d=ja</cite> - Bei Angabe von <em>m</em> &gt; 1 Rückgabe einer DatenReihe mit
+dem Gewinn pro Spiel</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<p>Eigenschaften und Methoden für die ZufallsGröße &#8220;Gewinn&#8221; siehe
+<a class="reference internal" href="zg.html#spiele"><span class="std std-ref">Seite für ZufallsGröße</span></a></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="roulette.html"
+                        title="vorheriges Kapitel">Roulette</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="craps.html"
+                        title="nächstes Kapitel">Craps</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/chuck.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="craps.html" title="Craps"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="roulette.html" title="Roulette"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" >Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

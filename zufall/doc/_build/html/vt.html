@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>VT - VierFelderTafel &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen" href="klassen.html" />
+    <link rel="next" title="HB - HäufigkeitsBaum" href="hb.html" />
+    <link rel="prev" title="EA - EreignisAlgebra" href="ea.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="hb.html" title="HB - HäufigkeitsBaum"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="ea.html" title="EA - EreignisAlgebra"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" accesskey="U">Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="vt-vierfeldertafel">
+<h1>VT - VierFelderTafel<a class="headerlink" href="#vt-vierfeldertafel" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="zufall.lib.objekte.vier_felder_tafel.VierFelderTafel">
+<em class="property">class </em><code class="descclassname">zufall.lib.objekte.vier_felder_tafel.</code><code class="descname">VierFelderTafel</code><a class="headerlink" href="#zufall.lib.objekte.vier_felder_tafel.VierFelderTafel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Vier-Felder-Tafel</p>
+<p><strong>Kurzname</strong> <strong>VT</strong></p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>VT( <em>werte /[, bezeichner]</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><dl class="docutils">
+<dt><em>werte</em>: </dt>
+<dd><div class="first last line-block">
+<div class="line">Liste mit 4 Werten: innere Werte der Tafel</div>
+<div class="line">Liste mit 9 Werten: alle Werte der Tafel (einschließlich 
+Randwerte)</div>
+<div class="line"><em>x</em> bzw. &#8216;<em>x</em>&#8216; steht für einen nicht gegebenen Wert</div>
+<div class="line">die Eingabe der Werte erfolgt zeilenweise</div>
+</div>
+</dd>
+<dt><em>bezeichner</em>: </dt>
+<dd><div class="first last line-block">
+<div class="line">Liste mit den Bezeichnern der Zeilen / Spalten (4 oder 2 Bezeichner; </div>
+<div class="line">bei 2 Bezeichnern wird das jeweilige Gegenereignis automatisch 
+bezeichnet)                                        </div>
+<div class="line">sind keine Bezeichner angegeben, werden automatisch die Bezeichner 
+<em>A</em> und <em>B</em> angenommen                                     </div>
+<div class="line">Merkmal <em>A</em> - 1. Zeile                          </div>
+<div class="line">Merkmal <em>B</em> - 1. Spalte </div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.abs_h">
+<code class="descname">abs_h</code><a class="headerlink" href="#zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.abs_h" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Tafel mit absoluten / natürlichen Häufigkeiten</p>
+<p>Synonym: <strong>nat_h</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.abs_h_">
+<code class="descname">abs_h_</code><span class="sig-paren">(</span><em> /[grund] </em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.abs_h_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Tafel mit absoluten Häufigkeiten; zugehörige Methode</p>
+<dl class="docutils">
+<dt><em>grund</em>:   Grundwert</dt>
+<dd>alle Tafelwerte werden auf diesen Wert umgerechnet; falls nicht
+angegeben, ist der Grundwert die (eventuell gerundete)
+Zeilen-/Spaltensumme der Tafelwerte</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.ausg">
+<code class="descname">ausg</code><a class="headerlink" href="#zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.ausg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ausgabe der Tafel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.baum">
+<code class="descname">baum</code><a class="headerlink" href="#zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.baum" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Baumdiagramm (für das zugehörige ZufallsExperiment)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.baum_">
+<code class="descname">baum_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.baum_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Baumdiagramm; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>p=ja</cite> - Wahrscheinlichkeiten werden als Prozentwerte ausgegeben</p>
+<p class="last"><cite>d=n</cite>  - Wahrscheinlichkeiten werden als Dezimalzahlen mit <em>n</em>
+Kommastellen ausgegeben</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.chi2_test">
+<code class="descname">chi2_test</code><a class="headerlink" href="#zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.chi2_test" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Chi-Quadrat-Test auf Unabhängigkeit</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.fisher_test">
+<code class="descname">fisher_test</code><a class="headerlink" href="#zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.fisher_test" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Fishertest auf Unabhängigkeit</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.hb">
+<code class="descname">hb</code><a class="headerlink" href="#zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.hb" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Zugehöriger Häufigkeitsbaum</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.hb_">
+<code class="descname">hb_</code><span class="sig-paren">(</span><em> /[grund] </em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.hb_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Häufigkeitsbaum; zugehörige Methode</p>
+<dl class="docutils">
+<dt><em>grund</em>:   Grundwert</dt>
+<dd>alle Tafelwerte werden auf diesen Wert umgerechnet; falls nicht
+angegeben, ist der Grundwert die (eventuell gerundete)
+Zeilen-/Spaltensumme der Tafelwerte</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.umkehr">
+<code class="descname">umkehr</code><a class="headerlink" href="#zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.umkehr" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umkehrung der Tafel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.wahrsch">
+<code class="descname">wahrsch</code><a class="headerlink" href="#zufall.lib.objekte.vier_felder_tafel.VierFelderTafel.wahrsch" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Anhand der Tafel berechnete Wahrscheinlichkeiten</p>
+</dd></dl>
+
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">abs_h</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">absH</span></code></p>
+<p><code class="docutils literal"><span class="pre">abs_h_</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">AbsH</span></code></p>
+<p><code class="docutils literal"><span class="pre">baum_</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Baum</span></code></p>
+<p><code class="docutils literal"><span class="pre">chi2_test</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">chi2Test</span></code></p>
+<p><code class="docutils literal"><span class="pre">fisher_test</span> <span class="pre">:</span> <span class="pre">fisherTest</span></code></p>
+<p><code class="docutils literal"><span class="pre">hb_</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160;&#160; <span class="pre">Hb</span></code></p>
+<p><code class="docutils literal"><span class="pre">nat_h</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160;&#160; <span class="pre">natH</span></code></p>
+<p><code class="docutils literal"><span class="pre">nat_h_</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">NatH</span></code></p>
+<p><code class="docutils literal"><span class="pre">rel_h</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">relH</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="ea.html"
+                        title="vorheriges Kapitel">EA - EreignisAlgebra</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="hb.html"
+                        title="nächstes Kapitel">HB - HäufigkeitsBaum</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/vt.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="hb.html" title="HB - HäufigkeitsBaum"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="ea.html" title="EA - EreignisAlgebra"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" >Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

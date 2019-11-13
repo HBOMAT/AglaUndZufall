@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Ellipse &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen in der Ebene" href="klassenr2.html" />
+    <link rel="next" title="Hyperbel" href="hyperbel.html" />
+    <link rel="prev" title="Figur" href="figur.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="hyperbel.html" title="Hyperbel"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="figur.html" title="Figur"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" accesskey="U">Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ellipse">
+<h1>Ellipse<a class="headerlink" href="#ellipse" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.ellipse.Ellipse">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.ellipse.</code><code class="descname">Ellipse</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ellipse in der Ebene</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>Ellipse ( <em>/[ mitte, ] a, b</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>mitte</em> : Mittelpunkt; Ursprung, wenn weggelassen</p>
+<p><em>a, b</em> :  Halbachsen</p>
+</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.a">
+<code class="descname">a</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.a" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erste Halbachse</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.b">
+<code class="descname">b</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.b" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Zweite Halbachse</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.brenn_ger">
+<code class="descname">brenn_ger</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.brenn_ger" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Brenn- / Leitgerade</p>
+<p>Synonym: <strong>leit_ger</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.brenn_punkt">
+<code class="descname">brenn_punkt</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.brenn_punkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Brennpunkte</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.flaeche">
+<code class="descname">flaeche</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.flaeche" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Flächeninhalt</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ellipse.Ellipse.flaeche_">
+<code class="descname">flaeche_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.flaeche_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>zugehörige Methode</p>
+<p>Zusatz :</p>
+<blockquote>
+<div><p><cite>d=n</cite> - Dezimalausgabe mit <em>n</em> Nachkomma-/Stellen</p>
+<p><cite>f=1</cite> - Formel</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.F1">
+<code class="descname">F1</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.F1" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erster Brennpunkt</p>
+<p>Synonym: <strong>f1</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.F2">
+<code class="descname">F2</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.F2" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Zweiter Brennpunkt</p>
+<p>Synonym: <strong>f2</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.gleich">
+<code class="descname">gleich</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.gleich" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gleichung; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ellipse.Ellipse.gleich_">
+<code class="descname">gleich_</code><span class="sig-paren">(</span><em>/[punkt]</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.gleich_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Auswertung der Gleichung in einem Punkt</p>
+<p>Zusatz :  <cite>g=ja</cite> -  Bereitstellung der Gleichung als Gleichung-Objekt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.in_kurve">
+<code class="descname">in_kurve</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.in_kurve" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konvertierung in Kurve</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.lin_exz">
+<code class="descname">lin_exz</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.lin_exz" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Lineare Exzentrizität</p>
+<p>Synonym: <strong>e</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.mitte">
+<code class="descname">mitte</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.mitte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Mittelpunkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.num_exz">
+<code class="descname">num_exz</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.num_exz" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Nummerische Exzentrizität</p>
+<p>Synonym: <strong>eps</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.prg">
+<code class="descname">prg</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.prg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parametergleichung; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Scharparameter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ellipse.Ellipse.umfang">
+<code class="descname">umfang</code><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.umfang" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umfang</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ellipse.Ellipse.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildellipse bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ellipse.Ellipse.pkt">
+<code class="descname">pkt</code><span class="sig-paren">(</span><em>/[wert]</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.pkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Punkt der Ellipse</p>
+<p><em>wert</em> : Wert des Ellipsenparameters (in Grad)</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Ellipsenpunkt, der zu diesem Wert gehört</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>allgemeiner Punkt der Ellipse</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ellipse.Ellipse.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Ellipsenschar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ellipse.Ellipse.tangente">
+<code class="descname">tangente</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ellipse.Ellipse.tangente" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Tangente in einem Ellipsenpunkt</p>
+<p><em>punkt</em> : Punkt der Ellipse</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">hilfe</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">h</span></code></p>
+<p><code class="docutils literal"><span class="pre">brenn_ger</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">brennGer</span></code></p>
+<p><code class="docutils literal"><span class="pre">brenn_punkt</span> <span class="pre">:</span>&#160; <span class="pre">brennPunkt</span></code></p>
+<p><code class="docutils literal"><span class="pre">fläche_</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Fläche</span></code></p>
+<p><code class="docutils literal"><span class="pre">gleich_</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Gleich</span></code></p>
+<p><code class="docutils literal"><span class="pre">in_kurve</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">inKurve</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">leit_ger</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">leitGer</span></code></p>
+<p><code class="docutils literal"><span class="pre">lin_exz</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">linExz</span></code></p>
+<p><code class="docutils literal"><span class="pre">num_exz</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">numExz</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="figur.html"
+                        title="vorheriges Kapitel">Figur</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="hyperbel.html"
+                        title="nächstes Kapitel">Hyperbel</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ellipse.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="hyperbel.html" title="Hyperbel"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="figur.html" title="Figur"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" >Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

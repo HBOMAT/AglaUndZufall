@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Roulette &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen" href="klassen.html" />
+    <link rel="next" title="Chuck - ChuckALuck" href="chuck.html" />
+    <link rel="prev" title="MK - MarkoffKette" href="mk.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="chuck.html" title="Chuck - ChuckALuck"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="mk.html" title="MK - MarkoffKette"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" accesskey="U">Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="roulette">
+<h1>Roulette<a class="headerlink" href="#roulette" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="zufall.lib.objekte.roulette.Roulette">
+<em class="property">class </em><code class="descclassname">zufall.lib.objekte.roulette.</code><code class="descname">Roulette</code><a class="headerlink" href="#zufall.lib.objekte.roulette.Roulette" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Roulette - Spiel</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>Roulette( )</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="zufall.lib.objekte.roulette.Roulette.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#zufall.lib.objekte.roulette.Roulette.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.roulette.Roulette.brett">
+<code class="descname">brett</code><a class="headerlink" href="#zufall.lib.objekte.roulette.Roulette.brett" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Spielbrett / -tisch (Abbildung)</p>
+<p>Synonym: <strong>tisch</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.roulette.Roulette.formeln">
+<code class="descname">formeln</code><a class="headerlink" href="#zufall.lib.objekte.roulette.Roulette.formeln" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Berechnungsformeln</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.roulette.Roulette.omega">
+<code class="descname">omega</code><a class="headerlink" href="#zufall.lib.objekte.roulette.Roulette.omega" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ergebnismenge</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.roulette.Roulette.P">
+<code class="descname">P</code><span class="sig-paren">(</span><em> e /[, e1])</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.roulette.Roulette.P" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wahrscheinlichkeit eines Ereignisses bei einem Spiel</p>
+<blockquote>
+<div><p><em>e</em> : Ereignis</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><em>Zahl</em> aus {0,1,...,36} |</div>
+<div class="line"><em>Menge/Liste/Tupel</em> von Zahlen |</div>
+<div class="line"><em>Chance</em> beim einmaligen Spielen (siehe unten)</div>
+</div>
+</div></blockquote>
+<p>Bei der Angabe von zwei Ereignissen wird die bedingte
+Wahrscheinlichkeit <span class="math">\(P( e | e1 )\)</span> berechnet</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.roulette.Roulette.regeln">
+<code class="descname">regeln</code><a class="headerlink" href="#zufall.lib.objekte.roulette.Roulette.regeln" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Regeln für Roulettespiel</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.roulette.Roulette.spiel">
+<code class="descname">spiel</code><span class="sig-paren">(</span><em>chance /</em><span class="optional">[</span>, <em>m</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.roulette.Roulette.spiel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Spiel</p>
+<p><em>chance</em> :   gesetzte Chance</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">einzelne <em>Zahl</em> aus {0,1,...36} |</div>
+<div class="line"><em>Menge</em> von 1-6 Zahlen aus dieser Menge |</div>
+<div class="line"><code class="docutils literal"><span class="pre">r.colonne1</span></code> | <code class="docutils literal"><span class="pre">r.colonne2</span></code> | <code class="docutils literal"><span class="pre">r.colonne3</span></code> |</div>
+<div class="line"><code class="docutils literal"><span class="pre">r.douze_premier</span></code> | <code class="docutils literal"><span class="pre">r.douze_milieu</span></code> | <code class="docutils literal"><span class="pre">r.douze_dernier</span></code> |</div>
+<div class="line"><code class="docutils literal"><span class="pre">r.pair</span></code> | <code class="docutils literal"><span class="pre">r.impair</span></code> |</div>
+<div class="line"><code class="docutils literal"><span class="pre">r.rouge</span></code> | <a href="#id1"><span class="problematic" id="id2">``</span></a>r.noir |</div>
+<div class="line"><code class="docutils literal"><span class="pre">r.manque</span></code> | <code class="docutils literal"><span class="pre">r.passe</span></code></div>
+</div>
+<div class="line-block">
+<div class="line">(<em>r</em> sei die Roulette-Instanz; zu den Chancen siehe unten )</div>
+</div>
+</div></blockquote>
+<p><em>m</em> : Anzahl Spiele; Standard=1</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>g=ja</cite> - Grafik des Gewinn-Verlaufes</p>
+<p><cite>m=ja</cite> - Grafik des Verlaufes des mittleren Gewinns</p>
+<p><cite>dr=ja</cite> - Bei Angabe von <em>m</em> &gt; 1 Rückgabe einer DatenReihe mit
+dem Gewinn / Verlust je Spiel</p>
+<p><cite>gdr=ja</cite> - Gewinnverlauf + DatenReihe</p>
+<p class="last"><cite>mdr=ja</cite> - Mittlerer Gewinn + DatenReihe</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Ereignisse</strong> (Setzmöglichkeiten, Chancen) <strong>beim einmaligen Roulette-Spiel</strong></p>
+<p>(Unbenannte Chancen sind über die Menge der Zahlen anzugeben, die
+anderen über den angeführten Namen; <em>r</em> ist eine Roulette-Instanz)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="28%" />
+<col width="22%" />
+<col width="6%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Beschreibung</th>
+<th class="head">Beispiel</th>
+<th class="head">Zahlen</th>
+<th class="head">Gewinnquote</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Unbenannte</strong> <strong>Ereignisse</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>(<code class="docutils literal"><span class="pre">plein</span></code>)</td>
+<td>einzelne Zahl</td>
+<td>3 bzw. {3}</td>
+<td>1</td>
+<td>35 : 1</td>
+</tr>
+<tr class="row-even"><td>(<code class="docutils literal"><span class="pre">a_cheval</span></code>)</td>
+<td>zwei angrenzende Zahlen</td>
+<td>{13,16}</td>
+<td>2</td>
+<td>17 : 1</td>
+</tr>
+<tr class="row-odd"><td>(<code class="docutils literal"><span class="pre">transversale_plein</span></code>)</td>
+<td>Querreihe von drei Zahlen</td>
+<td>{28,29,30}</td>
+<td>3</td>
+<td>11 : 1</td>
+</tr>
+<tr class="row-even"><td>(<code class="docutils literal"><span class="pre">carre</span></code>)</td>
+<td>vier Zahlen, deren Felder
+in einem Punkt
+zusammenstoßen
+bzw. die ersten vier
+Zahlen</td>
+<td>{14,15,17,18}</td>
+<td>4</td>
+<td>8 : 1</td>
+</tr>
+<tr class="row-odd"><td>(<code class="docutils literal"><span class="pre">transversale_simple</span></code>)</td>
+<td>zwei benachbarte Querreihen</td>
+<td>{7,8 9,10,11,12}</td>
+<td>6</td>
+<td>5 : 1</td>
+</tr>
+<tr class="row-even"><td><strong>Kolonne</strong> <strong>und</strong> <strong>Dutzend</strong></td>
+<td>&nbsp;</td>
+<td><strong>Menge</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">r.colonne1</span></code></td>
+<td>die linke Reihe</td>
+<td>{1,4,7,..,34}</td>
+<td>12</td>
+<td>2 : 1</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">r.colonne2</span></code></td>
+<td>die mittlere Reihe</td>
+<td>{2,5,8,..,35}</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">r.colonne3</span></code></td>
+<td>die rechte Reihe</td>
+<td>{3,6,9,..,36}</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">r.douze_premier</span></code></td>
+<td>das erste Dutzend</td>
+<td>{1,2,..,12}</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">r.douze_milieu</span></code></td>
+<td>das mittlere Dutzend</td>
+<td>{13,14,..,24}</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">r.douze_dernier</span></code></td>
+<td>das letzte Dutzend</td>
+<td>{25,26,..,36}</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><strong>Einfache</strong> <strong>Chancen</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">r.pair</span></code></td>
+<td>die geraden Zahlen außer 0</td>
+<td>{2,4,6,..,36}</td>
+<td>18</td>
+<td>1 : 1</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">r.impair</span></code></td>
+<td>die ungeraden Zahlen</td>
+<td>{1,3,5,..,35}</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">r.rouge</span></code></td>
+<td>die roten Zahlen</td>
+<td>{1,3,7,..36}</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">r.noir</span></code></td>
+<td>die schwarzen Zahlen</td>
+<td>{2,4,6,..35}</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">r.manque</span></code></td>
+<td>die erste Hälfte</td>
+<td>{1,2,..,18}</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">r.passe</span></code></td>
+<td>die zweite Hälfte</td>
+<td>{19,20,..,36}</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Alle <strong>Unbenannten Chancen</strong> außer plein</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">a_cheval</span></code> = [{0, 1}, {0, 2}, {0, 3}, {1, 2}, {2, 3}, {1, 4}, {2, 5}, {4, 5}, {3, 6},</dt>
+<dd>{5, 6}, {4, 7}, {5, 8}, {6, 9}, {7, 8}, {8, 9}, {7, 10}, {8, 11}, {10, 11},
+{9, 12}, {11, 12}, {10, 13}, {11, 14}, {12, 15}, {13, 14}, {13, 16},
+{14, 15}, {14, 17}, {15, 18}, {16, 17}, {17, 18}, {16, 19}, {17, 20},
+{19, 20}, {18, 21}, {19, 22}, {20, 21}, {20, 23}, {22, 23}, {21, 24},
+{22, 25}, {23, 24}, {23, 26}, {25, 26}, {24, 27}, {25, 28}, {26, 27},
+{26, 29}, {28, 29}, {27, 30}, {28, 31}, {29, 30}, {29, 32}, {30, 33},
+{31, 32}, {32, 33}, {31, 34}, {32, 35}, {33, 36}, {34, 35}, {35, 36}]</dd>
+<dt><code class="docutils literal"><span class="pre">transversale_plein</span></code> = [{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}, {13, 14, 15},</dt>
+<dd>{16, 17, 18}, {19, 20, 21}, {22, 23, 24}, {25, 26, 27}, {28, 29, 30},
+{31, 32, 33}, {34, 35, 36}]</dd>
+<dt><code class="docutils literal"><span class="pre">carre</span></code> = [{1, 2, 3, 4}, {1, 2, 4, 5}, {2, 3, 5, 6}, {4, 5, 7, 8}, {5, 6, 8, 9},</dt>
+<dd>{7, 8, 10, 11}, {8, 9, 11, 12}, {10, 11, 13, 14}, {11, 12, 14, 15},
+{13, 14, 16, 17}, {14, 15, 17, 18}, {16, 17, 19, 20}, {17, 18, 20, 21},
+{19, 20, 22, 23}, {20, 21, 23, 24}, {22, 23, 25, 26}, {23, 24, 26, 27},
+{25, 26, 28, 29}, {26, 27, 29, 30}, {28, 29, 31, 32}, {29, 30, 32, 33},
+{31, 32, 34, 35}, {32, 33, 35, 36}]</dd>
+<dt><code class="docutils literal"><span class="pre">transversale_simple</span></code> = [{1, 2, 3, 4, 5, 6}, {4, 5, 6, 7, 8, 9}, {7, 8, 9, 10, 11, 12},</dt>
+<dd>{10, 11, 12, 13, 14, 15}, {13, 14, 15, 16, 17, 18}, {16, 17, 18, 19, 20, 21},
+{19, 20, 21, 22, 23, 24}, {22, 23, 24, 25, 26, 27}, {25, 26, 27, 28, 29, 30},
+{28, 29, 30, 31, 32, 33}, {31, 32, 33, 34, 35, 36}]</dd>
+</dl>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="mk.html"
+                        title="vorheriges Kapitel">MK - MarkoffKette</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="chuck.html"
+                        title="nächstes Kapitel">Chuck - ChuckALuck</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/roulette.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="chuck.html" title="Chuck - ChuckALuck"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="mk.html" title="MK - MarkoffKette"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" >Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

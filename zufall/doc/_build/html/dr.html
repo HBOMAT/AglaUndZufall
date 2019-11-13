@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>DR - DatenReihe &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen" href="klassen.html" />
+    <link rel="next" title="EA - EreignisAlgebra" href="ea.html" />
+    <link rel="prev" title="EV - ExponentialVerteilung" href="ev.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="ea.html" title="EA - EreignisAlgebra"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="ev.html" title="EV - ExponentialVerteilung"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" accesskey="U">Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="dr-datenreihe">
+<h1>DR - DatenReihe<a class="headerlink" href="#dr-datenreihe" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe">
+<em class="property">class </em><code class="descclassname">zufall.lib.objekte.datenreihe.</code><code class="descname">DatenReihe</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Datenreihe</p>
+<p><strong>Kurzname</strong> <strong>DR</strong></p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>DR( <em>daten</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>daten</em> : Daten</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><em>zahl /[, zahl1, ... ]</em>  | </div>
+<div class="line"><em>{ zahl : wiederh /[, zahl1 : wiederh1, ... ] }</em></div>
+</div>
+</div></blockquote>
+<p><em>zahl</em> : reelle Zahl</p>
+<p><em>wiederh</em> : Anzahl der Wiederholungen</p>
+</div></blockquote>
+<p>Es werden vorwiegend DatenReihen mit ganzzahligen Elementen betrachtet</p>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.box_plot">
+<code class="descname">box_plot</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.box_plot" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Boxplot-Diagramm</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.box_plot_">
+<code class="descname">box_plot_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.box_plot_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Boxplot-Diagramm; zugehörige Methode</p>
+<p>Zusatz: <cite>e=ja</cite> - Erläuterungen zum Diagramm</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.daten">
+<code class="descname">daten</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.daten" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Datenliste</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.diagr">
+<code class="descname">diagr</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.diagr" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Daten-Balkendiagramm</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.graf_F">
+<code class="descname">graf_F</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.graf_F" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Graf der empirischen Verteilungsfunktion</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.F">
+<code class="descname">F</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.F" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Empirische Verteilungsfunktion</p>
+<p><em>wert</em> : Zahl</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>d=n</cite>    Darstellung dezimal mit <em>n</em> Kommastellen</p>
+<p class="last"><cite>b=ja</cite>   Erläuterung des Begriffes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.hh">
+<code class="descname">hh</code><span class="sig-paren">(</span><em>ereignis</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.hh" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Relative Häufigkeiten</p>
+<p><em>ereignis</em> :    <em>elem</em> | <em>Liste/Tupel/Menge</em> von elem&#8217;s</p>
+<p><em>elem</em> :        Element der Datenliste</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>p=ja</cite> -     Ausgabe als Prozentwert</p>
+<p><cite>d=n</cite> -      Ausgabe dezimal mit <em>n</em> Kommastellen</p>
+<p><cite>ah=ja</cite> -    Ausgabe aller Häufigkeiten der Datenelemente</p>
+<p><cite>ap=ja</cite> -    ebenso, Prozentwerte</p>
+<p><cite>ad=n</cite> -     ebenso, Dezimalzahlen mit <em>n</em> Kommastellen</p>
+<p><cite>ahd=ja</cite> -   Rückgabe als dictionary</p>
+<p><cite>adp=ja</cite> -   ebenso, Prozentwerte</p>
+<p class="last"><cite>add=n</cite> -    ebenso, Dezimalzahlen</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.H">
+<code class="descname">H</code><span class="sig-paren">(</span><em>ereignis</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.H" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Absolute Häufigkeiten</p>
+<p><em>ereignis</em> :    <em>elem</em> | <em>Liste/Tupel/Menge</em> von elem&#8217;s</p>
+<p><em>elem</em> :        Element der Datenliste</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>d=ja</cite> -     Ausgabe aller Häufigkeiten als dictionary</p>
+<p class="last"><cite>s=ja</cite> -     ebenso, Spaltenausgabe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.halb_weite">
+<code class="descname">halb_weite</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.halb_weite" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Halbweite</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.halb_weite_">
+<code class="descname">halb_weite_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.halb_weite_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Halbweite; zugehörige Methode</p>
+<p>Zusatz: <cite>e=ja</cite> - Erläuterung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.hist">
+<code class="descname">hist</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.hist" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Histogramm der relativen Häufigkeiten</p>
+<p>Synonym: <strong>hist_rel_h</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.hist_">
+<code class="descname">hist_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.hist_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Histogramm; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>p=ja</cite> - Polygonzug</p>
+<p class="last">Angabe einer ZufallsGröße | DatenReihe - Vergleich mit anderer
+Verteilung</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.hist_abs_h">
+<code class="descname">hist_abs_h</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.hist_abs_h" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Histogramm der absoluten Häufigkeiten</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.hist_kum">
+<code class="descname">hist_kum</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.hist_kum" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Histogramm der kumulierten relativen Häufigkeiten</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.is_ganz">
+<code class="descname">is_ganz</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.is_ganz" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf ganzzahlige Daten</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.klassen">
+<code class="descname">klassen</code><span class="sig-paren">(</span><em>anzahl</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.klassen" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>KLasseneinteilung</p>
+<p><em>anzahl</em> : Anzahl Klassen</p>
+<p>Die Klassen haben gleiche Breite und folgen unmittelbar aufeinander</p>
+<p>Die zurückgegebene DatenReihe beinhaltet für alle Datenelemente den
+Index der Klasse, in der das Datenelement liegt</p>
+<p>Zusatz: <cite>g=la</cite> - Ausgabe der Klassengrenzen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.korr_koeff">
+<code class="descname">korr_koeff</code><span class="sig-paren">(</span><em>dr</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.korr_koeff" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Korrelationskoeffizient für zwei DatenReihen</p>
+<p><em>dr</em> : DatenReihe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.linien">
+<code class="descname">linien</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.linien" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Linien-Daten-Diagramm</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.max">
+<code class="descname">max</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.max" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>größter Wert</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.min">
+<code class="descname">min</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.min" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>kleinster Wert</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.mittel">
+<code class="descname">mittel</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.mittel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Arithmetischer Mittelwert</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.mittel_">
+<code class="descname">mittel_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.mittel_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Arithmetischer Mittelwert; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>d=n</cite> - Darstellung dezimal mit <em>n</em> Kommastellen</p>
+<p class="last"><cite>f=ja</cite> - Berechnungsformel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.modal">
+<code class="descname">modal</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.modal" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Modalwert(e)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.modal_">
+<code class="descname">modal_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.modal_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Modalwert(e); zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>r=ja</cite> - relative Häufigkeit</p>
+<p><cite>rd=ja</cite> - ebenso, dezimal</p>
+<p class="last"><cite>e=ja</cite> - Erläuterung</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.o_quartil">
+<code class="descname">o_quartil</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.o_quartil" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Oberes Quartil</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.o_quartil_">
+<code class="descname">o_quartil_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.o_quartil_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Oberes Quartil; zugehörige Methode</p>
+<p>Zusatz: <cite>b=ja</cite> - Berechnung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.poly_zug">
+<code class="descname">poly_zug</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.poly_zug" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Polygonzug</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.quantil">
+<code class="descname">quantil</code><span class="sig-paren">(</span><em>q</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.quantil" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Quantile</p>
+<p><em>q</em> : Zahl aus [0, 1]</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.s">
+<code class="descname">s</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.s" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Standardabweichung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.s_">
+<code class="descname">s_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.s_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Standardabweichung; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>d=ja</cite> - Darstellung dezimal mit <em>n</em> Kommastellen</p>
+<p class="last"><cite>b=ja</cite> - Berechnung</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.spann_weite">
+<code class="descname">spann_weite</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.spann_weite" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Spannweite</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.spann_weite_">
+<code class="descname">spann_weite_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.spann_weite_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Spannweite; zugehörige Methode</p>
+<p>Zusatz: <cite>b=ja</cite> - Berechnung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.streu_diagr">
+<code class="descname">streu_diagr</code><span class="sig-paren">(</span><em>dr</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.streu_diagr" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Streudiagramm mit Regressionsgerade für zwei Datenreihen</p>
+<p><em>dr</em> : DatenReihe</p>
+<p>Zusatz: <cite>g=ja</cite> - Gleichung der Regressionsgeraden</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.umfang">
+<code class="descname">umfang</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.umfang" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umfang  / Anzahl Datenelemente</p>
+<p>Sybonym: <strong>n</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.u_quartil">
+<code class="descname">u_quartil</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.u_quartil" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Unteres Quartil</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.u_quartil_">
+<code class="descname">u_quartil_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.u_quartil_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Unteres Quartil; zugehörige Methode</p>
+<p>Zusatz: <cite>b=ja</cite> - Berechnung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.var">
+<code class="descname">var</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.var" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Varianz</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.var_">
+<code class="descname">var_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.var_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Varianz; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>d=n</cite> - Darstellung dezimal mit <em>n</em> Kommastellen</p>
+<p><cite>a=ja</cite> - Berechnung mit 1/(<em>n</em>-1)</p>
+<p><cite>ad=ja</cite> - ebenso, Darstellung dezimal</p>
+<p class="last"><cite>f=ja</cite> - Berechnungsformeln</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.vert">
+<code class="descname">vert</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.vert" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Verteilung der relativen Häufigkeiten</p>
+<p>Synonym: <strong>vert_rel_h</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.vert_">
+<code class="descname">vert_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.vert_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Verteilung der relativen Häufigkeiten; zugehörige Methode</p>
+<p>Synonym: <strong>vert_rel_h_</strong></p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>p=ja</cite> relative Häufigkeiten werden als Prozentwerte ausgegeben</p>
+<p><cite>d=n</cite> ebenso, dezimal mit <em>n</em> Kommastellen</p>
+<p><cite>s=ja</cite> Spaltenausgabe</p>
+<p><cite>sp=ja</cite> ebenso, Prozentwerte</p>
+<p class="last"><cite>sd=n</cite> ebenso, dezimal mit <em>n</em> Kommastellen</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.vert_abs_h">
+<code class="descname">vert_abs_h</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.vert_abs_h" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Verteilung der absoluten Häufigkeiten</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.vert_abs_h_">
+<code class="descname">vert_abs_h_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.vert_abs_h_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Verteilung der absoluten Häufigkeiten; zugehörige Methode</p>
+<p>Zusatz: <cite>s=ja</cite> Spaltenausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.vert_kum">
+<code class="descname">vert_kum</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.vert_kum" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kumulierte Häufigkeitskeitsverteilung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.vert_kum_">
+<code class="descname">vert_kum_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.vert_kum_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kumulierte Häufigkeitskeitsverteilung; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>p=ja</cite> relative Häufigkeiten werden als Prozentwerte ausgegeben</p>
+<p><cite>d=n</cite> ebenso, dezimal mit <em>n</em> Kommastellen</p>
+<p><cite>s=ja</cite> Spaltenausgabe</p>
+<p><cite>sp=ja</cite> ebenso, Prozentwerte</p>
+<p class="last"><cite>sd=n</cite> ebenso, dezimal mit <em>n</em> Kommastellen</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.violin_plot">
+<code class="descname">violin_plot</code><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.violin_plot" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Violinplot-Diagramm</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.datenreihe.DatenReihe.violin_plot_h_">
+<code class="descname">violin_plot_h_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.datenreihe.DatenReihe.violin_plot_h_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Violinplot-Diagramm; zugehörige Methode</p>
+<p>Zusatz: <cite>e=ja</cite> - Erläuterungen zum Diagramm</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">box_plot</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">boxPlot</span></code></p>
+<p><code class="docutils literal"><span class="pre">box_plot_</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">BoxPlot</span></code></p>
+<p><code class="docutils literal"><span class="pre">graf_F</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">grafF</span></code></p>
+<p><code class="docutils literal"><span class="pre">halb_weite</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">halbWeite</span></code></p>
+<p><code class="docutils literal"><span class="pre">halb_weite_</span>&#160; <span class="pre">:</span>&#160; <span class="pre">HalbWeite</span></code></p>
+<p><code class="docutils literal"><span class="pre">hist_</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Hist</span></code></p>
+<p><code class="docutils literal"><span class="pre">hist_abs_h</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">histAbsH</span></code></p>
+<p><code class="docutils literal"><span class="pre">hist_kum</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">histKum</span></code></p>
+<p><code class="docutils literal"><span class="pre">hist_rel_h</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">histRelH</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_ganz</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">isGanz</span></code></p>
+<p><code class="docutils literal"><span class="pre">korr_koeff</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">korrKoeff</span></code></p>
+<p><code class="docutils literal"><span class="pre">mittel_</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Mittel</span></code></p>
+<p><code class="docutils literal"><span class="pre">o_quartil</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">oQuartil</span></code></p>
+<p><code class="docutils literal"><span class="pre">o_quartil_</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">OQuartil</span></code></p>
+<p><code class="docutils literal"><span class="pre">poly_zug</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">polyZug</span></code></p>
+<p><code class="docutils literal"><span class="pre">poly_zug_</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">PolyZug</span></code></p>
+<p><code class="docutils literal"><span class="pre">modal_</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Modal</span></code></p>
+<p><code class="docutils literal"><span class="pre">s_</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">S</span></code></p>
+<p><code class="docutils literal"><span class="pre">spann_weite</span>&#160; <span class="pre">:</span>&#160; <span class="pre">spannWeite</span></code></p>
+<p><code class="docutils literal"><span class="pre">spann_weite_</span> <span class="pre">:</span>&#160; <span class="pre">SpannWeite</span></code></p>
+<p><code class="docutils literal"><span class="pre">streu_diagr</span>&#160; <span class="pre">:</span>&#160; <span class="pre">streuDiagr</span></code></p>
+<p><code class="docutils literal"><span class="pre">u_quartil</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">uQuartil</span></code></p>
+<p><code class="docutils literal"><span class="pre">u_quartil_</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">UQuartil</span></code></p>
+<p><code class="docutils literal"><span class="pre">var_</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Var</span></code></p>
+<p><code class="docutils literal"><span class="pre">vert_</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Vert</span></code></p>
+<p><code class="docutils literal"><span class="pre">vert_abs_h</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">vertAbsH</span></code></p>
+<p><code class="docutils literal"><span class="pre">vert_abs_h_</span>&#160; <span class="pre">:</span>&#160; <span class="pre">VertAbsH</span></code></p>
+<p><code class="docutils literal"><span class="pre">vert_kum</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">vertKum</span></code></p>
+<p><code class="docutils literal"><span class="pre">vert_kum_</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">VertKum</span></code></p>
+<p><code class="docutils literal"><span class="pre">vert_rel_h</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">vertRelH</span></code></p>
+<p><code class="docutils literal"><span class="pre">vert_rel_h_</span>&#160; <span class="pre">:</span>&#160; <span class="pre">VertRelH</span></code></p>
+<p><code class="docutils literal"><span class="pre">violin_plot</span>&#160; <span class="pre">:</span>&#160; <span class="pre">violinPlot</span></code></p>
+<p><code class="docutils literal"><span class="pre">violin_plot_</span> <span class="pre">:</span>&#160; <span class="pre">ViolinPlot</span></code></p>
+</div></blockquote>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="ev.html"
+                        title="vorheriges Kapitel">EV - ExponentialVerteilung</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="ea.html"
+                        title="nächstes Kapitel">EA - EreignisAlgebra</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/dr.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="ea.html" title="EA - EreignisAlgebra"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="ev.html" title="EV - ExponentialVerteilung"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" >Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

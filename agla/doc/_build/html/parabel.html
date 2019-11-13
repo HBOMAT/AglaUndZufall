@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parabel &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen in der Ebene" href="klassenr2.html" />
+    <link rel="next" title="Kurve2terOrdnung" href="k2o.html" />
+    <link rel="prev" title="Hyperbel" href="hyperbel.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="k2o.html" title="Kurve2terOrdnung"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="hyperbel.html" title="Hyperbel"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" accesskey="U">Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="parabel">
+<h1>Parabel<a class="headerlink" href="#parabel" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.parabel.Parabel">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.parabel.</code><code class="descname">Parabel</code><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parabel in der Ebene</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>Parabel ( <em>p</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><em>p</em> : Parameter in der Gleichung  <em>y</em><sup>2</sup> = <em>2px</em></div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.parabel.Parabel.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.parabel.Parabel.brenn_ger">
+<code class="descname">brenn_ger</code><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.brenn_ger" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Brenn- / Leitgerade</p>
+<p>Synonym: <strong>leit_ger</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.parabel.Parabel.brenn_punkt">
+<code class="descname">brenn_punkt</code><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.brenn_punkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Brennpunkt</p>
+<p>Synonyme: <strong>F</strong>, <strong>f</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.parabel.Parabel.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.parabel.Parabel.gleich">
+<code class="descname">gleich</code><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.gleich" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gleichung; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.parabel.Parabel.gleich_">
+<code class="descname">gleich_</code><span class="sig-paren">(</span><em>/[punkt]</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.gleich_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Auswertung der Gleichung in einem Punkt</p>
+<p><em>punkt</em> : Punkt</p>
+<p>Zusatz :  <cite>g=ja</cite> - Bereitstellung der Gleichung als Gleichung-Objekt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.parabel.Parabel.in_kurve">
+<code class="descname">in_kurve</code><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.in_kurve" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konvertierung in Kurve</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.parabel.Parabel.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.parabel.Parabel.lin_exz">
+<code class="descname">lin_exz</code><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.lin_exz" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Synonym: <strong>e</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.parabel.Parabel.num_exz">
+<code class="descname">num_exz</code><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.num_exz" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Synonym: <strong>eps</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.parabel.Parabel.p">
+<code class="descname">p</code><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.p" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameter in der Gleichung   <em>y</em><sup>2</sup> = <em>2px</em></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.parabel.Parabel.prg">
+<code class="descname">prg</code><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.prg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parametergleichung; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.parabel.Parabel.scheitel">
+<code class="descname">scheitel</code><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.scheitel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Scheitelpunkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.parabel.Parabel.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Scharparameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.parabel.Parabel.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildparabel bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.parabel.Parabel.pkt">
+<code class="descname">pkt</code><span class="sig-paren">(</span><em>/[wert] </em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.pkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Punkt der Parabel</p>
+<p><em>wert</em> : Wert des Parabelparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Parabelpunkt, der zu diesem Wert gehört</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>allgemeiner Punkt der Parabel</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.parabel.Parabel.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Parabelschar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.parabel.Parabel.tangente">
+<code class="descname">tangente</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.parabel.Parabel.tangente" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Tangente in einem Parabelpunkt</p>
+<p><em>punkt</em> : Punkt der Parabel</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">brenn_ger</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">brennGer</span></code></p>
+<p><code class="docutils literal"><span class="pre">brenn_punkt</span> <span class="pre">:</span>&#160; <span class="pre">brennPunkt</span></code></p>
+<p><code class="docutils literal"><span class="pre">gleich_</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Gleich</span></code></p>
+<p><code class="docutils literal"><span class="pre">in_kurve</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">inKurve</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">leit_ger</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">leitGer</span></code></p>
+<p><code class="docutils literal"><span class="pre">lin_exz</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">linExz</span></code></p>
+<p><code class="docutils literal"><span class="pre">num_exz</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">numExz</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="hyperbel.html"
+                        title="vorheriges Kapitel">Hyperbel</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="k2o.html"
+                        title="nächstes Kapitel">Kurve2terOrdnung</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/parabel.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="k2o.html" title="Kurve2terOrdnung"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="hyperbel.html" title="Hyperbel"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" >Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

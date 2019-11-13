@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ZE - ZufallsExperiment &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen" href="klassen.html" />
+    <link rel="next" title="ZG - ZufallsGröße" href="zg.html" />
+    <link rel="prev" title="Klassen" href="klassen.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="zg.html" title="ZG - ZufallsGröße"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="klassen.html" title="Klassen"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" accesskey="U">Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ze-zufallsexperiment">
+<h1>ZE - ZufallsExperiment<a class="headerlink" href="#ze-zufallsexperiment" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment">
+<em class="property">class </em><code class="descclassname">zufall.lib.objekte.zufalls_experiment.</code><code class="descname">ZufallsExperiment</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Zufallsexperiment</p>
+<p><strong>Kurzname</strong> <strong>ZE</strong></p>
+<p><strong>Synonym</strong> ZV (ZufallsVersuch)</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div><p>ZE(<em>liste /[, stufen ]</em> )</p>
+<blockquote>
+<div><em>stufen</em> :   Anzahl Stufen; Standard = 1</div></blockquote>
+<p><em>oder</em></p>
+<p>ZE( <em>liste1, liste2, ...</em>)</p>
+<blockquote>
+<div>bei mehrstufigem Experiment je Sufe eine Liste, diese 
+können unterschiedlich sein</div></blockquote>
+<p><em>oder</em></p>
+<p>ZE( <em>v_liste</em> )</p>
+<blockquote>
+<div>vollständige Liste bei einem mehrstufigen Zufallsexperiment</div></blockquote>
+</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>liste</em> : liste_1 | liste_2 | dict</p>
+<p><em>v_liste</em> :</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><em>liste_1</em> | </div>
+<div class="line"><em>[(obj1, zahl1), v_liste1, (obj2, zahl2),</em> 
+<em>v_liste2, ...]</em> </div>
+<div class="line">(<em>vollständige Liste</em>)</div>
+</div>
+</div></blockquote>
+<p><em>liste_1</em> :</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><em>[ (obj1, zahl1), (obj2, zahl2), ...]</em>  |</div>
+<div class="line"><em>[ [obj1, zahl1], [obj2, zahl2], ...]</em>                           </div>
+<div class="line">(obj-zahl-Paare als Tupel oder Liste)</div>
+</div>
+</div></blockquote>
+<p><em>liste_2</em> :</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><em>[obj1, obj2, ...]</em>  </div>
+<div class="line">(äquivalent zu <em>[ (obj1, 1), (obj2, 1), ...]</em> )</div>
+</div>
+</div></blockquote>
+<p><em>Stufen</em> :</p>
+<blockquote>
+<div>Anzahl Stufen</div></blockquote>
+<p><em>dict</em> : <em>{ obj1:zahl1, obj2:zahl2, ...}</em>  (dictionary)</p>
+<p><em>obj</em> : Bezeichner | ganze Zahl &gt;= 0</p>
+</div></blockquote>
+<dl class="docutils">
+<dt><strong>Zusatz</strong></dt>
+<dd><p class="first"><cite>a=nein</cite> - keine Beachtung der Anordnung/Reihenfolge; Standard=ja</p>
+<p><cite>w=nein</cite> - keine Wiederholung von Elementen; Standard=ja</p>
+<p class="last"><cite>f=funktions_name</cite> - Name einer ZG-Funktion (diese ordnet den Elementen 
+der Ergebnismenge Zahlen zu)</p>
+</dd>
+</dl>
+<p>Wird eine Liste mit nur zwei unterschiedlichen Objekten angegeben, wird
+bei Verwendung der Funktion <code class="docutils literal"><span class="pre">anzahl_treffer</span></code></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">bei Wiederholung von Elementen ein BernoulliKette - Objekt</div>
+</div>
+<div class="line-block">
+<div class="line">bei Nicht-Wiederholung von Elementen ein HyperGeometrischeVerteilung -
+Objekt</div>
+</div>
+</div></blockquote>
+<p>erzeugt</p>
+<p>Bezeichner, die länger als ein Zeichen sind, müssen als Zeichenkette 
+eingegeben oder vordeklariert werden, etwa  <code class="docutils literal"><span class="pre">Raucher</span> <span class="pre">=</span> <span class="pre">Symbol('Raucher')</span></code></p>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.anordn">
+<code class="descname">anordn</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.anordn" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Beachten der Anordnung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.baum">
+<code class="descname">baum</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.baum" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Baum-Diagramm</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.baum_">
+<code class="descname">baum_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.baum_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Baumdiagramm; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz :</dt>
+<dd><p class="first"><cite>p=ja</cite> - Wahrscheinlichkeiten werden als Prozentwerte ausgegeben</p>
+<dl class="last docutils">
+<dt><cite>d=n</cite> - Wahrscheinlichkeiten werden als Dezimalzahlen mit <em>n</em></dt>
+<dd>Kommastellen ausgegeben</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.n_omega">
+<code class="descname">n_omega</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.n_omega" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Größe der Ergebnismenge</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.omega">
+<code class="descname">omega</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.omega" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ergebismenge</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.omega_">
+<code class="descname">omega_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.omega_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ergebismenge; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz :</dt>
+<dd><p class="first"><cite>l=ja</cite> - Listenausgabe</p>
+<p><cite>t=ja</cite> - Tabellenausgabe</p>
+<p class="last"><cite>g=ja</cite> - Größe der Ergebnismenge</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.stufen">
+<code class="descname">stufen</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.stufen" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Stufenanzahl des Experimentes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.versuch">
+<code class="descname">versuch</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.versuch" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Versuch</p>
+<p>Synonyme: <strong>ausfall</strong>, <strong>wurf</strong>, <strong>ziehen</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.vert">
+<code class="descname">vert</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.vert" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wahrscheinlichkeitsverteilung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.vert_">
+<code class="descname">vert_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.vert_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wahrscheinlichkeitsverteilung</p>
+<dl class="docutils">
+<dt>Zusatz :</dt>
+<dd><p class="first"><cite>p=ja</cite> - Wahrscheinlichkeiten werden als Prozentwerte ausgegeben</p>
+<p><cite>d=n</cite> - ebenso, dezimal mit <em>n</em> Kommastellen</p>
+<p><cite>s=ja</cite> - Spaltenausgabe</p>
+<p><cite>sp=ja</cite> - ebenso, Prozentwerte</p>
+<p class="last"><cite>sd=n</cite> - ebenso, dezimal mit <em>n</em> Kommastellen</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.wiederh">
+<code class="descname">wiederh</code><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.wiederh" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wiederholung von Elementen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.P">
+<code class="descname">P</code><span class="sig-paren">(</span><em>e /</em><span class="optional">[</span>, <em>e1</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.P" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wahrscheinlichkeit eines Ereignisses</p>
+<p><em>e</em>: Ereignis</p>
+<blockquote>
+<div><em>Element</em> | <em>Liste</em> | <em>Tupel</em> | <em>Menge</em> von Elementen der
+Ergebnismenge</div></blockquote>
+<p>Bei der Angabe von zwei Ereignissen wird die bedingte
+Wahrscheinlichkeit <span class="math">\(P( e | e_1 )\)</span> berechnet</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>p=ja</cite> - Darstellung als Prozentwert</p>
+<p class="last"><cite>d=n</cite> - Darstellung dezimal mit <em>n</em> Kommastellen</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.relh2p">
+<code class="descname">relh2p</code><span class="sig-paren">(</span><em>e</em>, <em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.relh2p" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Stabilisierung der relativen Häufigkeiten</p>
+<p><em>e</em>: Ereignis</p>
+<blockquote>
+<div><em>Element</em> | <em>Liste</em> | <em>Tupel</em> | <em>Menge</em> von Elementen der
+Ergebnismenge</div></blockquote>
+<p><em>m</em>: Anzahl Versuche</p>
+<dl class="docutils">
+<dt>Zusatz:  <cite>d=ja</cite></dt>
+<dd><div class="first last line-block">
+<div class="line">Rückgabe einer DatenReihe mit den Versuchsausgängen</div>
+<div class="line">1 - Ereignis ist eingetreten</div>
+<div class="line">0 - Ereignis ist nicht eingetreten</div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.stich_probe">
+<code class="descname">stich_probe</code><span class="sig-paren">(</span><em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.zufalls_experiment.ZufallsExperiment.stich_probe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Stichprobe</p>
+<p><em>m</em> : Umfang (Anzahl Versuche)</p>
+<p>Zusatz: <cite>l=ja</cite> - Darstellung der Versuchsausgänge als Liste</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">baum_</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Baum</span></code></p>
+<p><code class="docutils literal"><span class="pre">n_omega</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">nOmega</span></code></p>
+<p><code class="docutils literal"><span class="pre">omega_</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Omega</span></code></p>
+<p><code class="docutils literal"><span class="pre">stich_probe</span> <span class="pre">:</span>&#160; <span class="pre">stichProbe</span></code></p>
+<p><code class="docutils literal"><span class="pre">vert_</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Vert</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="klassen.html"
+                        title="vorheriges Kapitel">Klassen</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="zg.html"
+                        title="nächstes Kapitel">ZG - ZufallsGröße</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ze.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="zg.html" title="ZG - ZufallsGröße"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="klassen.html" title="Klassen"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" >Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

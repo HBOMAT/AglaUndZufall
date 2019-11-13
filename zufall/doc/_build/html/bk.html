@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>BK - BernoulliKette &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen" href="klassen.html" />
+    <link rel="next" title="BV - BinomialVerteilung" href="bv.html" />
+    <link rel="prev" title="ZG - ZufallsGröße" href="zg.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="bv.html" title="BV - BinomialVerteilung"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="zg.html" title="ZG - ZufallsGröße"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" accesskey="U">Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bk-bernoullikette">
+<h1>BK - BernoulliKette<a class="headerlink" href="#bk-bernoullikette" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette">
+<em class="property">class </em><code class="descclassname">zufall.lib.objekte.bernoulli_kette.</code><code class="descname">BernoulliKette</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>BernoulliKette</p>
+<p><strong>Kurzname</strong> <strong>BK</strong></p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>BK( <em>n</em>, <em>p</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>n</em> : Anzahl Versuche</p>
+<p><em>p</em> : TrefferWahrscheinlichkeit</p>
+</div></blockquote>
+<dl class="docutils">
+<dt><strong>Zusatz</strong></dt>
+<dd><p class="first"><cite>ze=ja</cite> - Erzeugung eines ZufallsExperiment-Objektes</p>
+<p><cite>a=ja</cite> - Beachtung der Anordnung der Ergebnisse (nur bei <cite>ze=ja</cite> 
+wirksam)</p>
+<p><cite>f=funktion</cite> - Erzeugung eines ZufallsGröße-Objektes anhand der
+angegebenen ZG-Funktion <code class="docutils literal"><span class="pre">funktion</span></code></p>
+<p class="last"><cite>tn = [treffer, niete]</cite> - Namen für Treffer/Niete, Standard=[1, 0];
+Bezeichner, die länger als ein Zeichen sind, müssen als  
+Zeichenkette eingegeben oder vordeklariert werden, etwa 
+<code class="docutils literal"><span class="pre">Wappen</span> <span class="pre">=</span> <span class="pre">Symbol('Wappen')</span></code></p>
+</dd>
+</dl>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.erw">
+<code class="descname">erw</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.erw" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erwartungswert</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.erw_">
+<code class="descname">erw_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.erw_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erwartungswert; zugehörige Methode</p>
+<p>Zusatz: <cite>d=n</cite> Darstellung dezimal mit <em>n</em> Kommastellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.e_sigma_umg">
+<code class="descname">e_sigma_umg</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.e_sigma_umg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Sigma-Umgebungen des Erwartungswertes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.faust_regel">
+<code class="descname">faust_regel</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.faust_regel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Faustregel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.formeln">
+<code class="descname">formeln</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.formeln" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Formeln</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.graf_F">
+<code class="descname">graf_F</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.graf_F" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Graf der Verteilungsfunktion</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.hist">
+<code class="descname">hist</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.hist" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Histogramm</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.hist_">
+<code class="descname">hist_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.hist_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Histogramm; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>p=ja</cite> - Polygonzug-Diagramm</p>
+<p class="last">Angabe einer Zufallsgröße | Datenreihe - Vergleich mit anderer
+Verteilung</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.hist_kum">
+<code class="descname">hist_kum</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.hist_kum" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Histogramm der kumulierten Wahrscheinlichkeiten</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.n">
+<code class="descname">n</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.n" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Länge (Anzahl Versuche)</p>
+<p>Synonym: <strong>anzahl</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.niete">
+<code class="descname">niete</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.niete" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Niete</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.nv_approx">
+<code class="descname">nv_approx</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.nv_approx" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Approximation durch die Normalverteilung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.n_omega">
+<code class="descname">n_omega</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.n_omega" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Größe der Ergebnismenge</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.omega">
+<code class="descname">omega</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.omega" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ergebismenge</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.p">
+<code class="descname">p</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.p" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Trefferwahrscheinlichkeit</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.poly_zug">
+<code class="descname">poly_zug</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.poly_zug" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Polygonzug</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.poly_zug_">
+<code class="descname">poly_zug_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.poly_zug_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Polygonzug-Diagramm; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>hi=ja</cite> - Histogramm</p>
+<p class="last">Angabe einer Zufallsgröße | Datenreihe - Vergleich mit anderer
+Verteilung</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.p_sigma_umg">
+<code class="descname">p_sigma_umg</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.p_sigma_umg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Sigma-Umgebungen des Erwartungswertes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.sigma">
+<code class="descname">sigma</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.sigma" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Standardabweichung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.sigma_">
+<code class="descname">sigma_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.sigma_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Standardabweichung; zugehörige Methode</p>
+<p>Zusatz: <cite>d=n`</cite> - Darstellung dezimal mit <em>n</em> Kommastellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.treffer">
+<code class="descname">treffer</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.treffer" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Treffer</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.var">
+<code class="descname">var</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.var" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Varianz</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.var_">
+<code class="descname">var_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.var_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Varianz; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>d=n</cite> - Darstellung dezimal mit <em>n</em> Kommastellen</p>
+<p class="last"><cite>b=ja</cite> - Begriffe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.versuch">
+<code class="descname">versuch</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.versuch" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Versuch</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.vert">
+<code class="descname">vert</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.vert" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wahrscheinlichkeitsverteilung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.vert_">
+<code class="descname">vert_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.vert_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wahrscheinlichkeitsverteilung; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>p=ja</cite> - Wahrscheinlichkeiten werden als Prozentwerte ausgegeben</p>
+<p><cite>d=n</cite> - ebenso, dezimal mit <em>n</em> Kommastellen</p>
+<p><cite>s=ja</cite> - Spaltenausgabe</p>
+<p><cite>sp=ja</cite> - ebenso, Prozentwerte</p>
+<p class="last"><cite>sd=ja</cite> - ebenso, dezimal mit <em>n</em> Kommastellen</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.vert_kum">
+<code class="descname">vert_kum</code><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.vert_kum" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kumulierte Wahrscheinlichkeitsverteilung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.vert_kum_">
+<code class="descname">vert_kum_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.vert_kum_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kumuliert Wahrscheinlichkeitsverteilung; zugehörige Methode</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>p=ja</cite> - Wahrscheinlichkeiten werden als Prozentwerte ausgegeben</p>
+<p><cite>d=n</cite> - ebenso, dezimal mit <em>n</em> Kommastellen</p>
+<p><cite>s=ja</cite> - Spaltenausgabe</p>
+<p><cite>sp=ja</cite> - ebenso, Prozentwerte</p>
+<p class="last"><cite>sd=n</cite> - ebenso, dezimal mit <em>n</em> Kommastellen</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.F">
+<code class="descname">F</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.F" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Verteilungsfunktion</p>
+<p><em>wert</em> : Zahl</p>
+<p>Zusatz: <cite>d=n</cite> - Darstellung dezimal mit <em>n</em> Kommastellen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.P">
+<code class="descname">P</code><span class="sig-paren">(</span><em>e, /[e1] </em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.P" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wahrscheinlichkeit eines Ereignisses</p>
+<p><em>e</em>: Ereignis</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><em>elem</em> |</div>
+<div class="line"><em>Liste/Tupel/Menge</em> von Elementen der Ergebnismenge |</div>
+<div class="line"><em>X = elem</em> |</div>
+<div class="line"><em>elem rel X</em> |</div>
+<div class="line"><em>X rel elem</em> |</div>
+<div class="line"><em>abs( X - elem ) rel zahl</em> |</div>
+<div class="line"><em>&#8216;elem rel X rel elem&#8217;</em>  (Zeichenkette)</div>
+<div class="line">der Bezeichner <em>X</em> ist zwingend</div>
+</div>
+</div></blockquote>
+<p><em>e1</em> :  <em>elem</em> | <em>Liste/Tupel/Menge</em> von Elementen der Ergebnismenge</p>
+<p><em>elem</em> :   Element der Ergebnismenge</p>
+<p><em>rel</em> : Relation  &lt; | &lt;= | &gt; | &gt;=</p>
+<p><em>zahl</em> : reelle Zahl</p>
+<p>Bei der Angabe von zwei Ereignissen wird die bedingte Wahrscheinlichkeit
+<span class="math">\(P( e | e_1 )\)</span> berechnet</p>
+<dl class="docutils">
+<dt>Zusatz:</dt>
+<dd><p class="first"><cite>p=ja</cite> - Darstellung als Prozentwert</p>
+<p><cite>d=n</cite> - Darstellung dezimal mit <em>n</em> Kommastellen</p>
+<p class="last"><cite>g=ja</cite> - grafische Darstellung</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.quantil">
+<code class="descname">quantil</code><span class="sig-paren">(</span><em>q</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.quantil" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Quantile</p>
+<p><em>q</em> : Zahl aus [0,1]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.relh2p">
+<code class="descname">relh2p</code><span class="sig-paren">(</span><em>e</em>, <em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.relh2p" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Stabilisierung der relativen Häufigkeiten</p>
+<p><em>e</em>: Ereignis</p>
+<blockquote>
+<div><em>Element</em> | <em>Liste</em> | <em>Tupel</em> | <em>Menge</em> von Elementen der
+Ergebnismenge</div></blockquote>
+<p><em>m</em>: Anzahl Versuche</p>
+<dl class="docutils">
+<dt>Zusatz:  <cite>d=ja</cite></dt>
+<dd><div class="first last line-block">
+<div class="line">Rückgabe einer DatenReihe mit den Versuchsausgängen</div>
+<div class="line">1 - Ereignis ist eingetreten</div>
+<div class="line">0 - Ereignis ist nicht eingetreten</div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.bernoulli_kette.BernoulliKette.stich_probe">
+<code class="descname">stich_probe</code><span class="sig-paren">(</span><em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.bernoulli_kette.BernoulliKette.stich_probe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Stichprobe</p>
+<p><em>m</em> : Umfang (Anzahl Versuche)</p>
+<p>Zusatz: <cite>d=ja</cite> - Rückgabe als DatenReihe</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">erw_</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Erw</span></code></p>
+<p><code class="docutils literal"><span class="pre">e_sigma_umg</span>&#160; <span class="pre">:</span>&#160; <span class="pre">eSigmaUmg</span></code></p>
+<p><code class="docutils literal"><span class="pre">faust_regel</span>&#160; <span class="pre">:</span>&#160; <span class="pre">faustRegel</span></code></p>
+<p><code class="docutils literal"><span class="pre">graf_F</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">graf_F</span></code></p>
+<p><code class="docutils literal"><span class="pre">hist_</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Hist</span></code></p>
+<p><code class="docutils literal"><span class="pre">hist_kum</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">histKum</span></code></p>
+<p><code class="docutils literal"><span class="pre">n_omega</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">nOmega</span></code></p>
+<p><code class="docutils literal"><span class="pre">poly_zug</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">polyZug</span></code></p>
+<p><code class="docutils literal"><span class="pre">poly_zug_</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">PolyZug</span></code></p>
+<p><code class="docutils literal"><span class="pre">p_sigma_umg</span>&#160; <span class="pre">:</span>&#160; <span class="pre">pSigmaUmg</span></code></p>
+<p><code class="docutils literal"><span class="pre">sigma_</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Sigma</span></code></p>
+<p><code class="docutils literal"><span class="pre">stich_probe</span>&#160; <span class="pre">:</span>&#160; <span class="pre">stichProbe</span></code></p>
+<p><code class="docutils literal"><span class="pre">var_</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Var</span></code></p>
+<p><code class="docutils literal"><span class="pre">vert_</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Vert</span></code></p>
+<p><code class="docutils literal"><span class="pre">vert_kum</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">vertKum</span></code></p>
+<p><code class="docutils literal"><span class="pre">vert_kum_</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">VertKum</span></code></p>
+</div></blockquote>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="zg.html"
+                        title="vorheriges Kapitel">ZG - ZufallsGröße</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="bv.html"
+                        title="nächstes Kapitel">BV - BinomialVerteilung</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/bk.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="bv.html" title="BV - BinomialVerteilung"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="zg.html" title="ZG - ZufallsGröße"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" >Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

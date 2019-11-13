@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gleichung &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Andere Klassen" href="andere_klassen.html" />
+    <link rel="next" title="Klassen der sphärischen Geometrie" href="klassen_sphaer_geometrie.html" />
+    <link rel="prev" title="Lineares Gleichungssystem" href="lgs.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="klassen_sphaer_geometrie.html" title="Klassen der sphärischen Geometrie"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="lgs.html" title="Lineares Gleichungssystem"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="andere_klassen.html" accesskey="U">Andere Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="gleichung">
+<h1>Gleichung<a class="headerlink" href="#gleichung" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.funktionen.funktionen.Gleichung">
+<em class="property">class </em><code class="descclassname">agla.lib.funktionen.funktionen.</code><code class="descname">Gleichung</code><a class="headerlink" href="#agla.lib.funktionen.funktionen.Gleichung" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Hilfsklasse für Gleichungen</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>Gleichung ( <em>li_seite /[ re_seite, ]</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>li_seite</em> : linke Seite; nummerischer oder Vektorausdruck</p>
+<p><em>re_seite</em> : rechte Seite; ebenso; bei Weglassen 0 bzw. Nullvektor</p>
+</div></blockquote>
+<p><strong>Operatoren</strong></p>
+<blockquote>
+<div><p>Sie werden auf beide Seiten einer Gleichung angewendet</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">+</span></code></td>
+<td>Addition eines Skalars bzw. Vektors</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">-</span></code></td>
+<td>Negation oder Subtraktion eines Skalars bzw. Vektors</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">*</span></code></td>
+<td>Multiplikation mit einem Skalar</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">/</span></code></td>
+<td>Division durch einen Skalar</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">^</span></code></td>
+<td>Potenzieren  mit einem Skalar</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">**</span></code></td>
+<td>ebenso</td>
+</tr>
+</tbody>
+</table>
+<p>Außer bei einer Negation ist ein Operator grundsätzlich nach der 
+Gleichung zu notieren</p>
+</div></blockquote>
+<p><strong>Eigenschaften</strong></p>
+<dl class="attribute">
+<dt id="agla.lib.funktionen.funktionen.Gleichung.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.funktionen.funktionen.Gleichung.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.funktionen.funktionen.Gleichung.ls">
+<code class="descname">ls</code><a class="headerlink" href="#agla.lib.funktionen.funktionen.Gleichung.ls" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Linke Seite</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.funktionen.funktionen.Gleichung.rs">
+<code class="descname">rs</code><a class="headerlink" href="#agla.lib.funktionen.funktionen.Gleichung.rs" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Rechte Seite</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.funktionen.funktionen.Gleichung.r2l">
+<code class="descname">r2l</code><a class="headerlink" href="#agla.lib.funktionen.funktionen.Gleichung.r2l" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Rechte Seite  nach links bringen</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="lgs.html"
+                        title="vorheriges Kapitel">Lineares Gleichungssystem</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="klassen_sphaer_geometrie.html"
+                        title="nächstes Kapitel">Klassen der sphärischen Geometrie</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gleichung.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="klassen_sphaer_geometrie.html" title="Klassen der sphärischen Geometrie"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="lgs.html" title="Lineares Gleichungssystem"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="andere_klassen.html" >Andere Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

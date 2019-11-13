@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Ebene &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen im Raum" href="klassenr3.html" />
+    <link rel="next" title="Kugel" href="kugel.html" />
+    <link rel="prev" title="Gerade" href="gerade.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="kugel.html" title="Kugel"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="gerade.html" title="Gerade"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr3.html" accesskey="U">Klassen im Raum</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ebene">
+<h1>Ebene<a class="headerlink" href="#ebene" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.ebene.Ebene">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.ebene.</code><code class="descname">Ebene</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ebene im Raum</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div><p>Ebene ( <em>stütz, richt1, richt2 /[, par1, par2 ]</em> )</p>
+<blockquote>
+<div>(über Parameterform) <em>oder</em></div></blockquote>
+<p>Ebene ( <em>stütz, norm /[, par1, par2 ]</em> )</p>
+<blockquote>
+<div>(über Normalenform) <em>oder</em></div></blockquote>
+<p>Ebene ( <em>a, b, c, d /[, par1, par2 ]</em> )</p>
+<blockquote>
+<div>(über Koordinatenform)</div></blockquote>
+</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>stütz</em> :    Stützvektor</p>
+<p><em>richt</em> :    Richtungsvektor</p>
+<p><em>norm</em> :    Normalenvektor</p>
+<p><em>a, b, c, d</em> : Koeffizienten der Gleichung <em>ax + by + cz + d = 0</em></p>
+<p><em>par</em> :      Ebenenparameter; <em>r, s</em>  falls nicht angegeben</p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Vordefinierte Ebenen</strong></p>
+<p><code class="docutils literal"><span class="pre">xy_ebene</span></code> : <em>xy</em> - Ebene</p>
+<p><code class="docutils literal"><span class="pre">xz_ebene</span></code> : <em>xz</em> - Ebene</p>
+<p><code class="docutils literal"><span class="pre">yz_ebene</span></code> : <em>yz</em> - Ebene</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ue</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ü</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.aagl">
+<code class="descname">aagl</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.aagl" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Achsenabschnittsgleichung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.hnf">
+<code class="descname">hnf</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.hnf" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Hessesche Normalenform; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.koord">
+<code class="descname">koord</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.koord" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Koordinatengleichung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ebene.Ebene.koord_">
+<code class="descname">koord_</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.koord_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Auswertung der Koordinatengleichung in einem Punkt</p>
+<p><em>punkt</em> : Punkt</p>
+<p>Zusatz : <cite>k=1</cite> - Ausgabe der Koordinatengleichung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.nf">
+<code class="descname">nf</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.nf" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Normalenform der Gleichung; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ebene.Ebene.nf_">
+<code class="descname">nf_</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.nf_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Auswertung der Normalenform der Gleichung in einem Punkt</p>
+<p><em>punkt</em> : Punkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.norm">
+<code class="descname">norm</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.norm" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Normalenvektor</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.par">
+<code class="descname">par</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameter der Gleichung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.prg">
+<code class="descname">prg</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.prg" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parametergleichung; nur zur Ausgabe</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ebene.Ebene.prg_">
+<code class="descname">prg_</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.prg_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Auswertung der Parametergleichung in einem Punkt</p>
+<p><em>punkt</em> : Punkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.punkte">
+<code class="descname">punkte</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.punkte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Drei Ebenenpunkte</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ebene.Ebene.punkte_">
+<code class="descname">punkte_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.punkte_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>zu punkte zugehörig; Erläuterung der Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.richt">
+<code class="descname">richt</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.richt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Richtungsvektoren</p>
+<p>Synonym: <strong>spann</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Scharparameter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.spur_xy">
+<code class="descname">spur_xy</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.spur_xy" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Spur in der <em>xy</em> - Ebene</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.spur_xz">
+<code class="descname">spur_xz</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.spur_xz" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Spur in der <em>xz</em> - Ebene</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.spur_yz">
+<code class="descname">spur_yz</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.spur_yz" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Spur in der <em>yz</em> - Ebene</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.ebene.Ebene.stuetz">
+<code class="descname">stuetz</code><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.stuetz" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Stützvektor</p>
+<p>Synonym: <strong>auf_pkt</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ebene.Ebene.abstand">
+<code class="descname">abstand</code><span class="sig-paren">(</span><em>objekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.abstand" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Abstand der Ebene zu einem anderen Objekt</p>
+<p><em>objekt</em> : Punkt, Gerade, Ebene, Kugel</p>
+<p>Zusatz : <cite>d=n</cite> - Dezimaldarstellung mit <em>n</em> Nachkomma-/Stellen</p>
+<p>Rückgabe :  0, wenn die Ebene <em>objekt</em> schneidet</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ebene.Ebene.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildebene bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung des Raumes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ebene.Ebene.parallele">
+<code class="descname">parallele</code><span class="sig-paren">(</span><em>punkt | abstand</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.parallele" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parallele Ebene durch einen gegebenen Punkt oder in einem
+gegebenen Abstand</p>
+<p><em>punkt</em> :      Punkt</p>
+<p><em>abstand</em> :    Zahl; das Vorzeichen bestimmt die Lage</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ebene.Ebene.pkt">
+<code class="descname">pkt</code><span class="sig-paren">(</span><em>/[ wert1, wert2 ]</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.pkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Punkt der Ebene</p>
+<p><em>wert</em> : Wert eines Ebenenparameters</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe von zwei Parameterwerten:</dt>
+<dd>Ebenenpunkt, der zu diesen Werten gehört</dd>
+<dt>bei leerer Argumentliste oder freien Bezeichnern:</dt>
+<dd>allgemeiner Punkt der Ebene</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ebene.Ebene.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Ebenenschar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ebene.Ebene.schnitt">
+<code class="descname">schnitt</code><span class="sig-paren">(</span><em>objekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.schnitt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Schnittmenge der Ebene mit einem anderen Objekt</p>
+<p><em>objekt</em> : Punkt, Gerade, Ebene, Kugel, Strecke</p>
+<p>Zusatz: <cite>l=1</cite> - Lageinformationen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.ebene.Ebene.winkel">
+<code class="descname">winkel</code><span class="sig-paren">(</span><em>objekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.ebene.Ebene.winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Winkel der Ebene mit einem anderen Objekt (in Grad)</p>
+<p><em>objekt</em> : Vektor, Gerade, Ebene</p>
+<p>Zusatz : <cite>d=n</cite> - Dezimaldarstellung mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">hilfe</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">h</span></code></p>
+<p><code class="docutils literal"><span class="pre">auf_pkt</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">aufPkt</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">koord_</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Koord</span></code></p>
+<p><code class="docutils literal"><span class="pre">nf_</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Nf</span></code></p>
+<p><code class="docutils literal"><span class="pre">prg_</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Prg</span></code></p>
+<p><code class="docutils literal"><span class="pre">punkte_</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Punkte</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+<p><code class="docutils literal"><span class="pre">spur_xy</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">spurXY</span></code></p>
+<p><code class="docutils literal"><span class="pre">spur_xz</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">spurXZ</span></code></p>
+<p><code class="docutils literal"><span class="pre">spur_yz</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">spurYZ</span></code></p>
+</div></blockquote>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="gerade.html"
+                        title="vorheriges Kapitel">Gerade</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="kugel.html"
+                        title="nächstes Kapitel">Kugel</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ebene.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="kugel.html" title="Kugel"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="gerade.html" title="Gerade"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr3.html" >Klassen im Raum</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

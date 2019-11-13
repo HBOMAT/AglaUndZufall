@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Bezeichner &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="next" title="Zugriff auf Eigenschaften und Methoden" href="zugriff.html" />
+    <link rel="prev" title="Online - Hilfe" href="online-hilfe.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="zugriff.html" title="Zugriff auf Eigenschaften und Methoden"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="online-hilfe.html" title="Online - Hilfe"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bezeichner">
+<h1>Bezeichner<a class="headerlink" href="#bezeichner" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Die erzeugten <em>zufall</em>-Objekte können einem Bezeichner zugewiesen werden,
+z.B. wird mit der Anweisung</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">u</span> <span class="o">=</span> <span class="n">Urne</span><span class="p">(</span> <span class="p">{</span><span class="s1">&#39;rot&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;grün&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;blau&#39;</span><span class="p">:</span><span class="mi">2</span> <span class="p">},</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>dem Bezeichner <code class="docutils literal"><span class="pre">u</span></code> als Wert ein Urne-Objekt zugewiesen (<code class="docutils literal"><span class="pre">'='</span></code> ist in Python
+für Zuweisungen vorgesehen)</p>
+<p>Ein Bezeichner kann in <em>zufall</em> aus allen Buchstaben des englischen Alphabets,
+allen Ziffern <code class="docutils literal"><span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">...,</span> <span class="pre">9</span></code> und dem Unterstrich <code class="docutils literal"><span class="pre">'_'</span></code> bestehen, wobei er mit
+einem Buchstaben beginnen muß. Weiterhin können die deutschen Umlaute und <code class="docutils literal"><span class="pre">ß</span></code>
+verwendet werden. Der Name kann beliebig lang sein, es wird zwischen großen und
+kleinen Buchstaben unterschieden. Auf diese Art gebildeten Namen kann jederzeit
+ein Objekt (<em>zufall</em>-Objekt oder anderes, z.B. eine Zahl) zugewiesen werden. Dabei
+darf es sich nicht um einen geschützten Namen handeln (s.u.)</p>
+<p>Anders verhält es sich bei den &#8220;freien&#8221; Bezeichnern, denen unmittelbar kein
+Wert zugewiesen wird und die als Variablen oder als Parameter u.a. in
+Gleichungen auftreten. Im Unterschied zu anderen CAS werden in dem von <em>zufall</em>
+benutzten SymPy solche Bezeichner nicht einfach durch Hinschreiben erkannt
+und akzeptiert, sondern sie müssen explizit als Symbole deklariert werden.
+Für Buchstaben und kleine griechische Buchstaben wird das bereits innerhalb
+von <em>zufall</em> erledigt, so  dass Bezeichner wie <code class="docutils literal"><span class="pre">r,</span> <span class="pre">g,</span> <span class="pre">b,</span> <span class="pre">A,</span> <span class="pre">B</span></code> usw. jederzeit
+frei verwendet werden können</p>
+<p>Soll ein freier Bezeichner länger als ein Zeichen sein, muss er mittels einer
+entsprechenden SymPy-Anweisung deklariert werden, etwa durch</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">rot</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;rot&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>oder (gleichzeitige Erzeugung mehrerer Symbole)</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">rot</span><span class="p">,</span> <span class="n">grün</span><span class="p">,</span> <span class="n">blau</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;rot grün blau&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Falls in einem Bezeichner ein Umlaut vorkommt, wird er bei der Eingabe
+umgewandelt (z.B. <code class="docutils literal"><span class="pre">ß</span></code> in <code class="docutils literal"><span class="pre">ss</span></code>). Deshalb ist zu vermeiden, dass in einer
+Sitzung solche Namenspaare wie <code class="docutils literal"><span class="pre">schoen</span></code> und <code class="docutils literal"><span class="pre">schön</span></code> benutzt werden (beide
+haben intern den Namen <code class="docutils literal"><span class="pre">schoen</span></code>)</p>
+<p>Es gibt eine Reihe von Bezeichnern, die in <em>zufall</em> eine feste Bedeutung haben
+und nicht anderweitig verwendet werden können, indem sie einen anderen Wert
+bekommen. Beim Versuch, einen anderen Wert an einen solchen Bezeichner zu
+binden, warnt <em>zufall</em> mit einem Hinweis und verhindert das Überschreiben des
+bisherigen Wertes. Ebenfalls in das Warnsystem aufgenommen wurden die Elemente
+der SymPy-Sprache, die innerhalb von <em>zufall</em> zur Verfügung des Nutzers gestellt
+werden</p>
+<p>Besondere Beachtung erfordern die Bezeichner B, E, N und I, denen Konstanten
+zugewiesen sind. Sie werden kommentarlos überschrieben, wenn ihnen ein anderer
+Wert zugewiesen wird</p>
+<p>Viele Eigenschaften/Methoden haben synonyme Bezeichner, die folgendermaßen
+gebildet werden:</p>
+<ul class="simple">
+<li>ein &#8216;_&#8217; (Unterstrich) innerhalb des Bezeichners einer Eigenschaft oder
+Methode wird eliminiert, indem der nächste Buchstabe groß geschrieben
+wird, z.B. <code class="docutils literal"><span class="pre">stich_probe</span></code> <span class="math">\(\rightarrow\)</span> <code class="docutils literal"><span class="pre">stichProbe</span></code>
+(<em>Kamelschreibweise</em>; Methode &#8220;Stichprobe&#8221;)</li>
+<li>ein &#8216;_&#8217; am Ende eines Bezeichners wird eliminiert, indem das erste Zeichen
+groß geschrieben wird, z.B: <code class="docutils literal"><span class="pre">vert_</span></code><span class="math">\(\rightarrow\)</span> <code class="docutils literal"><span class="pre">Vert</span></code>
+(Eigenschaft &#8220;(Wahrscheinlichkeits-)Verteilung&#8221;)</li>
+</ul>
+<p>In einem <em>zufall</em>-Notebook kann explizit mit anderen Python-Paketen
+gearbeitet werden, speziell mit SymPy, von dem einige Anweisungen dem System
+bereits bekannt sind. Soll ein weiteres SymPy-Element benutzt werden, z.B.
+die Funktion <code class="docutils literal"><span class="pre">ceiling</span></code>, so ist dieses mit der üblichen import-Anweisung zu
+importieren und kann danach aufgerufen werden</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">ceiling</span>   <span class="c1"># eventuell mit Pfadangabe im SymPy-</span>
+                                     <span class="c1"># Baum</span>
+         <span class="o">...</span>
+<span class="n">In</span> <span class="p">[</span><span class="o">..</span><span class="p">]:</span> <span class="n">ceiling</span><span class="p">(</span><span class="mf">3.12</span><span class="p">)</span>    <span class="c1"># das Ergebnis ist 4</span>
+</pre></div>
+</div>
+<p>Die Bezeichner für die Klassen werden oft auch im umgangssprachlichen Sinn
+benutzt, wenn dadurch keine Mißverständnisse entstehen</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="online-hilfe.html"
+                        title="vorheriges Kapitel">Online - Hilfe</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="zugriff.html"
+                        title="nächstes Kapitel">Zugriff auf Eigenschaften und Methoden</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/bezeichner.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="zugriff.html" title="Zugriff auf Eigenschaften und Methoden"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="online-hilfe.html" title="Online - Hilfe"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>STP - SignifikanzTestP &#8212; zufall 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="zufall 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen" href="klassen.html" />
+    <link rel="next" title="Urne" href="urne.html" />
+    <link rel="prev" title="KI - KonfidenzIntervall" href="ki.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="urne.html" title="Urne"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="ki.html" title="KI - KonfidenzIntervall"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" accesskey="U">Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="stp-signifikanztestp">
+<h1>STP - SignifikanzTestP<a class="headerlink" href="#stp-signifikanztestp" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP">
+<em class="property">class </em><code class="descclassname">zufall.lib.objekte.signifikanz_test_p.</code><code class="descname">SignifikanzTestP</code><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Signifikanztest für die unbekannte Wahrscheinlichkeit der 
+Binomialverteilung</p>
+<p><strong>Kurzname</strong> <strong>STP</strong></p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>STP( <em>p0, alpha, seite, umfang, verfahren</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>p0</em> : Wahrscheinlchkeit bei <span class="math">\(H_0\)</span></p>
+<p><em>alpha</em> : Signifikanzniveau; Zahl aus (0,1)</p>
+<p><em>seite</em> :</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">&#8216;2&#8217; | &#8216;l&#8217; | &#8216;r&#8217;  <em>oder</em> </div>
+</div>
+<div class="line-block">
+<div class="line">&#8216;zwei&#8217; | &#8216;links&#8217; | &#8216;rechts&#8217;</div>
+</div>
+<div class="line-block">
+<div class="line">zwei-, links- oder rechtsseitiger Test</div>
+</div>
+</div></blockquote>
+<p><em>umfang</em> : Stichprobenumfang</p>
+<p><em>verfahren</em> :</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>&#8216;S&#8217; | &#8216;Sigma&#8217; -</dt>
+<dd><div class="first last line-block">
+<div class="line">bei alpha = 0.05 (einseitiger Test)</div>
+<div class="line">bei alpha = 0.05, 0.1 (zweiseitiger Test)</div>
+<div class="line">Benutzung der Sigma-Umgebung des Erwartungswertes</div>
+</div>
+</dd>
+<dt>&#8216;B&#8217; | &#8216;BV&#8217; -</dt>
+<dd>Benutzung der Binomialverteilung selbst</dd>
+<dt>&#8216;N&#8217; | &#8216;NV&#8217; - </dt>
+<dd>Benutzung der Approximation durch die Normalverteilung</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ue</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ü</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.ab_ber">
+<code class="descname">ab_ber</code><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.ab_ber" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ablehnungsbereich von <span class="math">\(H_0\)</span></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.ab_ber_">
+<code class="descname">ab_ber_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.ab_ber_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ablehnungsbereich von <span class="math">\(H_0\)</span>; zugehörige Methode</p>
+<p>Zusatz: <cite>g=ja</cite> Grafische Darstellung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.an_ber">
+<code class="descname">an_ber</code><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.an_ber" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Annahmebereich von <span class="math">\(H_0\)</span></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.an_ber_">
+<code class="descname">an_ber_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.an_ber_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Annahmebereich von <span class="math">\(H_0\)</span>; zugehörige Methode</p>
+<p>Zusatz: <cite>g=ja</cite> Grafische Darstellung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.alpha">
+<code class="descname">alpha</code><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.alpha" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wahrscheinlichkeit für Fehler 1. Art</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.begriffe">
+<code class="descname">begriffe</code><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.begriffe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Begriffe beim Testen von Hypothesen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.bv">
+<code class="descname">bv</code><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.bv" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>BinomialVerteilung bei <span class="math">\(H_0\)</span></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.guete">
+<code class="descname">guete</code><span class="sig-paren">(</span><em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.guete" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Güte-Funktion</p>
+<p><em>p</em> : Zahl aus [0, 1]</p>
+<p>Zusatz: <cite>g=ja</cite>   Graf der Funktion</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.h0">
+<code class="descname">h0</code><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.h0" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Nullhypothese</p>
+<p>Synonym: <strong>H0</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.h1">
+<code class="descname">h1</code><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.h1" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Alternativhypothese</p>
+<p>Synonym: <strong>H1</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.k">
+<code class="descname">k</code><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.k" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Kritische Zahl(en)</p>
+<p>Synonym: <strong>K</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.n">
+<code class="descname">n</code><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.n" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Stichprobenumfang</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.oc">
+<code class="descname">oc</code><span class="sig-paren">(</span><em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.oc" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Operationscharakteristik-Funktion</p>
+<p>Synonym: <strong>beta</strong></p>
+<p><em>p</em> : Zahl aus [0, 1]</p>
+<p>Zusatz: <cite>g=ja</cite>   Graf der Funktion</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.quantil_bv">
+<code class="descname">quantil_bv</code><span class="sig-paren">(</span><em>q</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.quantil_bv" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Quantile der Binomialverteilung bei <span class="math">\(H_0\)</span></p>
+<p><em>q</em> : Zahl aus [0, 1]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.quantil_nv">
+<code class="descname">quantil_nv</code><span class="sig-paren">(</span><em>q</em><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.quantil_nv" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Quantile der (0,1)-Normalverteilung</p>
+<p><em>q</em> : Zahl aus [0, 1]</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.regel">
+<code class="descname">regel</code><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.regel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Entscheidungsregel</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.regel_">
+<code class="descname">regel_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.regel_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Entscheidungsregel; zugehörige Methode</p>
+<p>Zusatz:   <cite>g=ja</cite>   Grafische Darstellung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.schema">
+<code class="descname">schema</code><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.schema" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Schema eines Signifikanztestes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.sig_niv">
+<code class="descname">sig_niv</code><a class="headerlink" href="#zufall.lib.objekte.signifikanz_test_p.SignifikanzTestP.sig_niv" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Signifikanzniveau</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">ab_ber</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">abBer</span></code></p>
+<p><code class="docutils literal"><span class="pre">an_ber</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">anBer</span></code></p>
+<p>d``beta_       :  Beta``</p>
+<p><code class="docutils literal"><span class="pre">quantil_bv</span>&#160; <span class="pre">:</span>&#160; <span class="pre">quantilBV</span></code></p>
+<p><code class="docutils literal"><span class="pre">quantil_nv</span>&#160; <span class="pre">:</span>&#160; <span class="pre">quantilNV</span></code></p>
+<p><code class="docutils literal"><span class="pre">regel_</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Regel</span></code></p>
+<p><code class="docutils literal"><span class="pre">sig_niv</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">sigNiv</span></code></p>
+</div></blockquote>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="ki.html"
+                        title="vorheriges Kapitel">KI - KonfidenzIntervall</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="urne.html"
+                        title="nächstes Kapitel">Urne</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/stp.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="urne.html" title="Urne"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="ki.html" title="KI - KonfidenzIntervall"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">zufall 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassen.html" >Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

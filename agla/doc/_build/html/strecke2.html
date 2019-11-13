@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Strecke &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen in der Ebene" href="klassenr2.html" />
+    <link rel="next" title="Dreieck" href="dreieck2.html" />
+    <link rel="prev" title="Parallelogramm" href="parallelogramm2.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="dreieck2.html" title="Dreieck"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="parallelogramm2.html" title="Parallelogramm"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" accesskey="U">Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="strecke">
+<h1>Strecke<a class="headerlink" href="#strecke" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.strecke.Strecke">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.strecke.</code><code class="descname">Strecke</code><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Strecke im Raum und in der Ebene</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>Strecke ( <em>punkt1, punkt2</em>)</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><em>punkt</em> : Punkt; Angabe von Anfangs- und Endpunkt</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.strecke.Strecke.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.strecke.Strecke.anf">
+<code class="descname">anf</code><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.anf" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Anfangspunkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.strecke.Strecke.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.strecke.Strecke.end">
+<code class="descname">end</code><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.end" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Endpunkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.strecke.Strecke.gerade">
+<code class="descname">gerade</code><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.gerade" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Trägergerade</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.strecke.Strecke.in_figur">
+<code class="descname">in_figur</code><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.in_figur" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konvertierung in Figur; nur in der Ebene</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.strecke.Strecke.in_koerper">
+<code class="descname">in_koerper</code><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.in_koerper" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konvertierung in Körper; nur im Raum</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.strecke.Strecke.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.strecke.Strecke.laenge">
+<code class="descname">laenge</code><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.laenge" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Länge</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.strecke.Strecke.laenge_">
+<code class="descname">laenge_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.laenge_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Länge; Dezimaldarstellung</p>
+<p>Zusatz : <cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.strecke.Strecke.mitte">
+<code class="descname">mitte</code><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.mitte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Mittelpunkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.strecke.Strecke.punkte">
+<code class="descname">punkte</code><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.punkte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Endpunkte</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.strecke.Strecke.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Scharparameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.strecke.Strecke.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bildstrecke bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.strecke.Strecke.pkt">
+<code class="descname">pkt</code><span class="sig-paren">(</span><em>/[wert]</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.pkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Punkt der Strecke</p>
+<p><em>wert</em> : Wert des Streckenparameters aus [0, 1]</p>
+<dl class="docutils">
+<dt>Rückgabe :</dt>
+<dd><dl class="first last docutils">
+<dt>bei Angabe eines Parameterwertes:</dt>
+<dd>Streckenpunkt, der zu diesem Wert gehört</dd>
+<dt>bei leerer Argumentliste oder freiem Bezeichner:</dt>
+<dd>allgemeiner Punkt der Strecke</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.strecke.Strecke.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Streckenschar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.strecke.Strecke.schnitt">
+<code class="descname">schnitt</code><span class="sig-paren">(</span><em>objekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.schnitt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Schnittmenge der Strecke mit einem anderen Objekt</p>
+<p><em>objekt</em> im Raum : Punkt, Gerade, Ebene, Strecke</p>
+<p><em>objekt</em> in der Ebene : Punkt, Gerade, Strecke</p>
+<p>Zusatz: <cite>l=1</cite> - Lageinformationen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.strecke.Strecke.teil_punkt">
+<code class="descname">teil_punkt</code><span class="sig-paren">(</span><em>k</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.teil_punkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Teilpunkt</p>
+<p><em>k</em> : Teilverhältnis</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.strecke.Strecke.teil_verh">
+<code class="descname">teil_verh</code><span class="sig-paren">(</span><em>punkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.strecke.Strecke.teil_verh" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Teilverhältnis</p>
+<p><em>punkt</em> : Punkt der Trägergeraden</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">in_figur</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">inFigur</span></code></p>
+<p><code class="docutils literal"><span class="pre">in_körper</span>&#160; <span class="pre">:</span>&#160; <span class="pre">inKörper</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">länge_</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Länge</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+<p><code class="docutils literal"><span class="pre">teil_punkt</span> <span class="pre">:</span>&#160; <span class="pre">teilPunkt</span></code></p>
+<p><code class="docutils literal"><span class="pre">teil_verh</span>&#160; <span class="pre">:</span>&#160; <span class="pre">teilVerh</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="parallelogramm2.html"
+                        title="vorheriges Kapitel">Parallelogramm</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="dreieck2.html"
+                        title="nächstes Kapitel">Dreieck</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/strecke2.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="dreieck2.html" title="Dreieck"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="parallelogramm2.html" title="Parallelogramm"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr2.html" >Klassen in der Ebene</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

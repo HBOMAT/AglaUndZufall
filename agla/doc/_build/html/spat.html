@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Spat &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Klassen im Raum" href="klassenr3.html" />
+    <link rel="next" title="Strecke" href="strecke.html" />
+    <link rel="prev" title="Parallelogramm" href="parallelogramm.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="strecke.html" title="Strecke"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="parallelogramm.html" title="Parallelogramm"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr3.html" accesskey="U">Klassen im Raum</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="spat">
+<h1>Spat<a class="headerlink" href="#spat" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="agla.lib.objekte.spat.Spat">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.spat.</code><code class="descname">Spat</code><a class="headerlink" href="#agla.lib.objekte.spat.Spat" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Spat im Raum</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>Spat ( <em>/[ stütz, ] spann1, spann2, spann3</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>stütz</em> : Stützvektor</p>
+<p><em>spann</em> : Spannvekor</p>
+</div></blockquote>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code>, <code class="docutils literal"><span class="pre">oe</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code>, <code class="docutils literal"><span class="pre">ö</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.spat.Spat.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.spat.Spat.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.spat.Spat.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.spat.Spat.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.spat.Spat.in_koerper">
+<code class="descname">in_koerper</code><a class="headerlink" href="#agla.lib.objekte.spat.Spat.in_koerper" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konvertierung in Körper</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.spat.Spat.in_prisma">
+<code class="descname">in_prisma</code><a class="headerlink" href="#agla.lib.objekte.spat.Spat.in_prisma" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konvertierung in Prisma</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.spat.Spat.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.spat.Spat.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.spat.Spat.laengen">
+<code class="descname">laengen</code><a class="headerlink" href="#agla.lib.objekte.spat.Spat.laengen" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Seitenlängen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.spat.Spat.laengen_">
+<code class="descname">laengen_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.spat.Spat.laengen_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Seitenlängen; Dezimaldarstellung</p>
+<p>Zusatz : <cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.spat.Spat.punkte">
+<code class="descname">punkte</code><a class="headerlink" href="#agla.lib.objekte.spat.Spat.punkte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Eckpunkte</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.spat.Spat.punkte_">
+<code class="descname">punkte_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.spat.Spat.punkte_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>zu punkte zugehörig; Erläuterung der Ausgabe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.spat.Spat.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.spat.Spat.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Scharparameter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.spat.Spat.spann">
+<code class="descname">spann</code><a class="headerlink" href="#agla.lib.objekte.spat.Spat.spann" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Spannvektoren</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.spat.Spat.stuetz">
+<code class="descname">stuetz</code><a class="headerlink" href="#agla.lib.objekte.spat.Spat.stuetz" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Stützvektor</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.spat.Spat.volumen">
+<code class="descname">volumen</code><a class="headerlink" href="#agla.lib.objekte.spat.Spat.volumen" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Volumen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.spat.Spat.volumen_">
+<code class="descname">volumen_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.spat.Spat.volumen_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Volumen; Dezimaldarstellung</p>
+<p>Zusatz :</p>
+<blockquote>
+<div><p><cite>d=n</cite> - mit <em>n</em> Nachkomma-/Stellen</p>
+<p><cite>f=1</cite> - Formel</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.spat.Spat.winkel">
+<code class="descname">winkel</code><a class="headerlink" href="#agla.lib.objekte.spat.Spat.winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Winkel zwischen den Spannvektoren</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.spat.Spat.winkel_">
+<code class="descname">winkel_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.spat.Spat.winkel_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Winkel zwischen den Spannvektoren; Dezimaldarstellung</p>
+<p>Zusatz : <cite>d=n</cite>  - mit <em>n</em> Nachkomma-/Stellen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.spat.Spat.bild">
+<code class="descname">bild</code><span class="sig-paren">(</span><em>abbildung</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.spat.Spat.bild" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bild bei einer Abbildung</p>
+<p><em>abbildung</em> : Abbildung des Raumes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.spat.Spat.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.spat.Spat.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Spatschar mit einem Parameter</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">in_körper</span> <span class="pre">:</span>&#160; <span class="pre">inKörper</span></code></p>
+<p><code class="docutils literal"><span class="pre">in_prisma</span> <span class="pre">:</span>&#160; <span class="pre">inPrisma</span></code></p>
+<p><code class="docutils literal"><span class="pre">is_schar</span>&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">längen_</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Längen</span></code></p>
+<p><code class="docutils literal"><span class="pre">punkte_</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Punkte</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+<p><code class="docutils literal"><span class="pre">volumen_</span>&#160; <span class="pre">:</span>&#160; <span class="pre">Volumen</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="parallelogramm.html"
+                        title="vorheriges Kapitel">Parallelogramm</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="strecke.html"
+                        title="nächstes Kapitel">Strecke</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/spat.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="strecke.html" title="Strecke"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="parallelogramm.html" title="Parallelogramm"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="klassenr3.html" >Klassen im Raum</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

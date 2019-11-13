@@ -1,0 +1,832 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Klassen der hyperbolischen Geometrie &#8212; agla 0.1.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="agla 0.1.0 Dokumentation" href="index.html" />
+    <link rel="up" title="Andere Klassen" href="andere_klassen.html" />
+    <link rel="next" title="Funktionen" href="funktionen.html" />
+    <link rel="prev" title="Klassen der sphärischen Geometrie" href="klassen_sphaer_geometrie.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="funktionen.html" title="Funktionen"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="klassen_sphaer_geometrie.html" title="Klassen der sphärischen Geometrie"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="andere_klassen.html" accesskey="U">Andere Klassen</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="klassen-der-hyperbolischen-geometrie">
+<span id="klassen-hyp-geometrie"></span><h1>Klassen der hyperbolischen Geometrie<a class="headerlink" href="#klassen-der-hyperbolischen-geometrie" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Betrachtete Modelle (<a class="reference internal" href="hyperbolische_geometrie.html#hyperbolische-geometrie"><span class="std std-ref">siehe auch</span></a>):</p>
+<blockquote>
+<div><p><strong>D</strong>  - EinheitsKreisScheiben-Modell in der Ebene</p>
+<p><strong>D3</strong> - D-Modell in der <em>xy</em> - Ebene des Raumes</p>
+<p><strong>H</strong>  - HyperboloidHalbSchalen-Modell im Raum</p>
+</div></blockquote>
+<p>Es stehen folgende Klassen zur Verfügung:</p>
+<p><code class="docutils literal"><span class="pre">hPunkt</span></code> - <a class="reference internal" href="#hpunkt"><span class="std std-ref">hyperbolischer Punkt</span></a></p>
+<p><code class="docutils literal"><span class="pre">hGerade</span></code> - <a class="reference internal" href="#hgerade"><span class="std std-ref">hyperbolische Gerade</span></a></p>
+<p><code class="docutils literal"><span class="pre">hStrecke</span></code> - <a class="reference internal" href="#hstrecke"><span class="std std-ref">hyperbolische Strecke</span></a></p>
+<p><code class="docutils literal"><span class="pre">hStrahl</span></code> - <a class="reference internal" href="#hstrahl"><span class="std std-ref">hyperbolischer Strahl</span></a></p>
+<p><code class="docutils literal"><span class="pre">hDreieck</span></code> - <a class="reference internal" href="#hdreieck"><span class="std std-ref">hyperbolisches Dreieck</span></a></p>
+<p><code class="docutils literal"><span class="pre">hKreis</span></code> - <a class="reference internal" href="#hkreis"><span class="std std-ref">hyperbolischer Kreis</span></a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="hyperbolischer-punkt">
+<span id="hpunkt"></span><h2>hyperbolischer Punkt<a class="headerlink" href="#hyperbolischer-punkt" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="class">
+<dt id="agla.lib.objekte.hyp_geometrie.hPunkt">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.hyp_geometrie.</code><code class="descname">hPunkt</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hPunkt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>hyperbolischer Punkt</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div><p>hPunkt ( <em>x, y</em> ) <em>bzw.</em></p>
+<p>hPunkt ( <em>x+yi</em> ) mittels komplexer Zahlen</p>
+<blockquote>
+<div>hyperbolischer Punkt im D-Modell   <em>oder</em></div></blockquote>
+<p>hPunkt ( <em>x, y, 0</em> ) <em>bzw.</em></p>
+<p>hPunkt ( <em>x, y, &#8216;D3&#8217; | &#8216;d3&#8217;</em> )</p>
+<blockquote>
+<div>hyperbolischer Punkt im D3-Modell;  <span class="math">\(x^2+y^2 &lt; 1\)</span> <em>oder</em></div></blockquote>
+<p>hPunkt ( <em>x, y, &#8216;H&#8217; | &#8216;h&#8217;</em> ),  <em>x, y</em>  beliebige reelle Zahlen <em>bzw.</em></p>
+<dl class="docutils">
+<dt>hPunkt( <em>x, y, z</em> )     <span class="math">\(-x^2-y^2+z^2 = 1, z &gt; 0\)</span></dt>
+<dd><blockquote class="first">
+<div>hier sind <em>x</em> und <em>y</em> günstig als ganz bzw. rational 
+anzugeben und <em>z</em> als <span class="math">\(sqrt(1 + x^2 + y^2)\)</span></div></blockquote>
+<p class="last">hyperbolischer Punkt im H-Modell</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>Zusatz</strong> <cite>exakt=ja</cite></p>
+<blockquote>
+<div>Die (euklidischen) Koordinaten des Punktes werden exakt gespeichert</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>x, y</em> bzw. <em>x, y, z</em> sind die euklidischen Koordinaten eines Punktes; sie können
+auch als <em>Vektor(x, y)</em> (D-Modell) bzw. <em>Vektor(x, y, z)</em> (H-Modell) angegeben 
+werden</p>
+<p>Ist bei der Erzeugung eines Punktes im D-Modell als drittes Argument <cite>p</cite> 
+angegeben, werden <em>x</em> und <em>y</em> als Polarkoordinaten <em>r</em> und <em>phi</em> (in Grad) 
+interpretiert</p>
+</div></blockquote>
+<p>Die Randpunkte der Einheitskreisscheibe im D- und D3-Modell werden aus
+technischen Gründen ebenfalls als hyperbolische Punkte betrachtet</p>
+<p>Die Berechnungen erfolgen standardmäßig nummerisch (nicht exakt), die
+symbolische Berechnung kann mit der Angabe <code class="docutils literal"><span class="pre">exakt=ja</span></code> bzw. mittels der 
+Systemvariablen <code class="docutils literal"><span class="pre">UMG.EXAKT</span></code> erreicht werden</p>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hPunkt.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hPunkt.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hPunkt.abstand">
+<code class="descname">abstand</code><span class="sig-paren">(</span><em>hpunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hPunkt.abstand" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Hyperbolischer Abstand zu einem anderen Punkt</p>
+<p><em>hpunkt</em> : hyperbolischer Punkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hPunkt.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hPunkt.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidische Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hPunkt.exakt">
+<code class="descname">exakt</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hPunkt.exakt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf exakte Koordinasten</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hPunkt.is_schar">
+<code class="descname">is_schar</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hPunkt.is_schar" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf Schar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hPunkt.mod">
+<code class="descname">mod</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hPunkt.mod" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Modell</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hPunkt.schnitt">
+<code class="descname">schnitt</code><span class="sig-paren">(</span><em>hgerade</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hPunkt.schnitt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Schnitt mit einer hyperbolischen Geraden</p>
+<p><em>hgerade</em> : hyperbolische Gerade</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hPunkt.sch_el">
+<code class="descname">sch_el</code><span class="sig-paren">(</span><em>wert</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hPunkt.sch_el" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Element einer Schar von hyperbolischen Punkten</p>
+<p><em>wert</em> : Wert des Scharparameters</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hPunkt.sch_par">
+<code class="descname">sch_par</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hPunkt.sch_par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameter einer Schar hyperbolischer Punkte</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hPunkt.traeger">
+<code class="descname">traeger</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hPunkt.traeger" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidischer Trägerpunkt</p>
+<p>Synonym: <strong>e</strong></p>
+</dd></dl>
+
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">is_schar</span>&#160; <span class="pre">:</span>&#160; <span class="pre">isSchar</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_el</span>&#160;&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schEl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sch_par</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">schPar</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="hyperbolische-gerade">
+<span id="hgerade"></span><h2>hyperbolische Gerade<a class="headerlink" href="#hyperbolische-gerade" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="class">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.hyp_geometrie.</code><code class="descname">hGerade</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>hyperbolische Gerade</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>hGerade ( <em>hpunkt1, hpunkt2</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><em>hpunkt</em> : hyperbolischer Punkt</div></blockquote>
+<p>Die Berechnungen erfolgen standardmäßig nummerisch (nicht exakt), die
+symbolische Berechnung kann mit der Angabe <code class="docutils literal"><span class="pre">exakt=ja</span></code> bzw. mittels der 
+Systemvariablen <code class="docutils literal"><span class="pre">UMG.EXAKT</span></code> erreicht werden</p>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade.ber">
+<code class="descname">ber</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade.ber" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameterbereich</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidische Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade.exakt">
+<code class="descname">exakt</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade.exakt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf exakte Punkte</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade.inv">
+<code class="descname">inv</code><span class="sig-paren">(</span><em>hobjekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade.inv" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Inversion / Spiegelung eines hyperbolischen Objektes an der Geraden</p>
+<p>Synonym: <strong>spieg</strong></p>
+<p><em>hobjekt</em> : hyperbolische(r)(s) Punkt, Gerade, Strecke, Dreieck</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade.inv_f">
+<code class="descname">inv_f</code><span class="sig-paren">(</span><em>/[hpunkt]</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade.inv_f" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Abbildungsfunktion zur Inversion eines hyperbolischen Punktes
+an der Geraden</p>
+<p><em>hpunkt</em> : hyperbolischer Punkt</p>
+<dl class="docutils">
+<dt>Rückgabe:</dt>
+<dd><p class="first">Bei Angabe eines hyperbolischen Punktes wird dessen Bild
+bei der Abbildung ausgegeben, die Funktionsvorschrift
+wird angezeigt</p>
+<p class="last">Wird kein Argument angegeben, wird die Abbildungsfunktion
+als Funktionsobjekt ausgegeben</p>
+</dd>
+<dt>Zusatz: <cite>f=1</cite></dt>
+<dd>Ausgabe der Funktionsvorschrift (als komplexe
+Funktion in der Variablen <em>z</em> )</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade.lot">
+<code class="descname">lot</code><span class="sig-paren">(</span><em>hpunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade.lot" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Lot auf die Gerade von einem Punkt aus</p>
+<p><em>hpunkt</em> : hyperbolischer Punkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade.mod">
+<code class="descname">mod</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade.mod" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Modell</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade.normale">
+<code class="descname">normale</code><span class="sig-paren">(</span><em>hpunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade.normale" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Normale in einem Punkt der Geraden</p>
+<p><em>hpunkt</em> : hyperbolischer Punkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade.par">
+<code class="descname">par</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade.par" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade.punkte">
+<code class="descname">punkte</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade.punkte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erzeugende Punkte</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade.schnitt">
+<code class="descname">schnitt</code><span class="sig-paren">(</span><em>hobjekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade.schnitt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Schnitt mit anderem hyperbolischen Objekt</p>
+<p><em>hobjekt</em> : hyperbolische(r) Punkt, Gerade</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade.traeger">
+<code class="descname">traeger</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade.traeger" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidisches Träger-Objekt</p>
+<p>Synonym: <strong>e</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hGerade.winkel">
+<code class="descname">winkel</code><span class="sig-paren">(</span><em>hobjekt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hGerade.winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Winkel der Geraden mit einem anderen hyperbolischen Objekt in
+einem gemeinsamen Punkt</p>
+<p><em>hobjekt</em> : hyperbolische(r) Punkt, Gerade</p>
+<p>Es wird nicht geprüft, ob der Punkt auf den beiden Objekten
+liegtn</p>
+</dd></dl>
+
+<p><strong>Synonymer Bezeichner</strong></p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">inv_f</span>&#160; <span class="pre">:</span>&#160; <span class="pre">invF</span></code></div></blockquote>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="hyperbolische-strecke">
+<span id="hstrecke"></span><h2>hyperbolische Strecke<a class="headerlink" href="#hyperbolische-strecke" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="class">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.hyp_geometrie.</code><code class="descname">hStrecke</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>hyperbolische Strecke</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>hStrecke ( <em>hpunkt1, hpunkt2</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><em>hpunkt</em> : hyperbolischer Punkt</div></blockquote>
+<p>Die Berechnungen erfolgen standardmäßig nummerisch (nicht exakt), die
+symbolische Berechnung kann mit der Angabe <code class="docutils literal"><span class="pre">exakt=ja</span></code> bzw. mittels der 
+Systemvariablen <code class="docutils literal"><span class="pre">UMG.EXAKT</span></code> erreicht werden</p>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke.ber">
+<code class="descname">ber</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke.ber" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameterbereich</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidische Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke.exakt">
+<code class="descname">exakt</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke.exakt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf exakte Erzeugung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke.gerade">
+<code class="descname">gerade</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke.gerade" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>hyperbolische Trägergerade</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke.laenge">
+<code class="descname">laenge</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke.laenge" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Länge</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke.mitte">
+<code class="descname">mitte</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke.mitte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Mittelpunkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke.mitt_senkr">
+<code class="descname">mitt_senkr</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke.mitt_senkr" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Mittelsenkrechte</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke.mod">
+<code class="descname">mod</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke.mod" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Modell</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke.normale">
+<code class="descname">normale</code><span class="sig-paren">(</span><em>hpunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke.normale" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Normale in einem Punkt der Strecke</p>
+<p><em>hpunkt</em> : hyperbolischer Punkt</p>
+<p>Es wird nicht geprüft, ob der Punkt auf der Strecke liegt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke.punkte">
+<code class="descname">punkte</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke.punkte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erzeugende Punkte</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke.traeger">
+<code class="descname">traeger</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke.traeger" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidisches Träger-Objekt</p>
+<p>Synonym: <strong>e</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke.winkel">
+<code class="descname">winkel</code><span class="sig-paren">(</span><em>hobjekt</em>, <em>hpunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke.winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Winkel der Strecke mit einem anderen hyperbolischen Objekt in einem
+gemeinsamen Punkt</p>
+<p><em>hobjekt</em> : hyperbolische(r) Gerade, Strahl, Strecke</p>
+<p><em>hpunkt</em> : hyperbolischer Punkt - gemeinsamer Punkt</p>
+<p>Es wird nicht geprüft, ob der Punkt zu den beiden Objekten gehört</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrecke.wink_halb">
+<code class="descname">wink_halb</code><span class="sig-paren">(</span><em>hstrecke</em>, <em>hpunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrecke.wink_halb" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Winkelhalbierende Strecke mit einer anderen hyperbolischen Strecke
+in einem gemeinsamen Endpunkt</p>
+<p><em>hstrecke</em> :  hyperbolische Strecke</p>
+<p><em>hpunkt</em> : hyperbolischer Punkt - gemeinsamer Endpunkt</p>
+<p>Es wird nicht geprüft, ob der Punkt Endpunkt beider Strecken ist</p>
+</dd></dl>
+
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">mitt_senkr</span> <span class="pre">:</span>&#160; <span class="pre">mittSenkr</span></code></p>
+<p><code class="docutils literal"><span class="pre">wink_halb</span>&#160; <span class="pre">:</span>&#160; <span class="pre">winkHalb</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="hyperbolischer-strahl">
+<span id="hstrahl"></span><h2>hyperbolischer Strahl<a class="headerlink" href="#hyperbolischer-strahl" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="class">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrahl">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.hyp_geometrie.</code><code class="descname">hStrahl</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrahl" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>hyperbolischer Strahl</p>
+<p><strong>Synonym</strong></p>
+<blockquote>
+<div><strong>hHalbGerade</strong></div></blockquote>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>hStrahl ( <em>hpunkt1, hpunkt2</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>hpunkt</em> : hyperbolischer Punkt</p>
+<p>einer der Punkte muss Randpunkt sein, der andere nicht</p>
+</div></blockquote>
+<p>Die Berechnungen erfolgen standardmäßig nummerisch (nicht exakt), die
+symbolische Berechnung kann mit der Angabe <code class="docutils literal"><span class="pre">exakt=ja</span></code> bzw. mittels der 
+Systemvariablen <code class="docutils literal"><span class="pre">UMG.EXAKT</span></code> erreicht werden</p>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrahl.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrahl.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrahl.ber">
+<code class="descname">ber</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrahl.ber" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Parameterbereich</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrahl.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrahl.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidische Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrahl.exakt">
+<code class="descname">exakt</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrahl.exakt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf exakte Punkte</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrahl.gerade">
+<code class="descname">gerade</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrahl.gerade" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>hyperbolische Trägergerade</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrahl.mod">
+<code class="descname">mod</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrahl.mod" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Modell</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrahl.normale">
+<code class="descname">normale</code><span class="sig-paren">(</span><em>hpunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrahl.normale" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Normale in einem Strahlpunkt</p>
+<p><em>hpunkt</em> : hyperbolischer Punkt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrahl.punkte">
+<code class="descname">punkte</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrahl.punkte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erzeugende Punkte</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrahl.traeger">
+<code class="descname">traeger</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrahl.traeger" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidisches Träger-Objekt</p>
+<p>Synonym: <strong>e</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hStrahl.winkel">
+<code class="descname">winkel</code><span class="sig-paren">(</span><em>hobjekt</em>, <em>hpunkt</em><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hStrahl.winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Winkel mit einem anderen hyperbolischen Objekt in einem gemeinsamen
+Punkt</p>
+<p><em>hobjekt</em> : hyperbolische(r) Gerade, Strahl, Strecke</p>
+<p><em>hpunkt</em> : hyperbolischer Punkt</p>
+<p>Es wird nicht geprüft, ob der Punkt zu den beiden Objekten gehört</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="hyperbolisches-dreieck">
+<span id="hdreieck"></span><h2>hyperbolisches Dreieck<a class="headerlink" href="#hyperbolisches-dreieck" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="class">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.hyp_geometrie.</code><code class="descname">hDreieck</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>hyperbolisches Dreieck</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>hDreieck ( <em>hpunkt1, hpunkt2, hpunkt3</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><em>hpunkt</em> : hyperbolischer Punkt</div></blockquote>
+<p>Die Berechnungen erfolgen standardmäßig nummerisch (nicht exakt), die
+symbolische Berechnung kann mit der Angabe <code class="docutils literal"><span class="pre">exakt=ja</span></code> bzw. mittels der 
+Systemvariablen <code class="docutils literal"><span class="pre">UMG.EXAKT</span></code> erreicht werden</p>
+<p><strong>Eigenschaften</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code>, <code class="docutils literal"><span class="pre">ss</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code>, <code class="docutils literal"><span class="pre">ß</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidische Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck.exakt">
+<code class="descname">exakt</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck.exakt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf exakte Punkte</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck.exzess">
+<code class="descname">exzess</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck.exzess" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Exzeß</p>
+<p>Synonym: <strong>defekt</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck.flaeche">
+<code class="descname">flaeche</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck.flaeche" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Flächeninhalt</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck.inkreis">
+<code class="descname">inkreis</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck.inkreis" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Inkreis</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck.laengen">
+<code class="descname">laengen</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck.laengen" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Seitenlängen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck.mod">
+<code class="descname">mod</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck.mod" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Modell</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck.punkte">
+<code class="descname">punkte</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck.punkte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Eckpunkte</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck.seiten">
+<code class="descname">seiten</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck.seiten" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Seiten</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck.umfang">
+<code class="descname">umfang</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck.umfang" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umfang</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck.umkreis">
+<code class="descname">umkreis</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck.umkreis" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Umkreis</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck.winkel">
+<code class="descname">winkel</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck.winkel" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Innenwinkel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hDreieck.wink_summe">
+<code class="descname">wink_summe</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hDreieck.wink_summe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Innenwinkelsumme</p>
+</dd></dl>
+
+<p><strong>Synonymer Bezeichner</strong></p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">wink_summe</span> <span class="pre">:</span> <span class="pre">winkSumme</span></code></div></blockquote>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="hyperbolischer-kreis">
+<span id="hkreis"></span><h2>hyperbolischer Kreis<a class="headerlink" href="#hyperbolischer-kreis" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="class">
+<dt id="agla.lib.objekte.hyp_geometrie.hKreis">
+<em class="property">class </em><code class="descclassname">agla.lib.objekte.hyp_geometrie.</code><code class="descname">hKreis</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hKreis" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>hyperbolischer Kreis</p>
+<p><strong>Erzeugung</strong></p>
+<blockquote>
+<div>hKreis ( <em>mitte, radius</em> )</div></blockquote>
+<p><strong>Parameter</strong></p>
+<blockquote>
+<div><p><em>mitte</em> : hyperbolischer Punkt - Mittelpunkt</p>
+<p><em>radius</em> : Radius</p>
+</div></blockquote>
+<p>Die Berechnungen erfolgen standardmäßig nummerisch (nicht exakt), die
+symbolische Berechnung kann mit der Angabe <code class="docutils literal"><span class="pre">exakt=ja</span></code> bzw. mittels der 
+Systemvariablen <code class="docutils literal"><span class="pre">UMG.EXAKT</span></code> erreicht werden</p>
+<p><strong>Eigenschaften und Methoden</strong></p>
+<p><em>/statt</em> <code class="docutils literal"><span class="pre">ae</span></code> <em>kann</em> <code class="docutils literal"><span class="pre">ä</span></code> <em>geschrieben werden/</em></p>
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hKreis.hilfe">
+<code class="descname">hilfe</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hKreis.hilfe" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bezeichner der Eigenschaften und Methoden</p>
+<p>Synonym: <strong>h</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hKreis.dim">
+<code class="descname">dim</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hKreis.dim" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidische Dimension</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hKreis.exakt">
+<code class="descname">exakt</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hKreis.exakt" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test auf exakte Erzeugung</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hKreis.flaeche">
+<code class="descname">flaeche</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hKreis.flaeche" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Flächeninhalt</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hKreis.flaeche_">
+<code class="descname">flaeche_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hKreis.flaeche_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Flächeninhalt; Dezimalausgabe</p>
+<p>Zusatz: <cite>f=1</cite> Formel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hKreis.laenge">
+<code class="descname">laenge</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hKreis.laenge" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Länge</p>
+<p>Synonym: <strong>umfang</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="agla.lib.objekte.hyp_geometrie.hKreis.laenge_">
+<code class="descname">laenge_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hKreis.laenge_" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Länge; Dezimalausgabe</p>
+<p>Zusatz: <cite>f=1</cite> Formel</p>
+<p>Synonym: <strong>umfang_</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hKreis.mitte">
+<code class="descname">mitte</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hKreis.mitte" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Mittelpunkt</p>
+<p>Synonyme: <strong>M</strong>, <strong>m</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hKreis.mod">
+<code class="descname">mod</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hKreis.mod" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Modell</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hKreis.radius">
+<code class="descname">radius</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hKreis.radius" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Radius</p>
+<p>Synonym: <strong>r</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="agla.lib.objekte.hyp_geometrie.hKreis.traeger">
+<code class="descname">traeger</code><a class="headerlink" href="#agla.lib.objekte.hyp_geometrie.hKreis.traeger" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Euklidisches Träger-Objekt</p>
+<p>Synonym: <strong>e</strong></p>
+</dd></dl>
+
+<p><strong>Synonyme Bezeichner</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">fläche_</span>&#160; <span class="pre">:</span>&#160; <span class="pre">Fläche</span></code></p>
+<p><code class="docutils literal"><span class="pre">länge_</span>&#160;&#160; <span class="pre">:</span>&#160; <span class="pre">Länge</span></code></p>
+<p><code class="docutils literal"><span class="pre">umfang_</span>&#160; <span class="pre">:</span>&#160; <span class="pre">Umfang</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Inhalt</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Klassen der hyperbolischen Geometrie</a><ul>
+<li><a class="reference internal" href="#hyperbolischer-punkt">hyperbolischer Punkt</a></li>
+<li><a class="reference internal" href="#hyperbolische-gerade">hyperbolische Gerade</a></li>
+<li><a class="reference internal" href="#hyperbolische-strecke">hyperbolische Strecke</a></li>
+<li><a class="reference internal" href="#hyperbolischer-strahl">hyperbolischer Strahl</a></li>
+<li><a class="reference internal" href="#hyperbolisches-dreieck">hyperbolisches Dreieck</a></li>
+<li><a class="reference internal" href="#hyperbolischer-kreis">hyperbolischer Kreis</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Vorheriges Thema</h4>
+  <p class="topless"><a href="klassen_sphaer_geometrie.html"
+                        title="vorheriges Kapitel">Klassen der sphärischen Geometrie</a></p>
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="funktionen.html"
+                        title="nächstes Kapitel">Funktionen</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/klassen_hyp_geometrie.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="funktionen.html" title="Funktionen"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="klassen_sphaer_geometrie.html" title="Klassen der sphärischen Geometrie"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">agla 0.1.0 Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="andere_klassen.html" >Andere Klassen</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Holger Böttcher.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6 erstellt.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+
+
+Verzeichnisstruktur von zufall
+      
+    zufall
+
+        demo    Demo-Beispiele
+
+            ipynb    Jupyter-Notebooks
+
+            html     HTML-Versionen
+
+        doc	Dokumentations-Dateien; Pflege mit sphinx
+
+                html-Verzeichnis:  HTML-Version der Dokumentation
+                                   Einstieg mit index.html
+
+        lib	Quelltexte der zufall-Programme
+
+        mat	Arbeitsmaterialien (Beispiele für Jupyter-Notebooks)
+
+        org	Installation, Verzeichnisse
+
